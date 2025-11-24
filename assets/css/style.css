@@ -3524,7 +3524,7 @@ hr.title-line {
 
 /*------------------- 3.8. Text Color -------------------*/
 .text-theme {
-  color: var(--theme-color) !important;
+  color: var(--yellow-color) !important;
 }
 
 .text-title {

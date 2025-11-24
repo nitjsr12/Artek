@@ -9172,7 +9172,7 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.2em;
-  color: var(--yellow-color);
+  color: var(--theme-color);
   display: block;
   margin-bottom: 20px;
   margin-top: -0.35em;

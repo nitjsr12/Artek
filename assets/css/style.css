@@ -16592,7 +16592,7 @@ span.select2-selection.select2-selection--single:focus {
   font-family: var(--title-font);
   font-size: 18px;
   font-weight: 500;
-  color: var(--title-color);
+  color: var(--text-theme-color);
   font-weight: 600;
   display: -webkit-box;
   display: -webkit-flex;

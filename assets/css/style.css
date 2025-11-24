@@ -97,7 +97,7 @@ Version: 1.0.0
 /*------------------- 1.2. Function -------------------*/
 /*------------------- 1.3. Variable-------------------*/
 :root {
-  --theme-color: #0072bd;
+  --theme-color: #101840;
   --gr-color2: #39a1ea;
   --title-color: #101840;
   --body-color: #666666;
@@ -6662,7 +6662,7 @@ ol.wp-block-rss {
 }
 
 .header-layout2 .menu-area {
-  --body-bg: #fff;
+  --body-bg: #101840;
   background-color: var(--body-bg);
   border-radius: 48px;
   width: 100%;

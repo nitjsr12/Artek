@@ -2128,8 +2128,8 @@ textarea.is-invalid {
   border: none;
   text-transform: capitalize;
   text-align: center;
-  background-color: var(--theme-color);
-  color: var(--white-color);
+  background-color:var(--white-color) ;
+  color:var(--theme-color) ;
   font-family: var(--body-font);
   font-size: 15px;
   font-weight: 400;

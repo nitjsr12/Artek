@@ -6687,6 +6687,7 @@ ol.wp-block-rss {
 
 .header-layout2 .main-menu > ul > li > a {
   padding: 18px 0;
+  color: var(--white-color);
 }
 
 .header-layout2 .main-menu > ul > li > a:before {
@@ -6695,7 +6696,7 @@ ol.wp-block-rss {
   right: -12px;
   border-radius: 20px;
   z-index: -1;
-  color: var(--white-color);
+  
 }
 
 .header-layout2 .main-menu > ul > li > a:hover {

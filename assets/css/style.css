@@ -20415,28 +20415,29 @@ span.select2-selection.select2-selection--single:focus {
     06. Application Section*/
 
 /* === Grid Container === */
+/* === Application Section Wrapper === */
+
+/* === GRID === */
 .container-app {
-    max-width: 1100px;       /* smaller, not edge-to-edge */
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
 
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);   /* 4 columns */
     gap: 30px;
 }
 
 /* === Cards === */
 .app-card {
     text-align: center;
-    margin-bottom: 40px;
 }
 
 .app-card img {
     width: 100%;
+    max-width: 260px;
     height: auto;
-    max-width: 260px;   /* reduces card size for all devices */
     margin: 0 auto;
-    display: block;
     border-radius: 15px;
 }
 
@@ -20447,48 +20448,23 @@ span.select2-selection.select2-selection--single:focus {
     font-weight: 600;
 }
 
-/* === RESPONSIVE === */
-
-/* Tablets (3 columns) */
+/* === Responsive === */
 @media (max-width: 1024px) {
     .container-app {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-/* Mobile Large (2 columns) */
 @media (max-width: 768px) {
     .container-app {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Mobile Small (1 column) */
 @media (max-width: 480px) {
     .container-app {
         grid-template-columns: repeat(1, 1fr);
     }
-
-    .app-card img {
-        max-width: 220px;
-    }
 }
 
-
-/* RESPONSIVE */
-@media (max-width: 991px) {
-    .container-app {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 575px) {
-    .container-app {
-        grid-template-columns: 1fr;
-    }
-
-    .app-card img {
-        max-width: 140px;
-    }
-}
 

@@ -20436,12 +20436,12 @@ span.select2-selection.select2-selection--single:focus {
     height: auto;
     border-radius: 8px;
     object-fit: cover;
-    border-radius: 6px;
+    border-radius: 15px;
 }
 
 .app-card h4 {
     margin-top: 15px;
-    font-size: 18px;
+    font-size: 25px;
     font-weight: 600;
      color: var(--white-color);
 }

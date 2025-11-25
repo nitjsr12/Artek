@@ -20435,6 +20435,7 @@ span.select2-selection.select2-selection--single:focus {
     height: auto;
     border-radius: 8px;
     object-fit: cover;
+    border-radius: 6px;
 }
 
 .app-card h4 {

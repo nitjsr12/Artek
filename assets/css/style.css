@@ -2194,7 +2194,7 @@ textarea.is-invalid {
 }
 
 .th-btn.style3:hover {
-  color: var(--title-color);
+  color: var(--white-color);
 }
 
 .th-btn.style3:hover:before, .th-btn.style3:hover:after {

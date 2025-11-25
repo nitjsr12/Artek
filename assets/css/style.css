@@ -20428,6 +20428,7 @@ span.select2-selection.select2-selection--single:focus {
 
 .app-card {
     text-align: center;
+    color: var(--white-color);
 }
 
 .app-card img {

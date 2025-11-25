@@ -2203,6 +2203,7 @@ textarea.is-invalid {
 
 .th-btn.style4 {
   background-color: var(--title-color);
+  color: var(--white-color);
 }
 
 .th-btn.style4:before, .th-btn.style4:after {

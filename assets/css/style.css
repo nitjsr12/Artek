@@ -7762,6 +7762,12 @@ ol.wp-block-rss {
   }
 }
 
+.footer-wrapper a[href^="tel"],
+.footer-wrapper a[href^="mailto"] {
+    color: #ffffff !important;   /* change to your preferred color */
+}
+
+
 /* footer 2 ---------------------------------- */
 .footer-layout2 .copyright-wrap {
   border: none;

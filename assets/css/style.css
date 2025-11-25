@@ -20422,7 +20422,7 @@ span.select2-selection.select2-selection--single:focus {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
-    max-width: 400px;
+    max-width: 600px;
     margin: auto;
 }
 

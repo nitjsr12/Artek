@@ -20463,7 +20463,7 @@ span.select2-selection.select2-selection--single:focus {
 
 @media (max-width: 480px) {
     .container-app {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 

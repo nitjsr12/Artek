@@ -20409,3 +20409,36 @@ span.select2-selection.select2-selection--single:focus {
 } */ */
 
 /*# sourceMappingURL=style.css.map */
+
+
+/*=================================
+    06. Application Section*/
+
+.application-section {
+    padding: 60px 0;
+}
+
+.app-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.app-card {
+    text-align: center;
+}
+
+.app-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.app-card h4 {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 600;
+}

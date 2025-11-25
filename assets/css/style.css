@@ -20428,8 +20428,10 @@ span.select2-selection.select2-selection--single:focus {
 
 .app-card {
     text-align: center;
-   
+    margin-bottom: 40px;
 }
+
+   
 
 .app-card img {
     width: 100%;
@@ -20461,6 +20463,8 @@ span.select2-selection.select2-selection--single:focus {
 /* Cards */
 .app-card {
     text-align: center;
+    margin-bottom: 40px;
+
 }
 
 .app-card img {

@@ -15707,7 +15707,7 @@ span.select2-selection.select2-selection--single:focus {
 
 .counter-card .box-text {
   font-size: 18px;
-  color: var(--title-color);
+  color: var(--white-color);
 }
 
 .counter-card .media-body {
@@ -15718,7 +15718,7 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .counter-card-wrap.style2 {
-  background-color: var(--title-color);
+  background-color: var(--white-color);
   padding: 42px 60px;
   /* Medium Large devices */
   /* Small devices */

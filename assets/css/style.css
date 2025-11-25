@@ -20466,7 +20466,7 @@ span.select2-selection.select2-selection--single:focus {
 .app-card img {
     width: 100%;
     height: auto;
-    max-width: 180px;  /* Control image size */
+    max-width: 300px;  /* Control image size */
     margin: 0 auto;
     display: block;
 }

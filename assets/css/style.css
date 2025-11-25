@@ -20449,7 +20449,7 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 /* === Responsive === */
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
     .container-app {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -20465,6 +20465,6 @@ span.select2-selection.select2-selection--single:focus {
     .container-app {
         grid-template-columns: repeat(4, 1fr);
     }
-}
+} */
 
 

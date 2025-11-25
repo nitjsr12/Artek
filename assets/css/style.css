@@ -20420,9 +20420,9 @@ span.select2-selection.select2-selection--single:focus {
 
 .app-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 40px;
-    max-width: 900px;
+    max-width: 400px;
     margin: auto;
 }
 

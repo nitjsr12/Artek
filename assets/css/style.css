@@ -20446,3 +20446,53 @@ span.select2-selection.select2-selection--single:focus {
     font-weight: 600;
      color: var(--white-color);
 }
+
+/* To make it NOT full width */
+.container-app {
+    max-width: 1200px;       /* You can reduce to 1100, 1000, etc. */
+    margin: 0 auto;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+/* Cards */
+.app-card {
+    text-align: center;
+}
+
+.app-card img {
+    width: 100%;
+    height: auto;
+    max-width: 180px;  /* Control image size */
+    margin: 0 auto;
+    display: block;
+}
+
+.app-card h4 {
+    margin-top: 12px;
+    font-size: 18px;
+    color: #0A1A44;
+    font-weight: 600;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+    .container-app {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 575px) {
+    .container-app {
+        grid-template-columns: 1fr;
+    }
+
+    .app-card img {
+        max-width: 140px;
+    }
+}
+

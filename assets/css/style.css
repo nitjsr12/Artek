@@ -20441,6 +20441,7 @@ span.select2-selection.select2-selection--single:focus {
 
 .app-card h4 {
     margin-top: 15px;
+    margin-bottom: 15px;
     font-size: 25px;
     font-weight: 600;
      color: var(--white-color);

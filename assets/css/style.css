@@ -20417,27 +20417,85 @@ span.select2-selection.select2-selection--single:focus {
 
 /*# sourceMappingURL=style.css.map */
 
-/* application */
 
-.grid4 {
-    display: grid !important;
-    grid-template-columns: repeat(4, 1fr) !important;
-    gap: 40px !important;
-    width: 100%;
+/*=================================
+    06. Application Section*/
+
+/* === Grid Container === */
+.container-app {
+    max-width: 1100px;       /* smaller, not edge-to-edge */
+    margin: 0 auto;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+/* === Cards === */
+.app-card {
     text-align: center;
+    margin-bottom: 40;
 }
 
-.card img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
+.app-card img {
+    width: 100%;
+    height: auto;
+    max-width: 260px;   /* reduces card size for all devices */
+    margin: 0 auto;
+    display: block;
+    border-radius: 15px;
 }
 
-.card p {
-    color: #fff;
-    margin-top: 10px;
+.app-card h4 {
+    margin-top: 12px;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* === RESPONSIVE === */
+
+/* Tablets (3 columns) */
+@media (max-width: 1024px) {
+    .container-app {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Mobile Large (2 columns) */
+@media (max-width: 768px) {
+    .container-app {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile Small (1 column) */
+@media (max-width: 480px) {
+    .container-app {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .app-card img {
+        max-width: 220px;
+    }
 }
 
 
+/* RESPONSIVE */
+@media (max-width: 991px) {
+    .container-app {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
+@media (max-width: 575px) {
+    .container-app {
+        grid-template-columns: 1fr;
+    }
+
+    .app-card img {
+        max-width: 140px;
+    }
+}
 

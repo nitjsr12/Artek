@@ -20421,7 +20421,7 @@ span.select2-selection.select2-selection--single:focus {
 .application-section .app-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 items in each row */
-    gap: 40px; /* space between cards */
+    gap: 10px; /* space between cards */
     padding: 40px 0;
     max-width: 1200px;
     margin: 0 auto; /* center grid */
@@ -20434,7 +20434,7 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .application-section .app-card img {
-    width: 50px;
+    width: 100px;
     height: auto !important;
     object-fit: contain !important;
 }

@@ -20418,6 +20418,30 @@ span.select2-selection.select2-selection--single:focus {
 /*# sourceMappingURL=style.css.map */
 
 /* application */
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.category-item img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.category-item h4 {
+    text-align: center;
+    margin-top: 10px;
+    color: #fff;
+}
+
+
 .application-section .app-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 items in each row */

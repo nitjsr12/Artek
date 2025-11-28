@@ -20422,85 +20422,24 @@ span.select2-selection.select2-selection--single:focus {
     06. Application Section*/
 
 /* === Grid Container === */
-.application-grid {
+/* FORCE the application grid to override theme flex/row styles */
+#service-sec .application-grid {
     display: grid !important;
-    grid-template-columns: repeat(4, 1fr) !important;
-    gap: 40px !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 30px !important;
     width: 100% !important;
+    padding-top: 40px;
 }
 
-/* FORCE cards to behave like grid items */
-.application-grid .application-card {
-    width: 100% !important;
-    display: block !important;
+/* Make sure cards don't inherit row/column flex rules */
+#service-sec .application-grid .application-card {
     float: none !important;
-    margin: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    flex: 0 0 auto !important;
 }
-
-.application-grid > * {
-    grid-column: auto !important;
-}
-
-
-
-/* Each card */
-.application-card {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Image */
-.application-img {
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-    border-radius: 20px 20px 0 0;
-}
-
-/* White box */
-.application-info {
-    background: #fff;
-    padding: 40px 20px 30px;
-    text-align: center;
-    border-radius: 20px;
-    margin-top: -50px;
-    position: relative;
-}
-
-/* Circle icon */
-.application-icon {
-    width: 90px;
-    height: 90px;
-    background: #001f4d;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: -70px auto 20px;
-}
-
-.application-icon img {
-    width: 42px;
-}
-
-.application-info h3 {
-    font-size: 20px;
-    color: #001f4d;
-    font-weight: 700;
-}
-
-
-/* Responsive */
-@media(max-width: 1024px) {
-    .application-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media(max-width: 600px) {
-    .application-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
+#service-sec .application-grid .application-card .card-content {
+    padding: 20px !important;
 }
 
 

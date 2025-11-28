@@ -20423,11 +20423,12 @@ span.select2-selection.select2-selection--single:focus {
 
 /* === Grid Container === */
 .application-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
     gap: 40px;
-    padding: 40px 0;
+    width: 100% !important;
 }
+
 
 /* Each card */
 .application-card {

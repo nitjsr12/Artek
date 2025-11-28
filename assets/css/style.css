@@ -20422,52 +20422,23 @@ span.select2-selection.select2-selection--single:focus {
 .category-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
-    justify-items: center;
-    align-items: center;
+    gap: 50px;
     margin-top: 40px;
+    text-align: center;
 }
 
-.category-item img {
-    width: 120px;
-    height: 120px;
+.cat-box img {
+    width: 130px;
+    height: 130px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 6px;
 }
 
-.category-item h4 {
-    text-align: center;
+.cat-box h4 {
+    color: #fff;
     margin-top: 10px;
-    color: #fff;
-}
-
-
-.application-section .app-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 items in each row */
-    gap: 10px; /* space between cards */
-    padding: 40px 0;
-    max-width: 1200px;
-    margin: 0 auto; /* center grid */
-}
-
-.application-section .app-card {
-    text-align: center;
-    margin-bottom: 40;
-
-}
-
-.application-section .app-card img {
-    width: 100px;
-    height: auto !important;
-    object-fit: contain !important;
-}
-
-}
-
-.application-section .app-card h4 {
-    margin-top: 15px;
     font-size: 20px;
-    color: #fff;
+    font-weight: 600;
 }
+
 

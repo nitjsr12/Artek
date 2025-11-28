@@ -20419,26 +20419,28 @@ span.select2-selection.select2-selection--single:focus {
 
 /* application */
 
-.category-grid {
+.grid-4x2 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 50px;
-    margin-top: 40px;
+    gap: 40px;
     text-align: center;
+    width: 100%;
+    margin: 40px auto;
 }
 
-.cat-box img {
-    width: 130px;
-    height: 130px;
+.grid-4x2 .item img {
+    width: 140px;
+    height: 140px;
     object-fit: cover;
     border-radius: 6px;
 }
 
-.cat-box h4 {
-    color: #fff;
+.grid-4x2 .item p {
+    color: #fff; /* change if needed */
     margin-top: 10px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
 }
+
 
 

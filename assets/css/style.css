@@ -20424,10 +20424,23 @@ span.select2-selection.select2-selection--single:focus {
 /* === Grid Container === */
 .application-grid {
     display: grid !important;
-    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-    gap: 40px;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 40px !important;
     width: 100% !important;
 }
+
+/* FORCE cards to behave like grid items */
+.application-grid .application-card {
+    width: 100% !important;
+    display: block !important;
+    float: none !important;
+    margin: 0 !important;
+}
+
+.application-grid > * {
+    grid-column: auto !important;
+}
+
 
 
 /* Each card */

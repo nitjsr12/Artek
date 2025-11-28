@@ -20434,7 +20434,7 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .application-section .app-card img {
-    width: 100%;
+    width: 50px;
     height: auto !important;
     object-fit: contain !important;
 }

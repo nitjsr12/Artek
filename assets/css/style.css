@@ -20400,20 +20400,24 @@ span.select2-selection.select2-selection--single:focus {
 } */
 
 
-/* .video-fullwidth {
-  width: 100vw;
-  height: auto;
-  position: relative;
-  margin-left: calc(-50vw + 50%);
-  overflow: hidden;
+/* Full-width responsive video section */
+.fullwidth-video-wrapper {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    overflow: visible;
+    margin-top: 20px; /* adjust as needed */
 }
 
-/* .video-fullwidth video {
-  width: 50;
-  height: 10px;
-  display: block;
-  object-fit: cover;
-} */ */
+.fullwidth-video-wrapper video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    object-fit: cover;
+}
+
 
 /*# sourceMappingURL=style.css.map */
 

@@ -20419,28 +20419,25 @@ span.select2-selection.select2-selection--single:focus {
 
 /* application */
 
-.grid-4x2 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
-    text-align: center;
+.grid4 {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 40px !important;
     width: 100%;
-    margin: 40px auto;
+    text-align: center;
 }
 
-.grid-4x2 .item img {
-    width: 140px;
-    height: 140px;
+.card img {
+    width: 150px;
+    height: 150px;
     object-fit: cover;
-    border-radius: 6px;
 }
 
-.grid-4x2 .item p {
-    color: #fff; /* change if needed */
+.card p {
+    color: #fff;
     margin-top: 10px;
-    font-size: 18px;
-    font-weight: 600;
 }
+
 
 
 

@@ -6493,10 +6493,11 @@ ol.wp-block-rss {
           mask-size: 100% 100%;
 }
 
-/* Change only FAQ text color */
-.header-top .header-links ul li:first-child a {
-    color: var(--yellow-color) !important;   /* your preferred color */
+/* Change all top header link colors */
+.header-top .header-links ul li a {
+    color: var(--yellow-color) !important;
 }
+
 
 .header-layout1 .menu-area {
   --body-bg: var(--white-color);

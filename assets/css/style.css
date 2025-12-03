@@ -6520,6 +6520,10 @@ ol.wp-block-rss {
   /* Medium Large devices */
 }
 
+.header-layout1 .main-menu {
+  margin-left: -20px !important;
+}
+
 .header-layout1 .menu-area:before, .header-layout1 .menu-area:after {
   content: url('data:image/svg+xml,<svg width="30" height="16" viewBox="0 0 30 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M30 16H0L12.9599 11.4922C19.5401 9.20344 25.4122 5.24315 30 0V16Z" fill="%23101840"/></svg>');
   position: absolute;
@@ -6702,11 +6706,10 @@ ol.wp-block-rss {
 }
 
 .header-layout2 .main-menu {
-  margin-left: -40px !important;
+  margin-left: 80px !important;
 }
 
 .header-layout2 .main-menu > ul > li > a {
-  margin-left: -40px !important;
   padding: 18px 0;
   color: var(--white-color);
 }

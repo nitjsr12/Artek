@@ -6498,6 +6498,16 @@ ol.wp-block-rss {
     color: var(--yellow-color) !important;
 }
 
+/* Reduce spacing between top header links */
+.header-top .header-links ul li {
+    margin-right: 8px !important;   /* adjust value (default may be 15–20px) */
+}
+
+.header-top .header-links ul li a {
+    padding: 2px 5px !important;    /* tighter inner spacing */
+}
+
+
 
 .header-layout1 .menu-area {
   --body-bg: var(--white-color);

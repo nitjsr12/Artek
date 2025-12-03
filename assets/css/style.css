@@ -6495,7 +6495,7 @@ ol.wp-block-rss {
 
 /* Change only FAQ text color */
 .header-top .header-links ul li:first-child a {
-    color: var(--title-color) !important;   /* your preferred color */
+    color: var(--yellow-color) !important;   /* your preferred color */
 }
 
 .header-layout1 .menu-area {

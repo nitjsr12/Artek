@@ -6499,7 +6499,7 @@ ol.wp-block-rss {
 }
 
 .header-layout1 .menu-area {
-  --body-bg: var(--yellow-color);
+  --body-bg: var(--white-color);
   position: relative;
   z-index: 2;
   background-color: var(--body-bg);

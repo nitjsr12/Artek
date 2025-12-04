@@ -6697,7 +6697,7 @@ ol.wp-block-rss {
 /* If menu still shifting right, pull it left */
 .header-layout1 .main-menu {
     position: relative !important;
-    left: 50px !important;   /* adjust: -20px, -40px, -80px depending on how left you want */
+    left: 200px !important;   /* adjust: -20px, -40px, -80px depending on how left you want */
 }
 
 

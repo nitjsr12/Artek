@@ -19532,11 +19532,14 @@ span.select2-selection.select2-selection--single:focus {
     font-size: 18px;         /* smaller title */
 }
 
-#project-sec-quality .box-img img {
-    mix-blend-mode: multiply;
-    background: transparent !important;
+   #project-sec-quality .row {
+    justify-content: center !important;  /* center the columns */
 }
 
+#project-sec-quality .project-grid {
+    margin-left: auto;
+    margin-right: auto;  /* center each card */
+}
 
 /*------------------- 4.00. Process -------------------*/
 /* Process Card ---------------------------------- */

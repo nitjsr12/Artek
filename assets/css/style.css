@@ -19548,6 +19548,25 @@ span.select2-selection.select2-selection--single:focus {
     gap: 10px;   /* spacing between cards — adjust as needed */
     flex-wrap: wrap;
 }
+/* Center the certificate cards */
+#project-sec-quality .filter-active {
+    display: flex !important;
+    justify-content: center !important;   /* Centers all 3 cards */
+    align-items: flex-start;
+    gap: 40px;   /* spacing between cards */
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Disable Bootstrap column width so cards center properly */
+#project-sec-quality .filter-active .col-xxl-3,
+#project-sec-quality .filter-active .col-lg-4,
+#project-sec-quality .filter-active .col-md-6 {
+    flex: 0 0 auto; 
+    width: auto;
+    padding: 0;
+}
+
 
 /*------------------- 4.00. Process -------------------*/
 /* Process Card ---------------------------------- */

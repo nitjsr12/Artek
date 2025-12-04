@@ -19545,7 +19545,7 @@ span.select2-selection.select2-selection--single:focus {
     display: flex !important;
     justify-content: center !important;   /* center horizontally */
     align-items: center;
-    gap: 40px;   /* spacing between cards — adjust as needed */
+    gap: 10px;   /* spacing between cards — adjust as needed */
     flex-wrap: wrap;
 }
 

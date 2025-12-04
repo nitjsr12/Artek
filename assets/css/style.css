@@ -19517,6 +19517,29 @@ span.select2-selection.select2-selection--single:focus {
   z-index: 2;
 }
 
+/* Reduce card size */
+#project-sec-quality .project-grid {
+    max-width: 230px;        /* smaller card width */
+    margin: 0 auto;          /* center the cards */
+}
+
+/* Reduce image size inside the cards */
+#project-sec-quality .project-grid .box-img img {
+    height: auto;
+    max-height: 120px;       /* reduce height */
+    object-fit: contain;
+}
+
+/* Optional: tighten spacing */
+#project-sec-quality .project-grid .box-content {
+    padding: 10px 0;
+}
+
+#project-sec-quality .box-title {
+    font-size: 18px;         /* smaller title */
+}
+
+
 .process-card .box-number {
   font-size: 18px;
   font-family: var(--title-font);

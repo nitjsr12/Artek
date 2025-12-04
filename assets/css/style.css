@@ -6540,6 +6540,18 @@ ol.wp-block-rss {
           transform: rotateY(180deg);
 }
 
+/* Align menu to the left */
+.header-layout1 .main-menu > ul {
+    justify-content: flex-start !important;
+    text-align: left !important;
+}
+
+/* Remove negative left offset */
+.header-layout1 .main-menu {
+    margin-left: 0 !important;
+}
+
+
 @media (max-width: 1299px) {
   .header-layout1 .menu-area {
     border-radius: 0 0 18px 18px;

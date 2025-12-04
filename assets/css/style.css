@@ -6531,11 +6531,11 @@ ol.wp-block-rss {
 }
 
 .header-layout1 .menu-area:before {
-  left: -30px;
+  left: -80px;
 }
 
 .header-layout1 .menu-area:after {
-  right: -30px;
+  right: -80px;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }

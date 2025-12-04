@@ -19507,16 +19507,9 @@ span.select2-selection.select2-selection--single:focus {
 @media (max-width: 575px) {
   .project-nav .media-body {
     display: none;
-  }
-}
+  }}
 
-/*------------------- 4.00. Process -------------------*/
-/* Process Card ---------------------------------- */
-.process-card {
-  position: relative;
-  z-index: 2;
-}
-
+/*------------------- 4.01. Quality -------------------*/
 /* Reduce card size */
 #project-sec-quality .project-grid {
     max-width: 230px;        /* smaller card width */
@@ -19537,6 +19530,20 @@ span.select2-selection.select2-selection--single:focus {
 
 #project-sec-quality .box-title {
     font-size: 18px;         /* smaller title */
+}
+
+#project-sec-quality .box-img img {
+    mix-blend-mode: multiply;
+    background: transparent !important;
+}
+
+
+/*------------------- 4.00. Process -------------------*/
+/* Process Card ---------------------------------- */
+.process-card {
+  position: relative;
+  z-index: 2;
+
 }
 
 

@@ -6700,6 +6700,21 @@ ol.wp-block-rss {
     left: 200px !important;   /* adjust: -20px, -40px, -80px depending on how left you want */
 }
 
+.the-social a i {
+    color: #ffffff !important;  /* icon color */
+}
+
+.the-social a {
+    background: transparent;    /* remove white circle if you want */
+    border: none;
+}
+
+.the-social a:hover i {
+    color: #f0c353 !important;  /* hover color (gold) */
+}
+
+
+
 
 /* Header 2 ---------------------------------- */
 .header-layout2 {

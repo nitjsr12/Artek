@@ -19541,6 +19541,14 @@ span.select2-selection.select2-selection--single:focus {
     margin-right: auto;  /* center each card */
 }
 
+#project-sec-quality .filter-active {
+    display: flex !important;
+    justify-content: center !important;   /* center horizontally */
+    align-items: center;
+    gap: 40px;   /* spacing between cards — adjust as needed */
+    flex-wrap: wrap;
+}
+
 /*------------------- 4.00. Process -------------------*/
 /* Process Card ---------------------------------- */
 .process-card {

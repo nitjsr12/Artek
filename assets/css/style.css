@@ -6705,7 +6705,7 @@ ol.wp-block-rss {
 }
 
 .the-social a {
-    background: transparent;    /* remove white circle if you want */
+    background: var(--theme-color);    /* remove white circle if you want */
     border: none;
 }
 

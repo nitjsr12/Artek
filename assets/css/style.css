@@ -6713,6 +6713,15 @@ ol.wp-block-rss {
     color: #f0c353 !important;  /* hover color (gold) */
 }
 
+.the-social a {
+    margin-right: 12px;   /* increase or reduce this value */
+}
+
+.the-social a:last-child {
+    margin-right: 0;      /* remove gap after last icon */
+}
+
+
 
 
 

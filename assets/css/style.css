@@ -6675,6 +6675,32 @@ ol.wp-block-rss {
   }
 }
 
+/* FORCE MENU TO LEFT */
+.header-layout1 .menu-area .main-menu {
+    margin-left: 0 !important;
+    justify-content: flex-start !important;
+}
+
+/* Force UL to align left */
+.header-layout1 .main-menu > ul {
+    display: flex !important;
+    justify-content: flex-start !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+/* Remove any auto-centering done by theme */
+.header-layout1 .menu-area .row {
+    justify-content: flex-start !important;
+}
+
+/* If menu still shifting right, pull it left */
+.header-layout1 .main-menu {
+    position: relative !important;
+    left: -60px !important;   /* adjust: -20px, -40px, -80px depending on how left you want */
+}
+
+
 /* Header 2 ---------------------------------- */
 .header-layout2 {
   position: absolute;

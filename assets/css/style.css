@@ -9390,7 +9390,7 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
 
 /* Move hero text upward */
 .hero-style1 {
-    margin-top: -60px !important;  /* adjust value as needed */
+    margin-top: -10px !important;  /* adjust value as needed */
 }
 
 

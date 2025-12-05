@@ -9391,6 +9391,7 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
 
 
 
+
 .hero-style1 .hero-subtitle {
   margin-bottom: 35px;
 }
@@ -9483,6 +9484,11 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
     font-size: 28px;
   }
 }
+
+.hero-title {
+    margin-top: -40px !important;
+}
+
 
 /* Hero 2 ---------------------------------- */
 .hero-2 {

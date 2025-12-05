@@ -9398,6 +9398,7 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
 
 .hero-style1 .hero-title {
   color: var(--white-color);
+  margin-top: -100px !important;
 }
 
 .hero-style1 .hero-text {
@@ -9485,9 +9486,7 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
   }
 }
 
-.hero-title {
-    margin-top: -100px !important;
-}
+
 
 
 /* Hero 2 ---------------------------------- */

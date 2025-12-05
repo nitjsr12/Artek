@@ -9486,7 +9486,7 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
 }
 
 .hero-title {
-    margin-top: -60px !important;
+    margin-top: -100px !important;
 }
 
 

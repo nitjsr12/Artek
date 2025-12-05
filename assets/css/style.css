@@ -9388,10 +9388,7 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
   margin: 316px 0 180px 0;
 }
 
-/* Move hero text upward */
-.hero-style1 {
-    margin-top: -1px !important;  /* adjust value as needed */
-}
+
 
 
 .hero-style1 .hero-subtitle {

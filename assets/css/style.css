@@ -9298,7 +9298,7 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
 .hero-1 .hero-img {
   position: absolute;
   bottom: 0;
-  right: 7%;
+  right: 100%;
   z-index: 3;
   width: 100%;
   max-width: 744px;
@@ -9313,7 +9313,7 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
   content: '';
   position: absolute;
   bottom: 36px;
-  right: 15%;
+  right: 108%;
   width: 255px;
   height: 255px;
   background-color: rgba(255, 255, 255, 0.15);

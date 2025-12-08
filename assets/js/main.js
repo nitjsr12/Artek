@@ -1020,5 +1020,22 @@
     //       return false;
     //     }
     //   }
+
+
+document.querySelectorAll(".product-card").forEach(card => {
+  const tabs = card.querySelectorAll(".tab");
+  const panes = card.querySelectorAll(".tab-pane");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      tabs.forEach(t => t.classList.remove("active"));
+      panes.forEach(p => p.classList.remove("active"));
+
+      tab.classList.add("active");
+      card.querySelector("#" + tab.dataset.tab).classList.add("active");
+    });
+  });
+});
+
     
 })(jQuery);

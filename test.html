@@ -1,67 +1,135 @@
-<!-- SWIPER -->
-<div class="swiper product-slider">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Spray Cleaner — Product Card</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Small helper styles to preserve focus visibility if none provided */
+    .tab:focus { outline: 3px solid Highlight; outline-offset: 2px; }
+    .tab[aria-selected="true"] { font-weight:600; }
+    .tab-pane { display:none; }
+    .tab-pane.active { display:block; }
+  </style>
+</head>
+<body>
+
+<!-- Products carousel (single card sample) -->
+<section class="swiper product-slider" aria-label="Products carousel">
   <div class="swiper-wrapper">
 
-    <!-- CARD -->
-    <div class="swiper-slide">
-      <div class="product-card">
+    <article class="swiper-slide product-card" aria-labelledby="card-title-04">
 
-        <span class="card-number">04</span>
-        <div class="card-icon">🧪</div>
+      <span class="card-number">04</span>
+      <div class="card-icon" aria-hidden="true">🧪</div>
 
-        <h3 class="card-title">Spray Cleaner</h3>
+      <h3 class="card-title" id="card-title-04">Spray Cleaner</h3>
 
-        <div class="card-meta">
-          <span>N/A</span>
-          <span>Chemical</span>
-          <span>50+ Processes</span>
+      <div class="card-meta">
+        <span>N/A</span>
+        <span>Chemical</span>
+        <span>50+ Processes</span>
+      </div>
+
+      <!-- Accessible tabs -->
+      <div class="tabs" role="tablist" aria-label="Product details">
+        <button class="tab active" role="tab" id="tab-overview-04" aria-controls="panel-overview-04" aria-selected="true" data-tab="overview" type="button">Overview</button>
+        <button class="tab" role="tab" id="tab-benefits-04" aria-controls="panel-benefits-04" aria-selected="false" data-tab="benefits" type="button">Benefits</button>
+        <button class="tab" role="tab" id="tab-applications-04" aria-controls="panel-applications-04" aria-selected="false" data-tab="applications" type="button">Applications</button>
+      </div>
+
+      <!-- Tab panels -->
+      <div class="tab-content">
+
+        <div class="tab-pane active" role="tabpanel" id="panel-overview-04" aria-labelledby="tab-overview-04" tabindex="0">
+          <ul>
+            <li>Heavy-duty chelated alkaline cleaner</li>
+            <li>Removes oils, grease &amp; oxidation</li>
+            <li>Suitable for spray &amp; immersion cleaning</li>
+          </ul>
         </div>
 
-        <!-- Tabs -->
-        <div class="tabs">
-          <button class="tab active" data-tab="overview">Overview</button>
-          <button class="tab" data-tab="benefits">Benefits</button>
-          <button class="tab" data-tab="applications">Applications</button>
+        <div class="tab-pane" role="tabpanel" id="panel-benefits-04" aria-labelledby="tab-benefits-04" tabindex="0" hidden>
+          <ul>
+            <li>Improves surface activation</li>
+            <li>Long bath life</li>
+            <li>Uniform cleaning</li>
+          </ul>
         </div>
 
-        <!-- Scrollable Content -->
-        <div class="tab-content">
-
-          <div class="tab-pane active" id="overview">
-            <ul>
-              <li>Heavy-duty chelated alkaline cleaner</li>
-              <li>Removes oils, grease & oxidation</li>
-              <li>Suitable for spray & immersion cleaning</li>
-            </ul>
-          </div>
-
-          <div class="tab-pane" id="benefits">
-            <ul>
-              <li>Improves surface activation</li>
-              <li>Long bath life</li>
-              <li>Uniform cleaning</li>
-            </ul>
-          </div>
-
-          <div class="tab-pane" id="applications">
-            <ul>
-              <li>Steel components</li>
-              <li>Automotive parts</li>
-              <li>Industrial fabrication</li>
-            </ul>
-          </div>
-
-        </div>
-
-        <!-- Actions -->
-        <div class="card-actions">
-          <a href="#">View Full Details</a>
-          <button>Request Sample</button>
+        <div class="tab-pane" role="tabpanel" id="panel-applications-04" aria-labelledby="tab-applications-04" tabindex="0" hidden>
+          <ul>
+            <li>Steel components</li>
+            <li>Automotive parts</li>
+            <li>Industrial fabrication</li>
+          </ul>
         </div>
 
       </div>
-    </div>
+
+      <!-- Actions -->
+      <div class="card-actions">
+        <a href="#" class="btn btn-primary" aria-label="View full details for Spray Cleaner">View Full Details</a>
+        <button type="button" class="btn" aria-label="Request sample for Spray Cleaner">Request Sample</button>
+      </div>
+
+    </article>
 
   </div>
-  <div class="swiper-pagination"></div>
-</div>
+  <div class="swiper-pagination" aria-hidden="true"></div>
+</section>
+
+<!-- Accessible tab-switching script: minimal, self-contained -->
+<script>
+  (function(){
+    const tablist = document.querySelector('.tabs[role="tablist"]');
+    if(!tablist) return;
+
+    const tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
+
+    function getPanel(tab){
+      return document.getElementById(tab.getAttribute('aria-controls'));
+    }
+
+    function activateTab(tab){
+      tabs.forEach(t=>{
+        const selected = t === tab;
+        t.classList.toggle('active', selected);
+        t.setAttribute('aria-selected', selected ? 'true' : 'false');
+        t.tabIndex = selected ? 0 : -1;
+        const panel = getPanel(t);
+        if(!panel) return;
+        panel.classList.toggle('active', selected);
+        if(selected){
+          panel.hidden = false;
+        } else {
+          panel.hidden = true;
+        }
+      });
+      tab.focus();
+    }
+
+    tabs.forEach((tab, index)=>{
+      tab.addEventListener('click', ()=> activateTab(tab));
+
+      tab.addEventListener('keydown', (e)=>{
+        let newIndex = index;
+        if(e.key === 'ArrowRight') newIndex = (index + 1) % tabs.length;
+        else if(e.key === 'ArrowLeft') newIndex = (index - 1 + tabs.length) % tabs.length;
+        else if(e.key === 'Home') newIndex = 0;
+        else if(e.key === 'End') newIndex = tabs.length - 1;
+        else return;
+        e.preventDefault();
+        activateTab(tabs[newIndex]);
+      });
+    });
+
+    // Ensure initial state matches ARIA attributes (useful if server-side rendered)
+    const initial = tabs.find(t => t.getAttribute('aria-selected') === 'true') || tabs[0];
+    if(initial) activateTab(initial);
+  })();
+</script>
+
+</body>
+</html>

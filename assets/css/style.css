@@ -20601,3 +20601,114 @@ span.select2-selection.select2-selection--single:focus {
     margin-bottom: 40px;
 }
 
+.product-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 22px;
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.card-number {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  border: 2px solid #10a28c;
+  border-radius: 50%;
+  padding: 6px 10px;
+  font-size: 12px;
+  color: #10a28c;
+}
+
+.card-icon {
+  text-align: center;
+  font-size: 32px;
+  color: #10a28c;
+  margin-bottom: 12px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.card-meta {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  font-size: 12px;
+  margin: 10px 0;
+  color: #666;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #eee;
+  margin-top: 12px;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  color: #888;
+}
+
+.tab.active {
+  color: #10a28c;
+  border-bottom: 2px solid #10a28c;
+}
+
+/* Content */
+.tab-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px 4px;
+}
+
+.tab-content ul {
+  padding-left: 18px;
+}
+
+.tab-content li {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+/* Buttons */
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-actions a {
+  font-size: 13px;
+  color: #10a28c;
+  text-decoration: none;
+}
+
+.card-actions button {
+  background: #10a28c;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+}

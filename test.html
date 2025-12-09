@@ -3,131 +3,177 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Spray Cleaner — Product Card</title>
+  <title>Products Slider — 4 Cards</title>
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
-    /* Small helper styles to preserve focus visibility if none provided */
-    .tab:focus { outline: 3px solid Highlight; outline-offset: 2px; }
-    .tab[aria-selected="true"] { font-weight:600; }
-    .tab-pane { display:none; }
-    .tab-pane.active { display:block; }
+    /* Slider & card layout */
+    .product-slider { padding: 1rem; }
+    .swiper-wrapper { gap: 1rem; }
+    .swiper-slide { display: flex; align-items: stretch; }
+    .product-card {
+      box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+      border-radius: 6px;
+      padding: 1rem;
+      background:#fff;
+      display:flex;
+      flex-direction:column;
+      width:100%;
+      /* fixed height so all cards match — tweak as needed */
+      height:360px;
+      box-sizing:border-box;
+    }
+
+    .card-header { margin-bottom: 0.5rem; }
+    .card-title { font-size:1.05rem; margin:0; }
+    .card-sub { color:#666; font-size:0. ninerem; margin-top:4px }
+
+    .card-body { flex:1 1 auto; display:flex; flex-direction:column; gap:0.5rem; }
+
+    /* Pointers container is scrollable independently */
+    .pointers {
+      overflow:auto;
+      padding-right: 0.5rem; /* give room for scrollbar */
+      margin:0;
+      list-style: disc inside;
+      flex: 1 1 auto;
+    }
+
+    .pointers li { margin: 0.25rem 0; }
+
+    .card-actions { margin-top: 0.75rem; display:flex; gap:0.5rem; }
+
+    /* Make Swiper controls visible on top of content where available */
+    .swiper-button-next, .swiper-button-prev { color: #222; }
+
+    /* Small responsive tweaks */
+    @media (max-width:900px){ .product-card{ height: 420px; } }
+    @media (max-width:480px){ .product-card{ height: auto; } .pointers{ max-height:140px; } }
   </style>
 </head>
 <body>
 
-<!-- Products carousel (single card sample) -->
-<section class="swiper product-slider" aria-label="Products carousel">
+<section class="product-slider swiper" aria-label="Products carousel">
   <div class="swiper-wrapper">
 
-    <article class="swiper-slide product-card" aria-labelledby="card-title-04">
-
-      <span class="card-number">04</span>
-      <div class="card-icon" aria-hidden="true">🧪</div>
-
-      <h3 class="card-title" id="card-title-04">Spray Cleaner</h3>
-
-      <div class="card-meta">
-        <span>N/A</span>
-        <span>Chemical</span>
-        <span>50+ Processes</span>
-      </div>
-
-      <!-- Accessible tabs -->
-      <div class="tabs" role="tablist" aria-label="Product details">
-        <button class="tab active" role="tab" id="tab-overview-04" aria-controls="panel-overview-04" aria-selected="true" data-tab="overview" type="button">Overview</button>
-        <button class="tab" role="tab" id="tab-benefits-04" aria-controls="panel-benefits-04" aria-selected="false" data-tab="benefits" type="button">Benefits</button>
-        <button class="tab" role="tab" id="tab-applications-04" aria-controls="panel-applications-04" aria-selected="false" data-tab="applications" type="button">Applications</button>
-      </div>
-
-      <!-- Tab panels -->
-      <div class="tab-content">
-
-        <div class="tab-pane active" role="tabpanel" id="panel-overview-04" aria-labelledby="tab-overview-04" tabindex="0">
-          <ul>
-            <li>Heavy-duty chelated alkaline cleaner</li>
-            <li>Removes oils, grease &amp; oxidation</li>
-            <li>Suitable for spray &amp; immersion cleaning</li>
-          </ul>
+    <!-- Slide 1 -->
+    <article class="swiper-slide product-card" aria-labelledby="title-1">
+      <header class="card-header">
+        <h3 class="card-title" id="title-1">Card One</h3>
+        <div class="card-sub">Subheading A</div>
+      </header>
+      <div class="card-body">
+        <ul class="pointers" aria-label="Key points for card one">
+          <li>Pointer 1</li>
+          <li>Pointer 2</li>
+          <li>Pointer 3</li>
+          <li>Pointer 4</li>
+          <li>Pointer 5</li>
+          <li>Pointer 6</li>
+          <li>Pointer 7</li>
+        </ul>
+        <div class="card-actions">
+          <a class="btn" href="#">Details</a>
+          <button type="button" class="btn">Request</button>
         </div>
-
-        <div class="tab-pane" role="tabpanel" id="panel-benefits-04" aria-labelledby="tab-benefits-04" tabindex="0" hidden>
-          <ul>
-            <li>Improves surface activation</li>
-            <li>Long bath life</li>
-            <li>Uniform cleaning</li>
-          </ul>
-        </div>
-
-        <div class="tab-pane" role="tabpanel" id="panel-applications-04" aria-labelledby="tab-applications-04" tabindex="0" hidden>
-          <ul>
-            <li>Steel components</li>
-            <li>Automotive parts</li>
-            <li>Industrial fabrication</li>
-          </ul>
-        </div>
-
       </div>
+    </article>
 
-      <!-- Actions -->
-      <div class="card-actions">
-        <a href="#" class="btn btn-primary" aria-label="View full details for Spray Cleaner">View Full Details</a>
-        <button type="button" class="btn" aria-label="Request sample for Spray Cleaner">Request Sample</button>
+    <!-- Slide 2 -->
+    <article class="swiper-slide product-card" aria-labelledby="title-2">
+      <header class="card-header">
+        <h3 class="card-title" id="title-2">Card Two</h3>
+        <div class="card-sub">Subheading B</div>
+      </header>
+      <div class="card-body">
+        <ul class="pointers" aria-label="Key points for card two">
+          <li>Alpha</li>
+          <li>Beta</li>
+          <li>Gamma</li>
+        </ul>
+        <div class="card-actions">
+          <a class="btn" href="#">Details</a>
+          <button type="button" class="btn">Request</button>
+        </div>
       </div>
+    </article>
 
+    <!-- Slide 3 -->
+    <article class="swiper-slide product-card" aria-labelledby="title-3">
+      <header class="card-header">
+        <h3 class="card-title" id="title-3">Card Three</h3>
+        <div class="card-sub">Subheading C</div>
+      </header>
+      <div class="card-body">
+        <ul class="pointers" aria-label="Key points for card three">
+          <li>Item A</li>
+          <li>Item B</li>
+          <li>Item C</li>
+          <li>Item D</li>
+          <li>Item E</li>
+        </ul>
+        <div class="card-actions">
+          <a class="btn" href="#">Details</a>
+          <button type="button" class="btn">Request</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Slide 4 -->
+    <article class="swiper-slide product-card" aria-labelledby="title-4">
+      <header class="card-header">
+        <h3 class="card-title" id="title-4">Card Four</h3>
+        <div class="card-sub">Subheading D</div>
+      </header>
+      <div class="card-body">
+        <ul class="pointers" aria-label="Key points for card four">
+          <li>Point one</li>
+          <li>Point two</li>
+        </ul>
+        <div class="card-actions">
+          <a class="btn" href="#">Details</a>
+          <button type="button" class="btn">Request</button>
+        </div>
+      </div>
     </article>
 
   </div>
-  <div class="swiper-pagination" aria-hidden="true"></div>
+
+  <!-- Pagination + nav -->
+  <div class="swiper-pagination" aria-hidden="false"></div>
+  <div class="swiper-button-prev" aria-hidden="true"></div>
+  <div class="swiper-button-next" aria-hidden="true"></div>
 </section>
 
-<!-- Accessible tab-switching script: minimal, self-contained -->
+<!-- Load Swiper local file if present, otherwise fall back to CDN -->
 <script>
   (function(){
-    const tablist = document.querySelector('.tabs[role="tablist"]');
-    if(!tablist) return;
-
-    const tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
-
-    function getPanel(tab){
-      return document.getElementById(tab.getAttribute('aria-controls'));
+    function addScript(src, cb){
+      const s = document.createElement('script'); s.src = src; s.onload = cb; s.onerror = cb; document.head.appendChild(s);
     }
 
-    function activateTab(tab){
-      tabs.forEach(t=>{
-        const selected = t === tab;
-        t.classList.toggle('active', selected);
-        t.setAttribute('aria-selected', selected ? 'true' : 'false');
-        t.tabIndex = selected ? 0 : -1;
-        const panel = getPanel(t);
-        if(!panel) return;
-        panel.classList.toggle('active', selected);
-        if(selected){
-          panel.hidden = false;
-        } else {
-          panel.hidden = true;
+    if(window.Swiper){ initSwiper(); }
+    else {
+      // try local first
+      addScript('assets/js/swiper-bundle.min.js', function(){ if(window.Swiper) initSwiper(); else addScript('https://unpkg.com/swiper@8/swiper-bundle.min.js', initSwiper); });
+    }
+
+    function initSwiper(){
+      if(!window.Swiper) return;
+      new Swiper('.product-slider', {
+        slidesPerView: 4,
+        spaceBetween: 16,
+        loop: false,
+        pagination: { el: '.swiper-pagination', clickable: true },
+        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+        breakpoints: {
+          0: { slidesPerView: 1 },
+          640: { slidesPerView: 2 },
+          900: { slidesPerView: 3 },
+          1200: { slidesPerView: 4 }
         }
       });
-      tab.focus();
     }
-
-    tabs.forEach((tab, index)=>{
-      tab.addEventListener('click', ()=> activateTab(tab));
-
-      tab.addEventListener('keydown', (e)=>{
-        let newIndex = index;
-        if(e.key === 'ArrowRight') newIndex = (index + 1) % tabs.length;
-        else if(e.key === 'ArrowLeft') newIndex = (index - 1 + tabs.length) % tabs.length;
-        else if(e.key === 'Home') newIndex = 0;
-        else if(e.key === 'End') newIndex = tabs.length - 1;
-        else return;
-        e.preventDefault();
-        activateTab(tabs[newIndex]);
-      });
-    });
-
-    // Ensure initial state matches ARIA attributes (useful if server-side rendered)
-    const initial = tabs.find(t => t.getAttribute('aria-selected') === 'true') || tabs[0];
-    if(initial) activateTab(initial);
   })();
 </script>
 

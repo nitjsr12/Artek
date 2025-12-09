@@ -1022,30 +1022,32 @@
     //   }
 
 
-new Swiper('.product-slider', {
-  slidesPerView: 2,          // ✅ ONLY 2 cards at a time
-  spaceBetween: 20,
+new Swiper('.product-slider.swiper', {
+  slidesPerView: 2,
+  spaceBetween: 24,
   loop: false,
-
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true
-  },
+  watchOverflow: true,
 
   navigation: {
     nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
+    prevEl: '.swiper-button-prev',
+  },
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
   },
 
   breakpoints: {
     0: {
-      slidesPerView: 1       // Mobile
+      slidesPerView: 1
     },
     768: {
-      slidesPerView: 2       // Tablet & Desktop
+      slidesPerView: 2
     }
   }
 });
+
 
 
 

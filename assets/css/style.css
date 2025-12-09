@@ -19521,19 +19521,19 @@ span.select2-selection.select2-selection--single:focus {
 /* Reduce card size */
 #project-sec-quality .project-grid {
     max-width: 1000px;        /* smaller card width */
-    margin: 0 auto;          /* center the cards */
+    margin: 50px;          /* center the cards */
 }
 
 /* Reduce image size inside the cards */
 #project-sec-quality .project-grid .box-img img {
     height: auto;
-    max-height: 120px;       /* reduce height */
+    max-height: 500px;       /* reduce height */
     object-fit: contain;
 }
 
 /* Optional: tighten spacing */
 #project-sec-quality .project-grid .box-content {
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
 #project-sec-quality .box-title {

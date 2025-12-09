@@ -1023,19 +1023,30 @@
 
 
 new Swiper('.product-slider', {
-  slidesPerView: 4,
+  slidesPerView: 2,          // ✅ ONLY 2 cards at a time
   spaceBetween: 20,
-  pagination: { el: '.swiper-pagination', clickable: true },
+  loop: false,
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev'
   },
+
   breakpoints: {
-    0: { slidesPerView: 1 },
-    640: { slidesPerView: 2 },
-    1024: { slidesPerView: 4 }
+    0: {
+      slidesPerView: 1       // Mobile
+    },
+    768: {
+      slidesPerView: 2       // Tablet & Desktop
+    }
   }
 });
+
 
 
     

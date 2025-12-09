@@ -19520,7 +19520,7 @@ span.select2-selection.select2-selection--single:focus {
 /*------------------- 4.01. Quality -------------------*/
 /* Reduce card size */
 #project-sec-quality .project-grid {
-    max-width: 230px;        /* smaller card width */
+    max-width: 1000px;        /* smaller card width */
     margin: 0 auto;          /* center the cards */
 }
 

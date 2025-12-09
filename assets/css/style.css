@@ -20714,99 +20714,47 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 
-/* Section */
-.surface-conditioning-section {
-  background: #e9eceb;
-  padding: 100px 0;
-}
-
-.section-header h2 {
-  font-size: 42px;
-  margin-bottom: 10px;
-}
-
-.section-header p {
-  color: #6b6b6b;
-  max-width: 700px;
-  margin: 0 auto 60px;
-}
-
-/* Slider Layout */
-.product-slider {
-  display: flex;
-  gap: 32px;
-  overflow-x: auto;
-}
-
-/* Card */
 .product-card {
-  background: #ffffff;
-  border-radius: 24px;
-  padding: 28px;
-  width: 360px;
-  height: 520px; /* KEY: equal height */
+  height: 360px;
   display: flex;
   flex-direction: column;
-  flex-shrink: 0;
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
 }
 
-/* Header */
-.card-header h3 {
-  font-size: 20px;
-  margin: 12px 0 6px;
+.card-header {
+  margin-bottom: 8px;
 }
 
-.series {
-  font-size: 13px;
-  color: #7a7a7a;
-}
-
-/* Scrollable Content */
-.card-body {
+.product-card__content {
   flex: 1;
-  overflow-y: auto; /* KEY: scroll */
-  margin-top: 16px;
-  padding-right: 8px;
+  overflow-y: auto; /* ✅ ONLY SCROLL HERE */
+  padding-right: 6px;
 }
 
-.card-body ul {
+.product-card__content ul {
+  margin: 8px 0 16px;
   padding-left: 18px;
 }
 
-.card-body li {
-  margin-bottom: 10px;
-  font-size: 14px;
+.series {
+  font-size: 12px;
+  font-weight: 600;
+  color: #666;
+  margin-top: 12px;
+  display: block;
 }
 
-/* Footer */
-.card-footer {
-  margin-top: 20px;
+/* Optional scrollbar styling */
+.product-card__content::-webkit-scrollbar {
+  width: 6px;
 }
-
-.btn {
-  display: inline-block;
-  padding: 10px 22px;
-  border-radius: 30px;
-  background: #0da69f;
-  color: #fff;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-/* Scrollbar Styling */
-.card-body::-webkit-scrollbar {
-  width: 5px;
-}
-
-.card-body::-webkit-scrollbar-thumb {
-  background: #0da69f;
+.product-card__content::-webkit-scrollbar-thumb {
+  background: #14a8a8;
   border-radius: 10px;
 }
-
-/* Mobile */
-@media (max-width: 768px) {
-  .product-card {
-    height: 460px;
-    width: 300px;
-  }
+.product-card__content::-webkit-scrollbar-track {
+  background: #f1f1f1;
 }

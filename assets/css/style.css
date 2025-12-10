@@ -20783,24 +20783,23 @@ body {
   background: #f2f4f8;
 }
 
-.info-wrapper {
+.concept-wrapper {
   text-align: center;
   padding: 40px 0;
   font-family: Arial, sans-serif;
 }
 
-.info-circle {
+.concept-circle {
   width: 380px;
   height: 380px;
-  margin: 40px auto;
+  margin: 30px auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   border-radius: 50%;
   overflow: hidden;
 }
 
-/* Quadrants */
-.info-item {
+.concept {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20808,22 +20807,22 @@ body {
   transition: background 0.4s ease;
 }
 
-.info-content {
+.inner {
   padding: 20px;
   text-align: center;
 }
 
-/* SVG icons */
+/* ICON */
 .icon {
   width: 42px;
   height: 42px;
-  margin-bottom: 8px;
-  color: rgba(255,255,255,0.8);
-  transition: color 0.3s ease, transform 0.3s ease;
+  margin-bottom: 10px;
+  color: rgba(255,255,255,0.7);
+  transition: color 0.3s, transform 0.3s;
 }
 
-/* Subtext hidden */
-.info-content p {
+/* TEXT HIDDEN INITIALLY */
+.inner p {
   opacity: 0;
   max-height: 0;
   overflow: hidden;
@@ -20831,26 +20830,26 @@ body {
   font-size: 14px;
 }
 
-/* Hover effects */
-.info-item:hover p {
+/* HOVER */
+.concept:hover p {
   opacity: 1;
-  max-height: 80px;
+  max-height: 100px;
 }
 
-.info-item:hover .icon {
+.concept:hover .icon {
   color: #fff;
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
 
-/* Colors */
-.item1 { background: #2cc6b0; border-top-left-radius: 100%; }
-.item1:hover { background: #1aa192; }
+/* COLORS */
+.item1 { background: #20bfa9; border-top-left-radius: 100%; }
+.item1:hover { background: #159d8b; }
 
-.item2 { background: #7bd34c; border-top-right-radius: 100%; }
-.item2:hover { background: #5fb234; }
+.item2 { background: #8bd645; border-top-right-radius: 100%; }
+.item2:hover { background: #6fb82d; }
 
-.item3 { background: #4ea1ff; border-bottom-left-radius: 100%; }
-.item3:hover { background: #337fe0; }
+.item3 { background: #4c9cff; border-bottom-left-radius: 100%; }
+.item3:hover { background: #337ad9; }
 
 .item4 { background: #7a6de8; border-bottom-right-radius: 100%; }
-.item4:hover { background: #5b4fd6; }
+.item4:hover { background: #5f51d6; }

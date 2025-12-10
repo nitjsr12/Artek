@@ -1022,31 +1022,25 @@
     //   }
 
 
-new Swiper('.product-slider.swiper', {
+<
+new Swiper('.product-slider', {
   slidesPerView: 2,
-  spaceBetween: 24,
-  loop: false,
-  watchOverflow: true,
-
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
+  spaceBetween: 20,
   pagination: {
     el: '.swiper-pagination',
-    clickable: true,
+    clickable: true
   },
-
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
   breakpoints: {
-    0: {
-      slidesPerView: 1
-    },
-    768: {
-      slidesPerView: 2
-    }
+    0: { slidesPerView: 1 },
+    768: { slidesPerView: 2 }
   }
 });
+
+
 
 
 

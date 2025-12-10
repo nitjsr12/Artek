@@ -1,114 +1,11 @@
- <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Products Slider — 4 Cards</title>
-  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <style>
-    /* Slider & card layout */
-    .product-slider { padding: 1rem; }
-    .swiper-wrapper { gap: 1rem; }
-    .swiper-slide { display: flex; align-items: stretch; }
-    .product-card {
-      box-shadow: 0 1px 6px rgba(0,0,0,0.08);
-      border-radius: 6px;
-      padding: 1rem;
-      background:#fff;
-      display:flex;
-      flex-direction:column;
-      width:100%;
-      /* fixed height so all cards match — tweak as needed */
-      height:360px;
-      box-sizing:border-box;
-    }
-
-    .card-header { margin-bottom: 0.5rem; }
-    .card-title { font-size:1.05rem; margin:0; }
-    .card-sub { color:#666; font-size:0. ninerem; margin-top:4px }
-
-    .card-body { flex:1 1 auto; display:flex; flex-direction:column; gap:0.5rem; }
-
-    /* Pointers container is scrollable independently */
-    .pointers {
-      overflow:auto;
-      padding-right: 0.5rem; /* give room for scrollbar */
-      margin:0;
-      list-style: disc inside;
-      flex: 1 1 auto;
-    }
-
-    .pointers li { margin: 0.25rem 0; }
-
-    .card-actions { margin-top: 0.75rem; display:flex; gap:0.5rem; }
-
-    /* Make Swiper controls visible on top of content where available */
-    .swiper-button-next, .swiper-button-prev { color: #222; }
-
-    /* Small responsive tweaks */
-    @media (max-width:900px){ .product-card{ height: 420px; } }
-    @media (max-width:480px){ .product-card{ height: auto; } .pointers{ max-height:140px; } }
-  </style>
-</head>
-<body>
-
-<section class="product-slider swiper" aria-label="Products carousel">
-  <div class="swiper-wrapper">
-
-    
-
-  <!- Pagination + nav -->
-  <div class="swiper-pagination" aria-hidden="false"></div>
-  <div class="swiper-button-prev" aria-hidden="true"></div>
-  <div class="swiper-button-next" aria-hidden="true"></div>
-</section> 
-
- Load Swiper local file if present, otherwise fall back to CDN 
- <script>
-  (function(){
-    function addScript(src, cb){
-      const s = document.createElement('script'); s.src = src; s.onload = cb; s.onerror = cb; document.head.appendChild(s);
-    }
-
-    if(window.Swiper){ initSwiper(); }
-    else {
-      // try local first
-      addScript('assets/js/swiper-bundle.min.js', function(){ if(window.Swiper) initSwiper(); else addScript('https://unpkg.com/swiper@8/swiper-bundle.min.js', initSwiper); });
-    }
-
-    function initSwiper(){
-      if(!window.Swiper) return;
-      new Swiper('.product-slider', {
-        slidesPerView: 2,
-        spaceBetween: 16,
-        loop: false,
-        pagination: { el: '.swiper-pagination', clickable: true },
-        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-        breakpoints: {
-          0: { slidesPerView: 1 },
-          640: { slidesPerView: 2 },
-          900: { slidesPerView: 3 },
-          1200: { slidesPerView: 4 }
-        }
-      });
-    }
-  })();
-</script>
-
-</body>
-</html>
-
-<!--SLidder-->
-
-<div class="product-slider swiper">
+ <section class="product-slider swiper">
   <div class="swiper-wrapper">
 
     <!-- Card 01 -->
     <div class="swiper-slide">
       <div class="product-card">
         <div class="card-header">
-          <span class="card-index">01</span>
+          <span>01</span>
           <h3>Alkaline Soak Cleaners</h3>
           <span class="series">SURFOLIN SERIES</span>
         </div>
@@ -127,7 +24,7 @@
     <div class="swiper-slide">
       <div class="product-card">
         <div class="card-header">
-          <span class="card-index">02</span>
+          <span>02</span>
           <h3>Alkaline Electrolytic Cleaners</h3>
           <span class="series">SURFOLIN EL SERIES</span>
         </div>
@@ -144,14 +41,14 @@
     <div class="swiper-slide">
       <div class="product-card">
         <div class="card-header">
-          <span class="card-index">03</span>
+          <span>03</span>
           <h3>Electrolytic Alkaline Derusting</h3>
           <span class="series">SURFOLIN NC SERIES</span>
         </div>
         <div class="product-card__content">
           <ul>
             <li>Very good substitute for anodic etches</li>
-            <li>Very good cleaner prior to electroless nickel on steel</li>
+            <li>Cleaner prior to electroless nickel on steel</li>
             <li>Non-cyanide cleaner</li>
           </ul>
         </div>
@@ -162,7 +59,7 @@
     <div class="swiper-slide">
       <div class="product-card">
         <div class="card-header">
-          <span class="card-index">04</span>
+          <span>04</span>
           <h3>Spray Cleaner</h3>
           <span class="series">SURFOLIN SP PROCESS</span>
         </div>
@@ -174,62 +71,45 @@
       </div>
     </div>
 
-    <!-- Card 05 -->
-    <!-- Card 05 -->
+    <!-- ✅ Card 05 (SCROLLABLE CONTENT) -->
     <div class="swiper-slide">
-    <div class="product-card">
+      <div class="product-card">
         <div class="card-header">
-        <span class="card-index">05</span>
-        <h3>Acid Pickling & Brightening</h3>
-        <span class="series">ACITEK DRY ACID SALT</span>
+          <span>05</span>
+          <h3>Acid Pickling & Brightening</h3>
+          <span class="series">ACITEK DRY ACID SALT</span>
         </div>
 
         <div class="product-card__content">
+          <ul>
+            <li>Dry acid salt for oxide & silicate removal</li>
+            <li>Replaces hazardous hydrofluoric acid</li>
+            <li>Improves adhesion of electrodeposits</li>
+          </ul>
 
-        <ul>
-            <li>
-            A dry acid salt used for making acid dips for removal of silicate and oxide films
-            on ferrous and non-ferrous metals to ensure better adhesion of subsequent
-            electrodeposits.
-            </li>
-            <li>Replaces hazardous hydrofluoric acid.</li>
-            <li>Added to the acid dip for removal of silicate film.</li>
-            <li>
-            Also used as an additive to pickling baths for removal of smut from aluminium
-            alloys, stainless steel and titanium.
-            </li>
-        </ul>
+          <span class="series">ACID INHIBITOR SERIES</span>
+          <ul>
+            <li>Reduces base metal attack during pickling</li>
+          </ul>
 
-        <span class="series">ACID INHIBITOR SERIES</span>
-        <ul>
-            <li>
-            An excellent inhibitor specially developed for hydrochloric and sulphuric acid
-            pickling baths to reduce base metal attack during pickling.
-            </li>
-        </ul>
+          <span class="series">FUME REDUCER</span>
+          <ul>
+            <li>Suppresses pickling fumes</li>
+            <li>Ensures uniform action</li>
+          </ul>
 
-        <span class="series">FUME REDUCER</span>
-        <ul>
-            <li>Suppresses fume during pickling.</li>
-            <li>Aids in uniform pickling action.</li>
-            <li>Emulsifies the oil carryover from alkaline soak cleaner.</li>
-        </ul>
-
-        <span class="series">KEMBRITE BC 20</span>
-        <ul>
-            <li>Brightening dip for brass and copper components.</li>
-            <li>Brightens the component to produce a glossy finish.</li>
-            <li>
-            A dip in 5% sulphuric acid is used after BC 20 to get the final finish.
-            </li>
-        </ul>
-
+          <span class="series">KEMBRITE BC 20</span>
+          <ul>
+            <li>Brightening dip for brass & copper</li>
+            <li>Produces glossy finish</li>
+          </ul>
         </div>
+      </div>
     </div>
-    </div>
 
+  </div>
 
- 
-</div>
-<!--SLidder-->
-
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</section>

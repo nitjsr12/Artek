@@ -281,3 +281,151 @@ new Swiper('.product-slider', {
 
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>4 Concepts Infographics</title>
+<link rel="stylesheet" href="style.css">
+<style>
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f3f4f6;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* PIE CONTAINER */
+.pie {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  margin: 50px auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* COMMON SLICE */
+.slice {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.slice-content {
+  text-align: center;
+  width: 120px;
+}
+
+.slice-content p {
+  font-size: 12px;
+  margin-top: 8px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.slice:hover p {
+  opacity: 1;
+}
+
+/* ICON */
+.slice svg {
+  width: 36px;
+  height: 36px;
+  fill: #fff;
+  transition: 0.3s;
+}
+
+.slice:hover svg {
+  transform: scale(1.2);
+}
+
+/* INDIVIDUAL SLICES */
+.slice1 {
+  top: 0;
+  left: 0;
+  background: #16a085;
+  clip-path: polygon(100% 100%, 0 100%, 100% 0);
+}
+
+.slice2 {
+  top: 0;
+  right: 0;
+  background: #7cb342;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.slice3 {
+  bottom: 0;
+  left: 0;
+  background: #3498db;
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+}
+
+.slice4 {
+  bottom: 0;
+  right: 0;
+  background: #7e57c2;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+
+</style>
+</head>
+
+<body>
+
+<h2>4 Concepts Infographics</h2>
+
+<div class="pie">
+
+  <div class="slice slice1">
+    <div class="slice-content">
+      <!-- SVG ICON -->
+      <svg viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10"/>
+      </svg>
+      <p>Jupiter is the biggest planet in the Solar System.</p>
+    </div>
+  </div>
+
+  <div class="slice slice2">
+    <div class="slice-content">
+      <svg viewBox="0 0 24 24">
+        <rect x="4" y="4" width="16" height="16"/>
+      </svg>
+      <p>Despite being red, Mars is actually a cold place.</p>
+    </div>
+  </div>
+
+  <div class="slice slice3">
+    <div class="slice-content">
+      <svg viewBox="0 0 24 24">
+        <polygon points="12,2 22,22 2,22"/>
+      </svg>
+      <p>Venus is terribly hot, even hotter than Mercury.</p>
+    </div>
+  </div>
+
+  <div class="slice slice4">
+    <div class="slice-content">
+      <svg viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="6"/>
+      </svg>
+      <p>Mercury is the closest planet to the Sun.</p>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
+

@@ -1,11 +1,111 @@
- <section class="product-slider swiper">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Products Slider</title>
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+
+<style>
+body{
+  margin:0;
+  background:#eef0f0;
+  font-family: Arial, sans-serif;
+}
+
+/* Slider */
+.product-slider{
+  padding:40px;
+}
+.swiper-slide{
+  height:auto;
+}
+
+/* Card */
+.product-card{
+  background:#fff;
+  border-radius:10px;
+  padding:24px;
+  height:380px;
+  display:flex;
+  flex-direction:column;
+  box-shadow:0 6px 20px rgba(0,0,0,.08);
+}
+
+.card-header{
+  margin-bottom:12px;
+}
+
+.card-index{
+  font-size:14px;
+  color:#999;
+}
+
+.product-card h3{
+  margin:8px 0;
+  font-size:24px;
+  line-height:1.3;
+}
+
+.series{
+  font-size:12px;
+  font-weight:600;
+  color:#666;
+  display:block;
+  margin-bottom:8px;
+}
+
+/* Scrollable content */
+.product-card__content{
+  overflow-y:auto;
+  padding-right:8px;
+  flex:1;
+}
+
+.product-card__content ul{
+  padding-left:16px;
+  margin:0 0 12px 0;
+}
+
+.product-card__content li{
+  margin-bottom:8px;
+  line-height:1.5;
+}
+
+/* Scrollbar */
+.swiper-scrollbar{
+  margin-top:25px;
+  height:6px;
+  background:#d1d1d1;
+  border-radius:10px;
+}
+
+.swiper-scrollbar-drag{
+  background:#89246E;
+  border-radius:10px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .product-card{
+    height:auto;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="product-slider swiper">
   <div class="swiper-wrapper">
 
-    <!-- Card 01 -->
+    <!-- 01 -->
     <div class="swiper-slide">
       <div class="product-card">
         <div class="card-header">
-          <span>01</span>
+          <span class="card-index">01</span>
           <h3>Alkaline Soak Cleaners</h3>
           <span class="series">SURFOLIN SERIES</span>
         </div>
@@ -20,11 +120,11 @@
       </div>
     </div>
 
-    <!-- Card 02 -->
+    <!-- 02 -->
     <div class="swiper-slide">
       <div class="product-card">
         <div class="card-header">
-          <span>02</span>
+          <span class="card-index">02</span>
           <h3>Alkaline Electrolytic Cleaners</h3>
           <span class="series">SURFOLIN EL SERIES</span>
         </div>
@@ -37,29 +137,29 @@
       </div>
     </div>
 
-    <!-- Card 03 -->
+    <!-- 03 -->
     <div class="swiper-slide">
       <div class="product-card">
         <div class="card-header">
-          <span>03</span>
+          <span class="card-index">03</span>
           <h3>Electrolytic Alkaline Derusting</h3>
           <span class="series">SURFOLIN NC SERIES</span>
         </div>
         <div class="product-card__content">
           <ul>
             <li>Very good substitute for anodic etches</li>
-            <li>Cleaner prior to electroless nickel on steel</li>
+            <li>Very good cleaner prior to electroless nickel on steel</li>
             <li>Non-cyanide cleaner</li>
           </ul>
         </div>
       </div>
     </div>
 
-    <!-- Card 04 -->
+    <!-- 04 -->
     <div class="swiper-slide">
       <div class="product-card">
         <div class="card-header">
-          <span>04</span>
+          <span class="card-index">04</span>
           <h3>Spray Cleaner</h3>
           <span class="series">SURFOLIN SP PROCESS</span>
         </div>
@@ -71,45 +171,67 @@
       </div>
     </div>
 
-    <!-- ✅ Card 05 (SCROLLABLE CONTENT) -->
+    <!-- 05 -->
     <div class="swiper-slide">
       <div class="product-card">
         <div class="card-header">
-          <span>05</span>
+          <span class="card-index">05</span>
           <h3>Acid Pickling & Brightening</h3>
           <span class="series">ACITEK DRY ACID SALT</span>
         </div>
-
         <div class="product-card__content">
+
           <ul>
-            <li>Dry acid salt for oxide & silicate removal</li>
+            <li>Dry acid salt for removal of silicate and oxide films</li>
+            <li>Ensures better adhesion of subsequent electrodeposits</li>
             <li>Replaces hazardous hydrofluoric acid</li>
-            <li>Improves adhesion of electrodeposits</li>
+            <li>Used in pickling baths for aluminium, stainless steel and titanium</li>
           </ul>
 
           <span class="series">ACID INHIBITOR SERIES</span>
           <ul>
-            <li>Reduces base metal attack during pickling</li>
+            <li>Reduces base metal attack in HCl and H₂SO₄ pickling baths</li>
           </ul>
 
           <span class="series">FUME REDUCER</span>
           <ul>
-            <li>Suppresses pickling fumes</li>
-            <li>Ensures uniform action</li>
+            <li>Suppresses fumes</li>
+            <li>Ensures uniform pickling action</li>
           </ul>
 
           <span class="series">KEMBRITE BC 20</span>
           <ul>
-            <li>Brightening dip for brass & copper</li>
+            <li>Brightening dip for brass and copper</li>
             <li>Produces glossy finish</li>
           </ul>
+
         </div>
       </div>
     </div>
 
   </div>
 
-  <div class="swiper-pagination"></div>
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
+  <!-- Scrollbar -->
+  <div class="swiper-scrollbar"></div>
 </section>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<script>
+new Swiper('.product-slider', {
+  slidesPerView: 2,
+  spaceBetween: 20,
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true
+  },
+  breakpoints:{
+    0:{ slidesPerView:1 },
+    768:{ slidesPerView:2 }
+  }
+});
+</script>
+
+</body>
+</html>

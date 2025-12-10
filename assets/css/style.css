@@ -20776,3 +20776,81 @@ span.select2-selection.select2-selection--single:focus {
     height: auto;
   }
 }
+
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f4f8;
+}
+
+.infographic {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.circle {
+  position: relative;
+  width: 380px;
+  height: 380px;
+  margin: 40px auto;
+  border-radius: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+}
+
+/* Common item styles */
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.4s ease;
+}
+
+.content {
+  text-align: center;
+  padding: 20px;
+}
+
+.icon {
+  font-size: 36px;
+  display: block;
+  margin-bottom: 10px;
+  transition: color 0.4s ease;
+}
+
+.item p {
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.4s ease;
+}
+
+/* Hover behaviour */
+.item:hover p {
+  opacity: 1;
+  max-height: 80px;
+}
+
+.item:hover .icon {
+  color: #fff;
+}
+
+/* Individual colors */
+.item-1 { background: #2cc6b0; }
+.item-1:hover { background: #1aa192; }
+
+.item-2 { background: #7bd34c; }
+.item-2:hover { background: #5fb234; }
+
+.item-3 { background: #4ea1ff; }
+.item-3:hover { background: #337fe0; }
+
+.item-4 { background: #7a6de8; }
+.item-4:hover { background: #5b4fd6; }
+
+/* Rounded segments */
+.item-1 { border-top-left-radius: 100%; }
+.item-2 { border-top-right-radius: 100%; }
+.item-3 { border-bottom-left-radius: 100%; }
+.item-4 { border-bottom-right-radius: 100%; }

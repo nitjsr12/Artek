@@ -20783,24 +20783,24 @@ body {
   background: #f2f4f8;
 }
 
-.infographic {
+.info-wrapper {
   text-align: center;
   padding: 40px 0;
+  font-family: Arial, sans-serif;
 }
 
-.circle {
-  position: relative;
+.info-circle {
   width: 380px;
   height: 380px;
   margin: 40px auto;
-  border-radius: 50%;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  border-radius: 50%;
   overflow: hidden;
 }
 
-/* Common item styles */
-.item {
+/* Quadrants */
+.info-item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20808,49 +20808,49 @@ body {
   transition: background 0.4s ease;
 }
 
-.content {
-  text-align: center;
+.info-content {
   padding: 20px;
+  text-align: center;
 }
 
+/* SVG icons */
 .icon {
-  font-size: 36px;
-  display: block;
-  margin-bottom: 10px;
-  transition: color 0.4s ease;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 8px;
+  color: rgba(255,255,255,0.8);
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.item p {
+/* Subtext hidden */
+.info-content p {
   opacity: 0;
   max-height: 0;
+  overflow: hidden;
   transition: all 0.4s ease;
+  font-size: 14px;
 }
 
-/* Hover behaviour */
-.item:hover p {
+/* Hover effects */
+.info-item:hover p {
   opacity: 1;
   max-height: 80px;
 }
 
-.item:hover .icon {
+.info-item:hover .icon {
   color: #fff;
+  transform: scale(1.1);
 }
 
-/* Individual colors */
-.item-1 { background: #2cc6b0; }
-.item-1:hover { background: #1aa192; }
+/* Colors */
+.item1 { background: #2cc6b0; border-top-left-radius: 100%; }
+.item1:hover { background: #1aa192; }
 
-.item-2 { background: #7bd34c; }
-.item-2:hover { background: #5fb234; }
+.item2 { background: #7bd34c; border-top-right-radius: 100%; }
+.item2:hover { background: #5fb234; }
 
-.item-3 { background: #4ea1ff; }
-.item-3:hover { background: #337fe0; }
+.item3 { background: #4ea1ff; border-bottom-left-radius: 100%; }
+.item3:hover { background: #337fe0; }
 
-.item-4 { background: #7a6de8; }
-.item-4:hover { background: #5b4fd6; }
-
-/* Rounded segments */
-.item-1 { border-top-left-radius: 100%; }
-.item-2 { border-top-right-radius: 100%; }
-.item-3 { border-bottom-left-radius: 100%; }
-.item-4 { border-bottom-right-radius: 100%; }
+.item4 { background: #7a6de8; border-bottom-right-radius: 100%; }
+.item4:hover { background: #5b4fd6; }

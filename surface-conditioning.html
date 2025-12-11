@@ -304,150 +304,246 @@ Service Area
 test Area  
 ==============================-->
 
-<section class="industry-slider-section" style="padding:60px 0;">
-  <div class="container">
-    <h2 class="section-title">Industries Powered by <span style="color:#89246E;">HTS Switchgears P Limited</span></h2>
+<section id="products-slider-section">
 
-    <div class="slider-wrapper">
-      <div class="slider" id="industrySlider">
-        
-        <!-- CARD 1 -->
-        <div class="card">
-          <h3>Power Distribution</h3>
-          <div class="card-content">
-            <p>
-              Ensuring uninterrupted and safe electricity distribution with advanced technology and durable switchgear products.
-            </p>
-          </div>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Products Slider</title>
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+
+<style>
+body{
+  margin:0;
+  background:#eef0f0;
+  font-family: Arial, sans-serif;
+}
+
+/* Slider */
+.product-slider {
+  max-width: 1100px;   /* try 1000px / 1050px */
+  margin: 0 auto;
+  padding: 30px 10px;
+}
+
+.swiper-slide{
+  height:auto;
+}
+
+/* Card */
+.product-card{
+  background:#fff;
+  border-radius:10px;
+  padding:24px;
+  height:200px;
+  display:flex;
+  flex-direction:column;
+  box-shadow:0 6px 20px rgba(0,0,0,.08);
+}
+
+.card-header{
+  margin-bottom:12px;
+}
+
+.card-index{
+  font-size:14px;
+  color:#999;
+}
+
+.product-card h3{
+  margin:8px 0;
+  font-size:24px;
+  line-height:1.3;
+}
+
+.series{
+  font-size:12px;
+  font-weight:600;
+  color:#666;
+  display:block;
+  margin-bottom:8px;
+}
+
+/* Scrollable content */
+.product-card__content{
+  overflow-y:auto;
+  padding-right:8px;
+  flex:1;
+}
+
+.product-card__content ul{
+  padding-left:16px;
+  margin:0 0 12px 0;
+}
+
+.product-card__content li{
+  margin-bottom:8px;
+  line-height:1.5;
+}
+
+/* Slider scrollbar track */
+.swiper-scrollbar {
+  height: 5px;
+  background: #e0e0e0;
+  border-radius: 10px;
+}
+
+/* Slider scrollbar thumb */
+.swiper-scrollbar-drag {
+  background: #101840;   /* your brand color */
+  border-radius: 10px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .product-card{
+    height:auto;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="product-slider swiper">
+  <div class="swiper-wrapper">
+
+    <!-- 01 -->
+    <div class="swiper-slide">
+      <div class="product-card">
+        <div class="card-header">
+          <h3>Alkaline Soak Cleaners</h3>
+          <span class="series">SURFOLIN SERIES</span>
         </div>
-
-        <!-- CARD 2 -->
-        <div class="card">
-          <h3>Industrial Automation</h3>
-          <div class="card-content">
-            <p>
-              Supporting large-scale manufacturing units by providing reliable switching and protection mechanisms.
-            </p>
-          </div>
+        <div class="product-card__content">
+          <ul>
+            <li>High efficiency cleaner suitable for ferrous and non-ferrous metals</li>
+            <li>Long service life with excellent cleaning performance</li>
+            <li>Removes grease, soil, and weak scale layers</li>
+            <li>Leaves the surface active and bright</li>
+          </ul>
         </div>
-
-        <!-- CARD 3 -->
-        <div class="card">
-          <h3>Renewable Energy</h3>
-          <div class="card-content">
-            <p>
-              Helping solar and wind installations operate efficiently with high-performance switchgear systems.
-            </p>
-          </div>
-        </div>
-
-        <!-- CARD 4 -->
-        <div class="card">
-          <h3>Infrastructure</h3>
-          <div class="card-content">
-            <p>
-              Powering commercial and residential infrastructure with safe, certified and robust electrical solutions.
-            </p>
-          </div>
-        </div>
-
-        <!-- CARD 5 -->
-        <div class="card">
-          <h3>Transportation Sector</h3>
-          <div class="card-content">
-            <p>
-              Serving metro, rail and airport operations with highly reliable electrical control and protection devices.
-            </p>
-          </div>
-        </div>
-
       </div>
+    </div>
 
-      <!-- SCROLLER -->
-      <div class="scrollbar-container">
-        <input type="range" id="rangeControl" min="0" max="100" value="0">
+    <!-- 02 -->
+    <div class="swiper-slide">
+      <div class="product-card">
+        <div class="card-header">
+          <h3>Alkaline Electrolytic Cleaners</h3>
+          <span class="series">SURFOLIN EL SERIES</span>
+        </div>
+        <div class="product-card__content">
+          <ul>
+            <li>Heavy duty chelated alkaline anodic cleaner</li>
+            <li>For activating passive nickel</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 -->
+    <div class="swiper-slide">
+      <div class="product-card">
+        <div class="card-header">
+          <h3>Electrolytic Alkaline Derusting</h3>
+          <span class="series">SURFOLIN NC SERIES</span>
+        </div>
+        <div class="product-card__content">
+          <ul>
+            <li>Very good substitute for anodic etches</li>
+            <li>Very good cleaner prior to electroless nickel on steel</li>
+            <li>Non-cyanide cleaner</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04 -->
+    <div class="swiper-slide">
+      <div class="product-card">
+        <div class="card-header">
+          <h3>Spray Cleaner</h3>
+          <span class="series">SURFOLIN SP PROCESS</span>
+        </div>
+        <div class="product-card__content">
+          <ul>
+            <li>Heavy duty chelated alkaline cleaner for ferrous metals</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 05 -->
+    <div class="swiper-slide">
+      <div class="product-card">
+        <div class="card-header">
+          <h3>Acid Pickling & Brightening</h3>
+          <span class="series">ACITEK DRY ACID SALT</span>
+        </div>
+        <div class="product-card__content">
+
+          <ul>
+            <li>Dry acid salt for removal of silicate and oxide films</li>
+            <li>Ensures better adhesion of subsequent electrodeposits</li>
+            <li>Replaces hazardous hydrofluoric acid</li>
+            <li>Used in pickling baths for aluminium, stainless steel and titanium</li>
+          </ul>
+
+          <span class="series">ACID INHIBITOR SERIES</span>
+          <ul>
+            <li>Reduces base metal attack in HCl and H₂SO₄ pickling baths</li>
+          </ul>
+
+          <span class="series">FUME REDUCER</span>
+          <ul>
+            <li>Suppresses fumes</li>
+            <li>Ensures uniform pickling action</li>
+          </ul>
+
+          <span class="series">KEMBRITE BC 20</span>
+          <ul>
+            <li>Brightening dip for brass and copper</li>
+            <li>Produces glossy finish</li>
+          </ul>
+
+        </div>
       </div>
 
     </div>
+
   </div>
+
+  <!-- Scrollbar -->
+  <div class="swiper-scrollbar"></div>
 </section>
 
-<style>
-  .slider-wrapper {
-    position: relative;
-    margin-top: 30px;
-  }
-
-  .slider {
-    display: flex;
-    overflow-x: hidden;
-    gap: 20px;
-    scroll-behavior: smooth;
-  }
-
-  .card {
-    min-width: 45%;
-    max-width: 45%;
-    background: #fff;
-    padding: 25px;
-    border-radius: 16px;
-    height: 300px;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-  }
-
-  .card-content {
-    overflow-y: auto;
-    max-height: 200px;
-    padding-right: 10px;
-  }
-
-  /* Custom Scrollbar */
-  .card-content::-webkit-scrollbar {
-    width: 6px;
-  }
-  .card-content::-webkit-scrollbar-thumb {
-    background: #101840;
-    border-radius: 10px;
-  }
-
-  .scrollbar-container {
-    margin-top: 20px;
-  }
-
-  input[type="range"] {
-    width: 100%;
-    height: 5px;
-    border-radius: 10px;
-    background: #ddd;
-    outline: none;
-  }
-
-  input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    background: #101840;
-    cursor: pointer;
-  }
-</style>
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
 <script>
-  const slider = document.getElementById("industrySlider");
-  const range = document.getElementById("rangeControl");
-
-  range.addEventListener("input", () => {
-    const maxScroll = slider.scrollWidth - slider.clientWidth;
-    const scrollValue = (range.value / 100) * maxScroll;
-    slider.scrollLeft = scrollValue;
-  });
-
-  slider.addEventListener("scroll", () => {
-    const maxScroll = slider.scrollWidth - slider.clientWidth;
-    range.value = (slider.scrollLeft / maxScroll) * 100;
-  });
+new Swiper('.product-slider', {
+  slidesPerView: 2,
+  spaceBetween: 20,
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true
+  },
+  breakpoints:{
+    0:{ slidesPerView:1 },
+    768:{ slidesPerView:2 }
+  }
+});
 </script>
+
+</body>
+</html>
+
+</section>
 
 
 <!--==============================
@@ -463,7 +559,7 @@ Feature Area
             <div class="col-xl-5">
                 <div class="img-box2">
                     <div class="img1">
-                        <img src="Artek/assets/Surface-Conditioning.png" alt="Why">
+                        <img src="assets/Surface-Conditioning.png" alt="Why">
                     </div>
                 </div>
             </div>

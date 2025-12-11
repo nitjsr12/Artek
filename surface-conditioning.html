@@ -300,6 +300,156 @@ Service Area
             </div>
         </div>
     </section>
+    <!--==============================
+test Area  
+==============================-->
+
+<section class="industry-slider-section" style="padding:60px 0;">
+  <div class="container">
+    <h2 class="section-title">Industries Powered by <span style="color:#89246E;">HTS Switchgears P Limited</span></h2>
+
+    <div class="slider-wrapper">
+      <div class="slider" id="industrySlider">
+        
+        <!-- CARD 1 -->
+        <div class="card">
+          <h3>Power Distribution</h3>
+          <div class="card-content">
+            <p>
+              Ensuring uninterrupted and safe electricity distribution with advanced technology and durable switchgear products.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card">
+          <h3>Industrial Automation</h3>
+          <div class="card-content">
+            <p>
+              Supporting large-scale manufacturing units by providing reliable switching and protection mechanisms.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="card">
+          <h3>Renewable Energy</h3>
+          <div class="card-content">
+            <p>
+              Helping solar and wind installations operate efficiently with high-performance switchgear systems.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="card">
+          <h3>Infrastructure</h3>
+          <div class="card-content">
+            <p>
+              Powering commercial and residential infrastructure with safe, certified and robust electrical solutions.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="card">
+          <h3>Transportation Sector</h3>
+          <div class="card-content">
+            <p>
+              Serving metro, rail and airport operations with highly reliable electrical control and protection devices.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SCROLLER -->
+      <div class="scrollbar-container">
+        <input type="range" id="rangeControl" min="0" max="100" value="0">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .slider-wrapper {
+    position: relative;
+    margin-top: 30px;
+  }
+
+  .slider {
+    display: flex;
+    overflow-x: hidden;
+    gap: 20px;
+    scroll-behavior: smooth;
+  }
+
+  .card {
+    min-width: 45%;
+    max-width: 45%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 16px;
+    height: 300px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+
+  .card-content {
+    overflow-y: auto;
+    max-height: 200px;
+    padding-right: 10px;
+  }
+
+  /* Custom Scrollbar */
+  .card-content::-webkit-scrollbar {
+    width: 6px;
+  }
+  .card-content::-webkit-scrollbar-thumb {
+    background: #101840;
+    border-radius: 10px;
+  }
+
+  .scrollbar-container {
+    margin-top: 20px;
+  }
+
+  input[type="range"] {
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+    background: #ddd;
+    outline: none;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #101840;
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  const slider = document.getElementById("industrySlider");
+  const range = document.getElementById("rangeControl");
+
+  range.addEventListener("input", () => {
+    const maxScroll = slider.scrollWidth - slider.clientWidth;
+    const scrollValue = (range.value / 100) * maxScroll;
+    slider.scrollLeft = scrollValue;
+  });
+
+  slider.addEventListener("scroll", () => {
+    const maxScroll = slider.scrollWidth - slider.clientWidth;
+    range.value = (slider.scrollLeft / maxScroll) * 100;
+  });
+</script>
+
+
 <!--==============================
 Feature Area  
 ==============================-->
@@ -313,7 +463,7 @@ Feature Area
             <div class="col-xl-5">
                 <div class="img-box2">
                     <div class="img1">
-                        <img src="assets/img/normal/Why-chose-us.jpg" alt="Why">
+                        <img src="Artek/assets/Surface-Conditioning.png" alt="Why">
                     </div>
                 </div>
             </div>

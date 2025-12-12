@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>4 Concepts Infographics</title>
+
 <style>
 body{
   font-family: Arial, sans-serif;
@@ -20,52 +21,50 @@ h2{
   margin:0 auto;
 }
 
-/* Outside text positions */
-.text-top{
+/* TEXT POSITIONS */
+.text-top-left{
   position:absolute;
-  top:-40px;
-  left:50%;
-  transform:translateX(-50%);
-  text-align:center;
-  font-size:16px;
-}
-
-.text-left{
-  position:absolute;
-  left:-120px;
-  top:50%;
-  transform:translateY(-50%);
-  width:100px;
+  top:-25px;
+  left:-90px;
+  width:120px;
   text-align:right;
   font-size:16px;
 }
 
-.text-right{
+.text-top-right{
   position:absolute;
-  right:-120px;
-  top:50%;
-  transform:translateY(-50%);
-  width:100px;
+  top:-25px;
+  right:-90px;
+  width:120px;
   text-align:left;
   font-size:16px;
 }
 
-.text-bottom{
+.text-bottom-left{
   position:absolute;
-  bottom:-40px;
-  left:50%;
-  transform:translateX(-50%);
-  text-align:center;
+  bottom:-25px;
+  left:-90px;
+  width:120px;
+  text-align:right;
   font-size:16px;
 }
 
-/* Slice icon styles */
+.text-bottom-right{
+  position:absolute;
+  bottom:-25px;
+  right:-90px;
+  width:120px;
+  text-align:left;
+  font-size:16px;
+}
+
+/* ICON STYLE */
 .slice-icon{
   fill:#fff;
 }
-
 </style>
 </head>
+
 
 <body>
 
@@ -73,47 +72,40 @@ h2{
 
 <div class="wrapper">
 
-  <!-- TOP TEXT -->
-  <div class="text-top-right">Mars is cold despite being red</div>
-
-  <!-- LEFT TEXT -->
-  <div class="text-bottom-right">Mercury is closest to the Sun</div>
-
-  <!-- RIGHT TEXT -->
-  <div class="text-top-left">Jupiter is the biggest planet</div>
-
-  <!-- BOTTOM TEXT -->
+  <!-- TEXT IN ALL FOUR CORNERS -->
+  <div class="text-top-left">Mercury is closest to the Sun</div>
+  <div class="text-top-right">Jupiter is the biggest planet</div>
   <div class="text-bottom-left">Venus is extremely hot</div>
-
+  <div class="text-bottom-right">Mars is cold despite being red</div>
 
   <svg width="360" height="360" viewBox="0 0 360 360">
 
-    <!-- SLICE 1 (Top-right) -->
+    <!-- Top-right slice -->
     <g class="slice slice1">
       <path d="M180 180 L180 20 A160 160 0 0 1 340 180 Z" fill="#16a085"/>
       <circle cx="250" cy="110" r="16" class="slice-icon"/>
     </g>
 
-    <!-- SLICE 2 (Bottom-right) -->
+    <!-- Bottom-right slice -->
     <g class="slice slice2">
       <path d="M180 180 L340 180 A160 160 0 0 1 180 340 Z" fill="#8bc34a"/>
       <rect x="260" y="235" width="18" height="18" class="slice-icon"/>
     </g>
 
-    <!-- SLICE 3 (Bottom-left) -->
+    <!-- Bottom-left slice -->
     <g class="slice slice3">
       <path d="M180 180 L180 340 A160 160 0 0 1 20 180 Z" fill="#3498db"/>
       <polygon points="90,240 110,200 130,240" class="slice-icon"/>
     </g>
 
-    <!-- SLICE 4 (Top-left) -->
+    <!-- Top-left slice -->
     <g class="slice slice4">
       <path d="M180 180 L20 180 A160 160 0 0 1 180 20 Z" fill="#7e57c2"/>
       <circle cx="110" cy="110" r="10" class="slice-icon"/>
     </g>
 
   </svg>
-
+  
 </div>
 
 </body>

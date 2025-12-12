@@ -18423,6 +18423,31 @@ span.select2-selection.select2-selection--single:focus {
   background-color: var(--theme-color);
 }
 
+/* Reduce the overall section padding */
+#service-sec.space {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+}
+
+/* Tighten the heading block */
+#service-sec .title-area {
+    margin-bottom: 20px !important;
+}
+
+/* Reduce spacing inside the title block */
+#service-sec .sub-title {
+    margin-bottom: 5px !important;
+}
+
+#service-sec .sec-title {
+    margin-bottom: 10px !important;
+}
+
+#service-sec .sec-text {
+    margin-bottom: 15px !important;
+}
+
+
 /* Service Box ---------------------------------- */
 .service-box {
   position: relative;

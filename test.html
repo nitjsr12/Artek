@@ -143,3 +143,114 @@ document.querySelectorAll(".slice").forEach(slice=>{
 
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infographic Slider</title>
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+
+<style>
+    body{
+        margin:0;
+        padding:0;
+        background:#f5f5f5;
+        font-family:Arial, sans-serif;
+    }
+
+    .slider-wrapper{
+        width:100%;
+        max-width:900px;
+        margin:60px auto;
+        padding:20px;
+    }
+
+    .swiper{
+        width:100%;
+        padding-bottom:40px;
+    }
+
+    .swiper-slide{
+        background:#fff;
+        border-radius:18px;
+        box-shadow:0 4px 20px rgba(0,0,0,0.1);
+        padding:20px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .swiper-slide img{
+        width:100%;
+        height:auto;
+        display:block;
+    }
+
+    .swiper-pagination-bullet{
+        background:#555;
+        opacity:1;
+    }
+
+    .swiper-pagination-bullet-active{
+        background:#000;
+    }
+</style>
+
+</head>
+<body>
+
+<div class="slider-wrapper">
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+                <img src="assets/img/infographic/1.png" alt="Slide 1">
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+                <img src="assets/img/infographic/2.png" alt="Slide 2">
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+                <img src="assets/img/infographic/3.png" alt="Slide 3">
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="swiper-slide">
+                <img src="assets/img/infographic/4.png" alt="Slide 4">
+            </div>
+
+        </div>
+
+        <!-- Pagination dots -->
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+</div>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+</script>
+
+</body>
+</html>

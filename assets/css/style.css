@@ -16994,6 +16994,7 @@ span.select2-selection.select2-selection--single:focus {
   position: relative;
   z-index: 2;
   margin-left: -305px;
+  height: auto;
   
   
 }

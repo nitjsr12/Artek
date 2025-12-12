@@ -16994,12 +16994,12 @@ span.select2-selection.select2-selection--single:focus {
   position: relative;
   z-index: 2;
   margin-left: -305px;
-  height: 100%;
+  
   
 }
 .img-box2 .img1 img{
     width: 500px;
-    height: 300px;
+    height: 100px;
 
   /* Extra large devices */
   /* Medium Large devices */

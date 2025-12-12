@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <title>4 Concepts Infographics</title>
-
 <style>
 body{
   font-family: Arial, sans-serif;
@@ -15,98 +14,132 @@ h2{
   margin:30px 0;
 }
 
-.wrapper{
+.container{
+  width:540px;
+  margin:auto;
   position:relative;
-  width:360px;
-  margin:0 auto;
 }
 
 /* TEXT POSITIONS */
-.text-top-left{
+.info-text{
   position:absolute;
-  top:-25px;
-  left:-90px;
-  width:120px;
-  text-align:right;
+  width:160px;
   font-size:16px;
+  color:#101840;
+  opacity:0;
+  transition:.3s;
+  text-align:center;
+  pointer-events:none;
+  line-height:1.3;
 }
 
-.text-top-right{
-  position:absolute;
-  top:-25px;
-  right:-90px;
-  width:120px;
-  text-align:left;
-  font-size:16px;
+/* TOP-LEFT */
+#topleft{
+  top:-20px;
+  left:-40px;
 }
 
-.text-bottom-left{
-  position:absolute;
-  bottom:-25px;
-  left:-90px;
-  width:120px;
-  text-align:right;
-  font-size:16px;
+/* TOP-RIGHT */
+#topright{
+  top:-20px;
+  right:-40px;
 }
 
-.text-bottom-right{
-  position:absolute;
-  bottom:-25px;
-  right:-90px;
-  width:120px;
-  text-align:left;
-  font-size:16px;
+/* BOTTOM-LEFT */
+#bottomleft{
+  bottom:-20px;
+  left:-40px;
 }
 
-/* ICON STYLE */
-.slice-icon{
-  fill:#fff;
+/* BOTTOM-RIGHT */
+#bottomright{
+  bottom:-20px;
+  right:-40px;
 }
+
+/* IMAGE SLICE STYLE */
+.slice{
+  cursor:pointer;
+  transition:.3s;
+}
+
+.slice:hover{
+  transform:scale(1.05);
+}
+
 </style>
 </head>
-
 
 <body>
 
 <h2>4 Concepts Infographics</h2>
 
-<div class="wrapper">
+<div class="container">
 
-  <!-- TEXT IN ALL FOUR CORNERS -->
-  <div class="text-top-left">Mercury is closest to the Sun</div>
-  <div class="text-top-right">Jupiter is the biggest planet</div>
-  <div class="text-bottom-left">Venus is extremely hot</div>
-  <div class="text-bottom-right">Mars is cold despite being red</div>
+  <!-- INFO TEXT AROUND CIRCLE -->
+  <div id="topleft" class="info-text">Mercury is closest to the Sun</div>
+  <div id="topright" class="info-text">Jupiter is the biggest planet</div>
+  <div id="bottomleft" class="info-text">Venus is extremely hot</div>
+  <div id="bottomright" class="info-text">Mars is cold despite being red</div>
 
-  <svg width="360" height="360" viewBox="0 0 360 360">
+  <!-- MAIN CIRCLE SVG -->
+  <svg width="360" height="360" viewBox="0 0 360 360" style="display:block;margin:auto">
 
-    <!-- Top-right slice -->
-    <g class="slice slice1">
-      <path d="M180 180 L180 20 A160 160 0 0 1 340 180 Z" fill="#16a085"/>
-      <circle cx="250" cy="110" r="16" class="slice-icon"/>
+    <!-- TOP-RIGHT → Jupiter -->
+    <g class="slice" data-target="topright">
+      <defs>
+        <clipPath id="clip1">
+          <path d="M180 180 L180 20 A160 160 0 0 1 340 180 Z"/>
+        </clipPath>
+      </defs>
+      <image href="slice1.png" width="360" height="360" clip-path="url(#clip1)"></image>
     </g>
 
-    <!-- Bottom-right slice -->
-    <g class="slice slice2">
-      <path d="M180 180 L340 180 A160 160 0 0 1 180 340 Z" fill="#8bc34a"/>
-      <rect x="260" y="235" width="18" height="18" class="slice-icon"/>
+    <!-- BOTTOM-RIGHT → Mars -->
+    <g class="slice" data-target="bottomright">
+      <defs>
+        <clipPath id="clip2">
+          <path d="M180 180 L340 180 A160 160 0 0 1 180 340 Z"/>
+        </clipPath>
+      </defs>
+      <image href="slice2.png" width="360" height="360" clip-path="url(#clip2)"></image>
     </g>
 
-    <!-- Bottom-left slice -->
-    <g class="slice slice3">
-      <path d="M180 180 L180 340 A160 160 0 0 1 20 180 Z" fill="#3498db"/>
-      <polygon points="90,240 110,200 130,240" class="slice-icon"/>
+    <!-- BOTTOM-LEFT → Venus -->
+    <g class="slice" data-target="bottomleft">
+      <defs>
+        <clipPath id="clip3">
+          <path d="M180 180 L180 340 A160 160 0 0 1 20 180 Z"/>
+        </clipPath>
+      </defs>
+      <image href="assets/Infographics-4.svg" width="360" height="360" clip-path="url(#clip3)"></image>
     </g>
 
-    <!-- Top-left slice -->
-    <g class="slice slice4">
-      <path d="M180 180 L20 180 A160 160 0 0 1 180 20 Z" fill="#7e57c2"/>
-      <circle cx="110" cy="110" r="10" class="slice-icon"/>
+    <!-- TOP-LEFT → Mercury -->
+    <g class="slice" data-target="topleft">
+      <defs>
+        <clipPath id="clip4">
+          <path d="M180 180 L20 180 A160 160 0 0 1 180 20 Z"/>
+        </clipPath>
+      </defs>
+      <image href="slice4.png" width="360" height="360" clip-path="url(#clip4)"></image>
     </g>
 
   </svg>
-  
+
 </div>
+
+<script>
+// Hover show text
+document.querySelectorAll(".slice").forEach(slice=>{
+  slice.addEventListener("mouseenter",()=>{
+    document.getElementById(slice.dataset.target).style.opacity = "1";
+  });
+  slice.addEventListener("mouseleave",()=>{
+    document.getElementById(slice.dataset.target).style.opacity = "0";
+  });
+});
+</script>
 
 </body>
 </html>

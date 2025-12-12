@@ -4,102 +4,90 @@
 <meta charset="UTF-8">
 <title>4 Concepts Infographics</title>
 <style>
-.circle-container {
-    position: relative;
-    width: 600px;
-    height: 600px;
-    margin: auto;
-    border-radius: 50%;
-    overflow: hidden;
+body{
+  font-family: Arial, sans-serif;
+  background:#f3f4f6;
 }
 
-.slice {
-    position: absolute;
-    width: 50%;
-    height: 50%;
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
-    transition: 0.3s ease;
+h2{
+  text-align:center;
+  margin:30px 0;
 }
 
-/* Position of slices */
-.slice1 { top: 0; left: 0; background-image: url('assets\img\infographic\1.png'); }
-.slice2 { top: 0; right: 0; background-image: url('assets\img\infographic\2.png'); }
-.slice3 { bottom: 0; right: 0; background-image: url('assets\img\infographic\3.png'); }
-.slice4 { bottom: 0; left: 0; background-image: url('assets\img\infographic\4.png'); }
-
-/* Hover effect */
-.slice:hover {
-    filter: brightness(0.75);
+/* Outside text box */
+#info-box{
+  text-align:center;
+  margin-top:15px;
+  font-size:16px;
+  color:#101840;
+  min-height:22px;
+  transition:.3s;
 }
 
-/* Hover Text Box */
-.hover-text {
-    position: absolute;
-    width: 220px;
-    padding: 14px 18px;
-    background: #ffffffee;
-    border-radius: 12px;
-    font-size: 16px;
-    font-weight: 600;
-    display: none;
-    pointer-events: none;
-    color: #000;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    z-index: 10;
+/* ICON STYLE */
+.slice-icon{
+  fill:#fff;
+  transition:.3s;
+}
+
+/* DIFFERENT HOVER COLORS */
+.slice1:hover path{ fill:#11806a; }
+.slice2:hover path{ fill:#689f38; }
+.slice3:hover path{ fill:#1e88e5; }
+.slice4:hover path{ fill:#5e35b1; }
+
+.slice:hover .slice-icon{
+  fill:#101840;
 }
 </style>
+</head>
 
-<div class="circle-container">
-    <div class="slice slice1" data-text="Top Left information goes here"></div>
-    <div class="slice slice2" data-text="Top Right details appear here"></div>
-    <div class="slice slice3" data-text="Bottom Right description here"></div>
-    <div class="slice slice4" data-text="Bottom Left points here"></div>
+<body>
 
-    <div class="hover-text" id="hoverText"></div>
-</div>
+<h2>4 Concepts Infographics</h2>
+
+<!-- OUTSIDE TEXT -->
+<div id="info-box"></div>
+
+<svg width="360" height="360" viewBox="0 0 360 360" style="display:block;margin:auto">
+
+  <!-- SLICE 1 -->
+  <g class="slice slice1" data-text="Jupiter is the biggest planet">
+    <path d="M180 180 L180 20 A160 160 0 0 1 340 180 Z" fill="#16a085"/>
+    <circle cx="250" cy="110" r="16" class="slice-icon"/>
+  </g>
+
+  <!-- SLICE 2 -->
+  <g class="slice slice2" data-text="Mars is cold despite being red">
+    <path d="M180 180 L340 180 A160 160 0 0 1 180 340 Z" fill="#8bc34a"/>
+    <rect x="260" y="235" width="18" height="18" class="slice-icon"/>
+  </g>
+
+  <!-- SLICE 3 -->
+  <g class="slice slice3" data-text="Venus is extremely hot">
+    <path d="M180 180 L180 340 A160 160 0 0 1 20 180 Z" fill="#3498db"/>
+    <polygon points="90,240 110,200 130,240" class="slice-icon"/>
+  </g>
+
+  <!-- SLICE 4 -->
+  <g class="slice slice4" data-text="Mercury is closest to the Sun">
+    <path d="M180 180 L20 180 A160 160 0 0 1 180 20 Z" fill="#7e57c2"/>
+    <circle cx="110" cy="110" r="10" class="slice-icon"/>
+  </g>
+
+</svg>
 
 <script>
-const slices = document.querySelectorAll(".slice");
-const hoverBox = document.getElementById("hoverText");
-
-slices.forEach(slice => {
-    slice.addEventListener("mouseenter", function () {
-        const text = this.dataset.text;
-
-        hoverBox.innerHTML = text;
-        hoverBox.style.display = "block";
-
-        hoverBox.style.top = "auto";
-        hoverBox.style.bottom = "auto";
-        hoverBox.style.left = "auto";
-        hoverBox.style.right = "auto";
-
-        if (this.classList.contains("slice1")) {
-            hoverBox.style.top = "40px";
-            hoverBox.style.left = "40px";
-        } 
-        else if (this.classList.contains("slice2")) {
-            hoverBox.style.top = "40px";
-            hoverBox.style.right = "40px";
-        } 
-        else if (this.classList.contains("slice3")) {
-            hoverBox.style.bottom = "40px";
-            hoverBox.style.right = "40px";
-        } 
-        else if (this.classList.contains("slice4")) {
-            hoverBox.style.bottom = "40px";
-            hoverBox.style.left = "40px";
-        }
-    });
-
-    slice.addEventListener("mouseleave", function () {
-        hoverBox.style.display = "none";
-    });
+// On hover, update the outside text box
+document.querySelectorAll(".slice").forEach(slice=>{
+  slice.addEventListener("mouseenter",()=>{
+    document.getElementById("info-box").textContent = slice.dataset.text;
+  });
+  slice.addEventListener("mouseleave",()=>{
+    document.getElementById("info-box").textContent = "";
+  });
 });
 </script>
-
 
 </body>
 </html>

@@ -14,31 +14,56 @@ h2{
   margin:30px 0;
 }
 
-/* Outside text box */
-#info-box{
-  text-align:center;
-  margin-top:15px;
-  font-size:16px;
-  color:#101840;
-  min-height:22px;
-  transition:.3s;
+.wrapper{
+  position:relative;
+  width:360px;
+  margin:0 auto;
 }
 
-/* ICON STYLE */
+/* Outside text positions */
+.text-top{
+  position:absolute;
+  top:-40px;
+  left:50%;
+  transform:translateX(-50%);
+  text-align:center;
+  font-size:16px;
+}
+
+.text-left{
+  position:absolute;
+  left:-120px;
+  top:50%;
+  transform:translateY(-50%);
+  width:100px;
+  text-align:right;
+  font-size:16px;
+}
+
+.text-right{
+  position:absolute;
+  right:-120px;
+  top:50%;
+  transform:translateY(-50%);
+  width:100px;
+  text-align:left;
+  font-size:16px;
+}
+
+.text-bottom{
+  position:absolute;
+  bottom:-40px;
+  left:50%;
+  transform:translateX(-50%);
+  text-align:center;
+  font-size:16px;
+}
+
+/* Slice icon styles */
 .slice-icon{
   fill:#fff;
-  transition:.3s;
 }
 
-/* DIFFERENT HOVER COLORS */
-.slice1:hover path{ fill:#11806a; }
-.slice2:hover path{ fill:#689f38; }
-.slice3:hover path{ fill:#1e88e5; }
-.slice4:hover path{ fill:#5e35b1; }
-
-.slice:hover .slice-icon{
-  fill:#101840;
-}
 </style>
 </head>
 
@@ -46,48 +71,50 @@ h2{
 
 <h2>4 Concepts Infographics</h2>
 
-<!-- OUTSIDE TEXT -->
-<div id="info-box"></div>
+<div class="wrapper">
 
-<svg width="360" height="360" viewBox="0 0 360 360" style="display:block;margin:auto">
+  <!-- TOP TEXT -->
+  <div class="text-top">Mars is cold despite being red</div>
 
-  <!-- SLICE 1 -->
-  <g class="slice slice1" data-text="Jupiter is the biggest planet">
-    <path d="M180 180 L180 20 A160 160 0 0 1 340 180 Z" fill="#16a085"/>
-    <circle cx="250" cy="110" r="16" class="slice-icon"/>
-  </g>
+  <!-- LEFT TEXT -->
+  <div class="text-left">Mercury is closest to the Sun</div>
 
-  <!-- SLICE 2 -->
-  <g class="slice slice2" data-text="Mars is cold despite being red">
-    <path d="M180 180 L340 180 A160 160 0 0 1 180 340 Z" fill="#8bc34a"/>
-    <rect x="260" y="235" width="18" height="18" class="slice-icon"/>
-  </g>
+  <!-- RIGHT TEXT -->
+  <div class="text-right">Jupiter is the biggest planet</div>
 
-  <!-- SLICE 3 -->
-  <g class="slice slice3" data-text="Venus is extremely hot">
-    <path d="M180 180 L180 340 A160 160 0 0 1 20 180 Z" fill="#3498db"/>
-    <polygon points="90,240 110,200 130,240" class="slice-icon"/>
-  </g>
+  <!-- BOTTOM TEXT -->
+  <div class="text-bottom">Venus is extremely hot</div>
 
-  <!-- SLICE 4 -->
-  <g class="slice slice4" data-text="Mercury is closest to the Sun">
-    <path d="M180 180 L20 180 A160 160 0 0 1 180 20 Z" fill="#7e57c2"/>
-    <circle cx="110" cy="110" r="10" class="slice-icon"/>
-  </g>
 
-</svg>
+  <svg width="360" height="360" viewBox="0 0 360 360">
 
-<script>
-// On hover, update the outside text box
-document.querySelectorAll(".slice").forEach(slice=>{
-  slice.addEventListener("mouseenter",()=>{
-    document.getElementById("info-box").textContent = slice.dataset.text;
-  });
-  slice.addEventListener("mouseleave",()=>{
-    document.getElementById("info-box").textContent = "";
-  });
-});
-</script>
+    <!-- SLICE 1 (Top-right) -->
+    <g class="slice slice1">
+      <path d="M180 180 L180 20 A160 160 0 0 1 340 180 Z" fill="#16a085"/>
+      <circle cx="250" cy="110" r="16" class="slice-icon"/>
+    </g>
+
+    <!-- SLICE 2 (Bottom-right) -->
+    <g class="slice slice2">
+      <path d="M180 180 L340 180 A160 160 0 0 1 180 340 Z" fill="#8bc34a"/>
+      <rect x="260" y="235" width="18" height="18" class="slice-icon"/>
+    </g>
+
+    <!-- SLICE 3 (Bottom-left) -->
+    <g class="slice slice3">
+      <path d="M180 180 L180 340 A160 160 0 0 1 20 180 Z" fill="#3498db"/>
+      <polygon points="90,240 110,200 130,240" class="slice-icon"/>
+    </g>
+
+    <!-- SLICE 4 (Top-left) -->
+    <g class="slice slice4">
+      <path d="M180 180 L20 180 A160 160 0 0 1 180 20 Z" fill="#7e57c2"/>
+      <circle cx="110" cy="110" r="10" class="slice-icon"/>
+    </g>
+
+  </svg>
+
+</div>
 
 </body>
 </html>

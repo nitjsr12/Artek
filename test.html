@@ -14,31 +14,59 @@ h2{
   margin:30px 0;
 }
 
-/* Outside text box */
-#info-box{
-  text-align:center;
-  margin-top:15px;
+.container{
+  width:540px;
+  margin:auto;
+  position:relative;
+}
+
+/* TEXT POSITIONS */
+.info-text{
+  position:absolute;
+  width:160px;
   font-size:16px;
   color:#101840;
-  min-height:22px;
+  opacity:0;
+  transition:.3s;
+  text-align:center;
+  pointer-events:none;
+  line-height:1.3;
+}
+
+/* TOP-LEFT */
+#topleft{
+  top:-20px;
+  left:-40px;
+}
+
+/* TOP-RIGHT */
+#topright{
+  top:-20px;
+  right:-40px;
+}
+
+/* BOTTOM-LEFT */
+#bottomleft{
+  bottom:-20px;
+  left:-40px;
+}
+
+/* BOTTOM-RIGHT */
+#bottomright{
+  bottom:-20px;
+  right:-40px;
+}
+
+/* IMAGE SLICE STYLE */
+.slice{
+  cursor:pointer;
   transition:.3s;
 }
 
-/* ICON STYLE */
-.slice-icon{
-  fill:#fff;
-  transition:.3s;
+.slice:hover{
+  transform:scale(1.05);
 }
 
-/* DIFFERENT HOVER COLORS */
-.slice1:hover path{ fill:#11806a; }
-.slice2:hover path{ fill:#689f38; }
-.slice3:hover path{ fill:#1e88e5; }
-.slice4:hover path{ fill:#5e35b1; }
-
-.slice:hover .slice-icon{
-  fill:#101840;
-}
 </style>
 </head>
 
@@ -46,45 +74,69 @@ h2{
 
 <h2>4 Concepts Infographics</h2>
 
-<!-- OUTSIDE TEXT -->
-<div id="info-box"></div>
+<div class="container">
 
-<svg width="360" height="360" viewBox="0 0 360 360" style="display:block;margin:auto">
+  <!-- INFO TEXT AROUND CIRCLE -->
+  <div id="topleft" class="info-text">Mercury is closest to the Sun</div>
+  <div id="topright" class="info-text">Jupiter is the biggest planet</div>
+  <div id="bottomleft" class="info-text">Venus is extremely hot</div>
+  <div id="bottomright" class="info-text">Mars is cold despite being red</div>
 
-  <!-- SLICE 1 -->
-  <g class="slice slice1" data-text="Jupiter is the biggest planet">
-    <path d="M180 180 L180 20 A160 160 0 0 1 340 180 Z" fill="#16a085"/>
-    <circle cx="250" cy="110" r="16" class="slice-icon"/>
-  </g>
+  <!-- MAIN CIRCLE SVG -->
+  <svg width="360" height="360" viewBox="0 0 360 360" style="display:block;margin:auto">
 
-  <!-- SLICE 2 -->
-  <g class="slice slice2" data-text="Mars is cold despite being red">
-    <path d="M180 180 L340 180 A160 160 0 0 1 180 340 Z" fill="#8bc34a"/>
-    <rect x="260" y="235" width="18" height="18" class="slice-icon"/>
-  </g>
+    <!-- TOP-RIGHT → Jupiter -->
+    <g class="slice" data-target="topright">
+      <defs>
+        <clipPath id="clip1">
+          <path d="M180 180 L180 20 A160 160 0 0 1 340 180 Z"/>
+        </clipPath>
+      </defs>
+      <image href="slice1.png" width="360" height="360" clip-path="url(#clip1)"></image>
+    </g>
 
-  <!-- SLICE 3 -->
-  <g class="slice slice3" data-text="Venus is extremely hot">
-    <path d="M180 180 L180 340 A160 160 0 0 1 20 180 Z" fill="#3498db"/>
-    <polygon points="90,240 110,200 130,240" class="slice-icon"/>
-  </g>
+    <!-- BOTTOM-RIGHT → Mars -->
+    <g class="slice" data-target="bottomright">
+      <defs>
+        <clipPath id="clip2">
+          <path d="M180 180 L340 180 A160 160 0 0 1 180 340 Z"/>
+        </clipPath>
+      </defs>
+      <image href="slice2.png" width="360" height="360" clip-path="url(#clip2)"></image>
+    </g>
 
-  <!-- SLICE 4 -->
-  <g class="slice slice4" data-text="Mercury is closest to the Sun">
-    <path d="M180 180 L20 180 A160 160 0 0 1 180 20 Z" fill="#7e57c2"/>
-    <circle cx="110" cy="110" r="10" class="slice-icon"/>
-  </g>
+    <!-- BOTTOM-LEFT → Venus -->
+    <g class="slice" data-target="bottomleft">
+      <defs>
+        <clipPath id="clip3">
+          <path d="M180 180 L180 340 A160 160 0 0 1 20 180 Z"/>
+        </clipPath>
+      </defs>
+      <image href="slice3.png" width="360" height="360" clip-path="url(#clip3)"></image>
+    </g>
 
-</svg>
+    <!-- TOP-LEFT → Mercury -->
+    <g class="slice" data-target="topleft">
+      <defs>
+        <clipPath id="clip4">
+          <path d="M180 180 L20 180 A160 160 0 0 1 180 20 Z"/>
+        </clipPath>
+      </defs>
+      <image href="slice4.png" width="360" height="360" clip-path="url(#clip4)"></image>
+    </g>
+
+  </svg>
+
+</div>
 
 <script>
-// On hover, update the outside text box
+// Hover show text
 document.querySelectorAll(".slice").forEach(slice=>{
   slice.addEventListener("mouseenter",()=>{
-    document.getElementById("info-box").textContent = slice.dataset.text;
+    document.getElementById(slice.dataset.target).style.opacity = "1";
   });
   slice.addEventListener("mouseleave",()=>{
-    document.getElementById("info-box").textContent = "";
+    document.getElementById(slice.dataset.target).style.opacity = "0";
   });
 });
 </script>

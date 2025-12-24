@@ -13480,13 +13480,13 @@ span.select2-selection.select2-selection--single:focus {
 .contact-process .box-number {
   width: 88px;
   height: 88px;
-  line-height: 50px;
+  line-height: 88px;
   font-family: var(--title-font);
   font-size: 18px;
   font-weight: 600;
   color: var(--white-color);
   text-align: center;
-  border-radius: 40px;
+  border-radius: 99px;
   background-color: #fff;
   position: relative;
   z-index: 2;
@@ -13495,7 +13495,7 @@ span.select2-selection.select2-selection--single:focus {
 .contact-process .box-number:before {
   content: '';
   position: absolute;
-  inset: 10px;
+  inset: 18px;
   background-color: #101841;
   border-radius: inherit;
   z-index: -1;
@@ -13503,11 +13503,11 @@ span.select2-selection.select2-selection--single:focus {
 
 .contact-process .box-title {
   color: var(--white-color);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .contact-process .box-text {
-  font-size: 18 px;
+  font-size: 14px;
   color: var(--light-color);
 }
 
@@ -13524,7 +13524,7 @@ span.select2-selection.select2-selection--single:focus {
             align-items: center;
     text-align: center;
     margin-bottom: 0;
-    gap: 1px;
+    gap: 24px;
   }
 }
 
@@ -14003,7 +14003,7 @@ span.select2-selection.select2-selection--single:focus {
   font-weight: 500;
   color: var(--white-color);
   margin-bottom: -0.3em;
-  font-size: 20px;
+  font-size: 18px;
   /* Large devices */
 }
 

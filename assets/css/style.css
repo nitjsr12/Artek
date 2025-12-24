@@ -13899,9 +13899,10 @@ span.select2-selection.select2-selection--single:focus {
   height: 154px;
   line-height: 154px;
   background-color: var(--theme-color);
-  border: 2px solid var(--yellow-color);
+  border: 2px solid var(--theme-color);
   border-radius: 999px;
   text-align: center;
+  text-color: var(--yellow-color);
 }
 
 .img-box1 .dot-shape {
@@ -13914,8 +13915,8 @@ span.select2-selection.select2-selection--single:focus {
 
 @-webkit-keyframes spinText {
   from {
-    -webkit-transform: rotate(-360deg);
-            transform: rotate(-360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
   to {
     -webkit-transform: rotate(0);
@@ -13925,8 +13926,8 @@ span.select2-selection.select2-selection--single:focus {
 
 @keyframes spinText {
   from {
-    -webkit-transform: rotate(-360deg);
-            transform: rotate(-360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
   to {
     -webkit-transform: rotate(0);

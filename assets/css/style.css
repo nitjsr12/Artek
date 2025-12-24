@@ -110,7 +110,7 @@ Version: 1.0.0
   --white-color: #ffffff;
   --body-bg: #E1E4E5;
   --light-color: #E1E4E5;
-  --yellow-color: #E2B93B;
+  --yellow-color: #e2b93b;
   --success-color: #27AE60;
   --error-color: #EB5757;
   --th-border-color: #fff;
@@ -14000,9 +14000,10 @@ span.select2-selection.select2-selection--single:focus {
 
 .about-feature .box-title {
   margin-bottom: 8px;
-  font-weight: 500;
+  font-weight: 200;
   color: var(--white-color);
   margin-bottom: -0.3em;
+  font-size: 20px;
   /* Large devices */
 }
 

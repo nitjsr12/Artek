@@ -14000,10 +14000,10 @@ span.select2-selection.select2-selection--single:focus {
 
 .about-feature .box-title {
   margin-bottom: 8px;
-  font-weight: 200;
+  font-weight: 500;
   color: var(--white-color);
   margin-bottom: -0.3em;
-  font-size: 20px;
+  font-size: 16px;
   /* Large devices */
 }
 

@@ -9402,9 +9402,9 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
 }
 
 .hero-style1 .hero-text {
-  max-width: 530px;
+  max-width: 300px;
   color: var(--white-color);
-  margin-bottom: 42px;
+  margin-bottom: auto;
 }
 
 .hero-style1 .hero-arrow {

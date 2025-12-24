@@ -14282,23 +14282,23 @@ span.select2-selection.select2-selection--single:focus {
     width: 140px;
     height: 140px;
     border-radius: 50%;
-    background-color: #101841; /* change colour */
+    background-color: var(--yellow-color); /* change colour */
     z-index: -1;
 }
 
 
 .img-box5 .box-badge .spin-text {
-  color: var(--title-color);
+  color: var(--yellow-color);
   position: absolute;
   right: -50%;
   top: -50%;
-  -webkit-animation: spinText 8s linear infinite;
-          animation: spinText 8s linear infinite;
+  -webkit-animation: spinText 8s linear infinite reverse;
+          animation: spinText 8s linear infinite reverse;
 }
 
 .img-box5 .box-badge .spin-text text {
   font-weight: 600;
-  fill: var(--title-color);
+  fill: var(--yellow-color);
 }
 
 .img-box5 .box-badge .spin-text svg {

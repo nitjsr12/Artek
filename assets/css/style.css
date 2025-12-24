@@ -13482,7 +13482,7 @@ span.select2-selection.select2-selection--single:focus {
   height: 88px;
   line-height: 50px;
   font-family: var(--title-font);
-  font-size: 10px;
+  font-size: 18px;
   font-weight: 600;
   color: var(--white-color);
   text-align: center;
@@ -13524,7 +13524,7 @@ span.select2-selection.select2-selection--single:focus {
             align-items: center;
     text-align: center;
     margin-bottom: 0;
-    gap: 10px;
+    gap: 1px;
   }
 }
 

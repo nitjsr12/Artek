@@ -13874,7 +13874,7 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .img-box1 .box-badge .spin-text {
-  color: var(--white-color);
+  color: var(--yellow-color);
   position: absolute;
   right: -50%;
   top: -50%;
@@ -13899,10 +13899,9 @@ span.select2-selection.select2-selection--single:focus {
   height: 154px;
   line-height: 154px;
   background-color: var(--theme-color);
-  border: 2px solid var(--theme-color);
+  border: 2px solid var(--white-color);
   border-radius: 999px;
   text-align: center;
-  text-color: var(--yellow-color);
 }
 
 .img-box1 .dot-shape {

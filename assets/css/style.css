@@ -15811,7 +15811,7 @@ span.select2-selection.select2-selection--single:focus {
 
 .counter-card .box-text {
   font-size: 18px;
-  color: var(--white-color);
+  color: var(--theme-color);
 }
 
 .counter-card .media-body {

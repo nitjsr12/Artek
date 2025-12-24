@@ -13503,11 +13503,11 @@ span.select2-selection.select2-selection--single:focus {
 
 .contact-process .box-title {
   color: var(--white-color);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .contact-process .box-text {
-  font-size: 8 px;
+  font-size: 18 px;
   color: var(--light-color);
 }
 

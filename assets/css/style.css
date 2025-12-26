@@ -20929,7 +20929,7 @@ textarea.form-control {
 
 /* Slightly reduce image height */
 .img-box3 img {
-    max-height: 410px;
+    max-height: 450px;
     object-fit: cover;
 }
 

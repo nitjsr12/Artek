@@ -20890,32 +20890,44 @@ span.select2-selection.select2-selection--single:focus {
   clip-path: polygon(0 0, 100% 0, 100% 100%);
 }
 
-/* Reduce overall section height */
-#enquiry-sec,
+/* Reduce overall section padding */
 .enquiry-sec,
-.enquiry-form-section {
-    padding-top: 40px;
-    padding-bottom: 40px;
+#about-sec,
+.overflow-hidden.bg-white {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
 }
 
-/* Reduce extra vertical spacing on right column */
+/* Reduce right-side spacing */
 .space-extra {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
 }
 
-/* Reduce spacing between process steps */
+/* Reduce form field spacing */
+.form-group {
+    margin-bottom: 14px;
+}
+
+/* Reduce input & select height */
+.form-control,
+.form-select {
+    height: 48px;
+    padding: 10px 16px;
+}
+
+/* Reduce textarea height */
+textarea.form-control {
+    min-height: 90px;
+}
+
+/* Reduce left process spacing */
 .contact-process {
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 }
 
-/* Reduce spacing inside image box */
-.img-box3 {
-    padding: 0;
-}
-
-/* Reduce image height slightly */
+/* Slightly reduce image height */
 .img-box3 img {
-    max-height: 380px;
+    max-height: 360px;
     object-fit: cover;
 }

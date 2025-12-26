@@ -20931,3 +20931,27 @@ textarea.form-control {
     max-height: 410px;
     object-fit: cover;
 }
+
+/* Center the enquiry form within right column */
+.col-xl-6.text-center.text-xl-start {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Limit form width for better alignment */
+.col-xl-6.text-center.text-xl-start form {
+    width: 100%;
+    max-width: 520px;
+}
+
+/* Align heading with form */
+.col-xl-6.text-center.text-xl-start .title-area {
+    width: 100%;
+    max-width: 520px;
+}
+
+/* Ensure inputs take full form width */
+.form-group {
+    width: 100%;
+}

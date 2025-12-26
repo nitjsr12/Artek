@@ -20919,6 +20919,7 @@ span.select2-selection.select2-selection--single:focus {
 /* Reduce textarea height */
 textarea.form-control {
     min-height: 50px;
+    margin-top: -10px;
 }
 
 /* Reduce left process spacing */

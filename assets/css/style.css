@@ -20890,3 +20890,32 @@ span.select2-selection.select2-selection--single:focus {
   clip-path: polygon(0 0, 100% 0, 100% 100%);
 }
 
+/* Reduce overall section height */
+#enquiry-sec,
+.enquiry-sec,
+.enquiry-form-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* Reduce extra vertical spacing on right column */
+.space-extra {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Reduce spacing between process steps */
+.contact-process {
+    margin-bottom: 12px;
+}
+
+/* Reduce spacing inside image box */
+.img-box3 {
+    padding: 0;
+}
+
+/* Reduce image height slightly */
+.img-box3 img {
+    max-height: 380px;
+    object-fit: cover;
+}

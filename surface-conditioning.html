@@ -400,6 +400,35 @@ body{
   border-radius: 10px;
 }
 
+/* Slider arrows - pushed outward */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 44px;
+  height: 44px;
+  background: #101840;
+  border-radius: 50%;
+  color: #fff;
+
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Move arrows OUTSIDE slider */
+.swiper-button-prev {
+  left: -60px;   /* move further left */
+}
+
+.swiper-button-next {
+  right: -60px;  /* move further right */
+}
+
+
 /* Slider scrollbar thumb */
 .swiper-scrollbar-drag {
   background: #101840;   /* your brand color */

@@ -20982,13 +20982,13 @@ textarea.form-control {
     text-align: left;
     font-size: 16px;
     font-weight: 600;
-    color: #7a1f6b;
+    color:var(--theme-color);
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .tab-btn.active {
-    background: #7a1f6b;
+    background: var(--theme-color);
     color: #ffffff;
 }
 

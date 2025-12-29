@@ -400,11 +400,64 @@ body{
   border-radius: 10px;
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+  display: flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
 
+.swiper-button-prev { left: -70px; }
+.swiper-button-next { right: -70px; }
 
+.product-slider {
+  overflow: visible;
+}
 
+.product-slider {
+  overflow: visible;
+  position: relative;
+}
 
+/* Arrow container */
+.custom-arrow {
+  width: 44px;
+  height: 44px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  color: #0b1b4d;
+}
 
+/* Push arrows outside */
+.swiper-button-prev {
+  left: -60px;
+}
+
+.swiper-button-next {
+  right: -60px;
+}
+
+/* Arrow icon size */
+.custom-arrow::after {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Force visibility */
+.swiper-button-prev,
+.swiper-button-next {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Hide on mobile */
+@media (max-width: 768px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  }
+}
 
 </style>
 </head>
@@ -545,19 +598,23 @@ body{
 new Swiper('.product-slider', {
   slidesPerView: 2,
   spaceBetween: 20,
-  scrollbar: {
-    el: '.swiper-scrollbar',
-    draggable: true
-  },
+
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev'
   },
-  breakpoints:{
-    0:{ slidesPerView:1 },
-    768:{ slidesPerView:2 }
+
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true
+  },
+
+  breakpoints: {
+    0: { slidesPerView: 1 },
+    768: { slidesPerView: 2 }
   }
 });
+
 </script>
 
 </body>

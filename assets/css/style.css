@@ -21045,6 +21045,7 @@ textarea.form-control {
     object-fit: contain;
     display: block;
     margin: 0 auto;
+    margin-left: -50px;
 }
 .industry-section {
     padding-top: 40px;

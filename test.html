@@ -2,279 +2,196 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>4 Concepts Infographics</title>
+<title>4 Concepts Hover Infographic</title>
+ 
 <style>
 body{
-  font-family: Arial, sans-serif;
   background:#f3f4f6;
+  font-family: Arial, sans-serif;
 }
-
-h2{
-  text-align:center;
-  margin:30px 0;
-}
-
-.container{
-  width:540px;
-  margin:auto;
+ 
+/* MAIN CONTAINER */
+.infographic{
+  width:520px;
+  height:520px;
+  margin:50px auto;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   position:relative;
 }
-
-/* TEXT POSITIONS */
-.info-text{
-  position:absolute;
-  width:160px;
-  font-size:16px;
-  color:#101840;
-  opacity:0;
-  transition:.3s;
-  text-align:center;
-  pointer-events:none;
-  line-height:1.3;
-}
-
-/* TOP-LEFT */
-#topleft{
-  top:-20px;
-  left:-40px;
-}
-
-/* TOP-RIGHT */
-#topright{
-  top:-20px;
-  right:-40px;
-}
-
-/* BOTTOM-LEFT */
-#bottomleft{
-  bottom:-20px;
-  left:-40px;
-}
-
-/* BOTTOM-RIGHT */
-#bottomright{
-  bottom:-20px;
-  right:-40px;
-}
-
-/* IMAGE SLICE STYLE */
-.slice{
-  cursor:pointer;
-  transition:.3s;
-}
-
-.slice:hover{
-  transform:scale(1.05);
-}
-
-</style>
-</head>
-
-<body>
-
-<h2>4 Concepts Infographics</h2>
-
-<div class="container">
-
-  <!-- INFO TEXT AROUND CIRCLE -->
-  <div id="topleft" class="info-text">Mercury is closest to the Sun</div>
-  <div id="topright" class="info-text">Jupiter is the biggest planet</div>
-  <div id="bottomleft" class="info-text">Venus is extremely hot</div>
-  <div id="bottomright" class="info-text">Mars is cold despite being red</div>
-
-  <!-- MAIN CIRCLE SVG -->
-  <svg width="360" height="360" viewBox="0 0 360 360" style="display:block;margin:auto">
-
-    <!-- TOP-RIGHT → Jupiter -->
-    <g class="slice" data-target="topright">
-      <defs>
-        <clipPath id="clip1">
-          <path d="M180 180 L180 20 A160 160 0 0 1 340 180 Z"/>
-        </clipPath>
-      </defs>
-      <image href="slice1.png" width="360" height="360" clip-path="url(#clip1)"></image>
-    </g>
-
-    <!-- BOTTOM-RIGHT → Mars -->
-    <g class="slice" data-target="bottomright">
-      <defs>
-        <clipPath id="clip2">
-          <path d="M180 180 L340 180 A160 160 0 0 1 180 340 Z"/>
-        </clipPath>
-      </defs>
-      <image href="slice2.png" width="360" height="360" clip-path="url(#clip2)"></image>
-    </g>
-
-    <!-- BOTTOM-LEFT → Venus -->
-    <g class="slice" data-target="bottomleft">
-      <defs>
-        <clipPath id="clip3">
-          <path d="M180 180 L180 340 A160 160 0 0 1 20 180 Z"/>
-        </clipPath>
-      </defs>
-      <image href="slice3.png" width="360" height="360" clip-path="url(#clip3)"></image>
-    </g>
-
-    <!-- TOP-LEFT → Mercury -->
-    <g class="slice" data-target="topleft">
-      <defs>
-        <clipPath id="clip4">
-          <path d="M180 180 L20 180 A160 160 0 0 1 180 20 Z"/>
-        </clipPath>
-      </defs>
-      <image href="slice4.png" width="360" height="360" clip-path="url(#clip4)"></image>
-    </g>
-
-  </svg>
-
-</div>
-
-<script>
-// Hover show text
-document.querySelectorAll(".slice").forEach(slice=>{
-  slice.addEventListener("mouseenter",()=>{
-    document.getElementById(slice.dataset.target).style.opacity = "1";
-  });
-  slice.addEventListener("mouseleave",()=>{
-    document.getElementById(slice.dataset.target).style.opacity = "0";
-  });
-});
-</script>
-
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>4 Concepts Infographics</title>
-
-<style>
-body{
-  font-family: Arial, sans-serif;
-  background:#f3f4f6;
-}
-
-.container{
-  width:540px;
-  margin:auto;
+ 
+/* COMMON PIECE STYLE */
+.piece{
   position:relative;
-}
-
-/* TEXT POSITIONS */
-.info-text{
-  position:absolute;
-  width:160px;
-  font-size:16px;
-  color:#101840;
-  opacity:0;
-  transition:.3s;
-  text-align:center;
-  pointer-events:none;
-  line-height:1.3;
-  font-weight:600;
-}
-
-/* TOP-LEFT */
-#topleft{
-  top:-30px;
-  left:-40px;
-}
-
-/* TOP-RIGHT */
-#topright{
-  top:-30px;
-  right:-40px;
-}
-
-/* BOTTOM-LEFT */
-#bottomleft{
-  bottom:-30px;
-  left:-40px;
-}
-
-/* BOTTOM-RIGHT */
-#bottomright{
-  bottom:-30px;
-  right:-40px;
-}
-
-/* SLICES */
-.slice{
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   cursor:pointer;
-  transition:.3s;
+  transition:transform 0.4s ease;
 }
-
-.slice:hover{
-  transform:scale(1.05);
+ 
+/* TEXT */
+.item{
+  position:relative;
+  width:100%;
+  height:100%;
 }
+ 
+ 
+.text{
+  position:absolute;
+  width:180px;
+  font-size:20px;
+}
+ 
+/* LEFT SIDE TEXT */
+.text.left{
+  left:-190px;
+  top:50%;
+  transform:translateY(-50%);
+  text-align:right;
+}
+ 
+/* RIGHT SIDE TEXT */
+.text.right{
+  right:-190px;
+  top:50%;
+  transform:translateY(-50%);
+  text-align:left;
+}
+ 
+/* BOTTOM LEFT */
+.text.bottom-left{
+  left:-190px;
+  bottom:20px;
+  text-align:right;
+}
+ 
+/* BOTTOM RIGHT */
+.text.bottom-right{
+  right:-190px;
+  bottom:20px;
+  text-align:left;
+}
+ 
+ 
+.desc{
+  opacity:0;
+  transition:opacity 0.3s ease;
+}
+ 
+/* when hovering image, show text */
+.item:hover .desc{
+  opacity:1;
+}
+ 
+.desc{
+  font-size:14px;
+  opacity:0;
+  transition:opacity 0.3s ease;
+  text-align:center;
+  padding:20px;
+}
+ 
+/* HOVER EFFECT */
+.piece:hover .desc{
+  opacity:1;
+}
+ 
+/* INDIVIDUAL PIECES + SEPARATION DIRECTION */
+.jupiter:hover{ transform:translate(-15px,-15px); }
+.mars:hover{ transform:translate(15px,-15px); }
+.venus:hover{ transform:translate(-15px,15px); }
+.mercury:hover{ transform:translate(15px,15px); }
+ 
+/* COLORS / PLACEHOLDER IMAGES */
+.jupiter{
+  background-image:url("1.png");
+  background-size:cover;
+  background-position:center;
+  border-top-left-radius:100%;
+}
+ 
+.mars{
+  background-image:url("2.png");
+  background-size:cover;
+  background-position:center;
+  border-top-right-radius:100%;
+}
+ 
+.venus{
+  background-image:url("3.png");
+  background-size:cover;
+  background-position:center;
+  border-bottom-left-radius:100%;
+}
+ 
+.mercury{
+  background-image:url("4.png");
+  background-size:cover;
+  background-position:center;
+  border-bottom-right-radius:100%;
+}
+ 
+ 
+.piece{
+  width:100%;
+  height:100%;
+}  
+ 
+/* TEXT COLORS */
+.jupiter .title{ color:#0e6251; }
+.mars .title{ color:#33691e; }
+.venus .title{ color:#0d47a1; }
+.mercury .title{ color:#4a148c; }
+ 
+.title{
+  font-weight:bold;}
+ 
 </style>
 </head>
-
+ 
 <body>
-
-<div class="container">
-
-  <!-- INFO TEXT -->
-  <div id="topleft" class="info-text">Text for Top Left Slice</div>
-  <div id="topright" class="info-text">Text for Top Right Slice</div>
-  <div id="bottomleft" class="info-text">Text for Bottom Left Slice</div>
-  <div id="bottomright" class="info-text">Text for Bottom Right Slice</div>
-
-  <!-- MAIN SVG CIRCLE -->
-  <svg width="360" height="360" viewBox="0 0 360 360">
-
-    <!-- TOP LEFT -->
-    <g class="slice" data-target="topleft">
-      <clipPath id="clip-tl">
-        <path d="M180 180 L180 20 A160 160 0 0 0 20 180 Z"/>
-      </clipPath>
-      <image href="slice-top-left.png" width="360" height="360" clip-path="url(#clip-tl)"></image>
-    </g>
-
-    <!-- TOP RIGHT -->
-    <g class="slice" data-target="topright">
-      <clipPath id="clip-tr">
-        <path d="M180 180 L180 20 A160 160 0 0 1 340 180 Z"/>
-      </clipPath>
-      <image href="slice-top-right.png" width="360" height="360" clip-path="url(#clip-tr)"></image>
-    </g>
-
-    <!-- BOTTOM RIGHT -->
-    <g class="slice" data-target="bottomright">
-      <clipPath id="clip-br">
-        <path d="M180 180 L340 180 A160 160 0 0 1 180 340 Z"/>
-      </clipPath>
-      <image href="slice-bottom-right.png" width="360" height="360" clip-path="url(#clip-br)"></image>
-    </g>
-
-    <!-- BOTTOM LEFT -->
-    <g class="slice" data-target="bottomleft">
-      <clipPath id="clip-bl">
-        <path d="M180 180 L20 180 A160 160 0 0 1 180 340 Z"/>
-      </clipPath>
-      <image href="slice-bottom-left.png" width="360" height="360" clip-path="url(#clip-bl)"></image>
-    </g>
-
-  </svg>
-
+ 
+<div class="infographic">
+ 
+  <div class="item">
+    <div class="piece jupiter"></div>
+    <div class="text left">
+      <div class="title">Jupiter</div>
+      <div class="desc">Jupiter is the biggest planet in the Solar System</div>
+    </div>
+  </div>
+ 
+  <div class="item">
+    <div class="piece mars"></div>
+    <div class="text right">
+      <div class="title">Mars</div>
+      <div class="desc">Despite being red, Mars is actually a cold place</div>
+    </div>
+  </div>
+ 
+  <div class="item">
+    <div class="piece venus"></div>
+    <div class="text bottom-left">
+      <div class="title">Venus</div>
+      <div class="desc">Venus is terribly hot, even hotter than Mercury</div>
+    </div>
+  </div>
+ 
+  <div class="item">
+    <div class="piece mercury"></div>
+    <div class="text bottom-right">
+      <div class="title">Mercury</div>
+      <div class="desc">Mercury is the closest planet to the Sun</div>
+    </div>
+  </div>
+ 
 </div>
-
-
-
-<script>
-// Hover show/hide text
-document.querySelectorAll(".slice").forEach(slice=>{
-  slice.addEventListener("mouseenter",()=>{
-    document.getElementById(slice.dataset.target).style.opacity = "1";
-  });
-  slice.addEventListener("mouseleave",()=>{
-    document.getElementById(slice.dataset.target).style.opacity = "0";
-  });
-});
-</script>
-
+ 
+ 
 </body>
 </html>
-

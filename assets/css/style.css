@@ -20933,3 +20933,101 @@ textarea.form-control {
     object-fit: cover;
 }
 
+.switchgear-section {
+    padding: 70px 0;
+    background: #ffffff;
+}
+
+.switchgear-section .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.section-head {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-head h2 {
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.section-head p {
+    max-width: 700px;
+    margin: auto;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* Layout */
+.tab-accordion {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+}
+
+/* Left list */
+.tab-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.tab-btn {
+    background: #f3f3f3;
+    border: none;
+    padding: 18px 24px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+    color: #7a1f6b;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    background: #7a1f6b;
+    color: #ffffff;
+}
+
+/* Right content */
+.tab-content {
+    padding-top: 10px;
+}
+
+.content {
+    display: none;
+    animation: slideFade 0.4s ease;
+}
+
+.content.active {
+    display: block;
+}
+
+.content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Animation */
+@keyframes slideFade {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tab-accordion {
+        grid-template-columns: 1fr;
+    }
+}
+

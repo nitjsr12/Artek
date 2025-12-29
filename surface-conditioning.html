@@ -537,6 +537,9 @@ body{
 
   </div>
 
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
   <!-- Scrollbar -->
   <div class="swiper-scrollbar"></div>
 </section>
@@ -551,6 +554,10 @@ new Swiper('.product-slider', {
   scrollbar: {
     el: '.swiper-scrollbar',
     draggable: true
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
   },
   breakpoints:{
     0:{ slidesPerView:1 },

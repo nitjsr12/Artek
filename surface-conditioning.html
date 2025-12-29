@@ -680,6 +680,19 @@ Feature Area
       </div>
     </div>
 
+    <script>
+    document.querySelectorAll(".tab-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+        document.querySelectorAll(".content").forEach(c => c.classList.remove("active"));
+
+        btn.classList.add("active");
+        document.getElementById(btn.dataset.tab).classList.add("active");
+    });
+    });
+    </script>
+
+
   </div>
 </section>
 

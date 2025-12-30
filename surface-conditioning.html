@@ -459,6 +459,7 @@ body{
   }
 }
 
+
 </style>
 </head>
 
@@ -598,23 +599,19 @@ body{
 new Swiper('.product-slider', {
   slidesPerView: 2,
   spaceBetween: 20,
-
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  },
-
   scrollbar: {
     el: '.swiper-scrollbar',
     draggable: true
   },
-
-  breakpoints: {
-    0: { slidesPerView: 1 },
-    768: { slidesPerView: 2 }
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
+  breakpoints:{
+    0:{ slidesPerView:1 },
+    768:{ slidesPerView:2 }
   }
 });
-
 </script>
 
 </body>

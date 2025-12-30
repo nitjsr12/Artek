@@ -339,28 +339,28 @@ body {
   max-width: 1100px;
   margin: 0 auto;
   position: relative;
-  overflow: hidden;      /* 🔴 THIS IS THE KEY */
-}
-
-/* ===== WRAPPER ===== */
-.product-slider .swiper-wrapper {
-  align-items: stretch;
+  overflow: hidden; /* IMPORTANT: only 2 slides visible */
+  padding-bottom: 80px; /* space for arrows */
 }
 
 /* ===== SLIDES ===== */
+.swiper-wrapper {
+  align-items: stretch;
+}
+
 .swiper-slide {
   height: auto;
 }
 
 /* ===== CARD ===== */
 .product-card {
-  background: #ffffff;
+  background: #fff;
   border-radius: 12px;
   padding: 24px;
   height: 320px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 20px rgba(0,0,0,.08);
 }
 
 /* ===== HEADER ===== */
@@ -397,37 +397,12 @@ body {
   font-size: 14px;
 }
 
-/* ===== ARROWS ===== */
-.swiper-button-prev,
-.swiper-button-next {
-  width: 44px;
-  height: 44px;
-  background: #fff;
-  border-radius: 50%;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  color: #0b1b4d;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-/* push arrows OUTSIDE without breaking overflow */
-.swiper-button-prev {
-  left: -60px;
-}
-
-.swiper-button-next {
-  right: -60px;
-}
-
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  font-size: 18px;
-  font-weight: bold;
-}
-
 /* ===== SCROLLBAR ===== */
 .swiper-scrollbar {
-  margin-top: 30px;
+  position: absolute;
+  bottom: 45px;
+  left: 0;
+  width: 100%;
   height: 4px;
   background: #ddd;
 }
@@ -436,13 +411,37 @@ body {
   background: #0b1b4d;
 }
 
+/* ===== BOTTOM ARROWS ===== */
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  bottom: 0;
+  top: auto;
+  width: 42px;
+  height: 42px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  color: #0b1b4d;
+}
+
+/* Center arrows */
+.swiper-button-prev {
+  left: calc(50% - 60px);
+}
+
+.swiper-button-next {
+  right: calc(50% - 60px);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 16px;
+  font-weight: bold;
+}
+
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
-  .swiper-button-prev,
-  .swiper-button-next {
-    display: none;
-  }
-
   .product-card {
     height: auto;
   }

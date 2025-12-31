@@ -43,34 +43,41 @@ body{
 }
  
  
-/* ===== FIX MAIN HEADING ALIGNMENT ===== */
-.text {
-  width: 260px;              /* more space so heading doesn’t break oddly */
+.text{
+  position:absolute;
+  width:180px;
+  font-size:22px;
 }
-
-/* Title styling */
-.text .title {
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1.4;
-  margin-bottom: 12px;
-  color: #0b1b4d;
-  text-align: inherit;       /* follows left/right placement correctly */
-  white-space: normal;
+ 
+/* LEFT SIDE TEXT */
+.text.left{
+  left:-190px;
+  top:50%;
+  transform:translateY(-50%);
+  text-align:right;
 }
-
-/* Left side headings */
-.text.left .title,
-.text.bottom-left .title {
-  text-align: right;
+ 
+/* RIGHT SIDE TEXT */
+.text.right{
+  right:-190px;
+  top:50%;
+  transform:translateY(-50%);
+  text-align:left;
 }
-
-/* Right side headings */
-.text.right .title,
-.text.bottom-right .title {
-  text-align: left;
+ 
+/* BOTTOM LEFT */
+.text.bottom-left{
+  left:-190px;
+  bottom:20px;
+  text-align:right;
 }
-
+ 
+/* BOTTOM RIGHT */
+.text.bottom-right{
+  right:-190px;
+  bottom:20px;
+  text-align:left;
+}
  
  
 .desc{

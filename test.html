@@ -12,13 +12,15 @@ body{
  
 /* MAIN CONTAINER */
 .infographic{
-  width:520px;
-  height:520px;
+  width:540px;
+  height:540px;
   margin:50px auto;
   display:grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   position:relative;
+ 
+ 
 }
  
 /* COMMON PIECE STYLE */
@@ -44,7 +46,7 @@ body{
 .text{
   position:absolute;
   width:180px;
-  font-size:20px;
+  font-size:22px;
 }
  
 /* LEFT SIDE TEXT */
@@ -89,7 +91,7 @@ body{
 }
  
 .desc{
-  font-size:14px;
+  font-size:18px;
   opacity:0;
   transition:opacity 0.3s ease;
   text-align:center;
@@ -109,31 +111,39 @@ body{
  
 /* COLORS / PLACEHOLDER IMAGES */
 .jupiter{
-  background-image:url("1.png");
-  background-size:cover;
-  background-position:center;
+  background-image:url("assets/infographicss/2info.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   border-top-left-radius:100%;
 }
  
 .mars{
-  background-image:url("2.png");
-  background-size:cover;
-  background-position:center;
+  background-image:url("assets/infographicss/1info.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   border-top-right-radius:100%;
+  transform: translateY(10px);
 }
  
 .venus{
-  background-image:url("3.png");
-  background-size:cover;
-  background-position:center;
+  background-image:url("assets/infographicss/4info.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   border-bottom-left-radius:100%;
+  transform: translateX(-10px);
 }
  
 .mercury{
-  background-image:url("4.png");
-  background-size:cover;
-  background-position:center;
+  background-image:url("assets/infographicss/3info.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   border-bottom-right-radius:100%;
+  transform: translate(-10px,10px);
+ 
 }
  
  
@@ -142,11 +152,6 @@ body{
   height:100%;
 }  
  
-/* TEXT COLORS */
-.jupiter .title{ color:#0e6251; }
-.mars .title{ color:#33691e; }
-.venus .title{ color:#0d47a1; }
-.mercury .title{ color:#4a148c; }
  
 .title{
   font-weight:bold;}

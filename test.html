@@ -90,13 +90,36 @@ body{
   opacity:1;
 }
  
-.desc{
-  font-size:18px;
-  opacity:0;
-  transition:opacity 0.3s ease;
-  text-align:center;
-  padding:20px;
+/* ===== DESCRIPTION TEXT IMPROVEMENT ===== */
+.desc {
+  font-size: 16px;          /* slightly smaller for clarity */
+  line-height: 1.8;         /* more breathing space */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: left;         /* list looks cleaner left-aligned */
+  padding: 12px 10px;
 }
+
+/* UL styling */
+.desc ul {
+  list-style: disc;
+  padding-left: 18px;
+  margin: 0;
+}
+
+/* EACH POINT = CLEAR LINE */
+.desc ul li {
+  margin-bottom: 12px;      /* 👈 this is the key */
+  line-height: 1.7;
+  font-size: 15px;
+  color: #333;
+}
+
+/* Optional: last item no extra gap */
+.desc ul li:last-child {
+  margin-bottom: 0;
+}
+
  
 /* HOVER EFFECT */
 .piece:hover .desc{

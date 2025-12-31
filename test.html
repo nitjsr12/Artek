@@ -102,18 +102,18 @@ body{
 
 /* UL styling */
 .desc ul {
-  list-style: disc;
-  padding-left: 18px;
-  margin: 0;
+  list-style: none;
+  padding-left: 0;
 }
 
-/* EACH POINT = CLEAR LINE */
-.desc ul li {
-  margin-bottom: 12px;      /* 👈 this is the key */
-  line-height: 1.7;
-  font-size: 15px;
-  color: #333;
+.desc ul li::before {
+  content: "•";
+  color: #0b1b4d;
+  font-weight: bold;
+  display: inline-block;
+  width: 14px;
 }
+
 
 /* Optional: last item no extra gap */
 .desc ul li:last-child {

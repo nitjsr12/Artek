@@ -9391,6 +9391,10 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
   width:100%
 }
 
+
+
+
+
 .hero-style1 .hero-subtitle {
   margin-bottom: 35px;
 }
@@ -9442,7 +9446,19 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
     font-size: 44px;
     line-height: 1.2;
   }
-  
+  .hero-style1 {
+    margin: 210px 0 40px 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-style1 .hero-text,
+  .hero-style1 .hero-title > span {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 /* Small devices */
 @media (max-width: 767px) {
   .hero-title {

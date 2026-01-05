@@ -9402,7 +9402,6 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
 .hero-style1 .hero-title {
   color: var(--white-color);
   margin-top: -100px !important;
-  max-width: 12ch;
 }
 
 .hero-style1 .hero-text {

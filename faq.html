@@ -764,6 +764,39 @@ Blog Area
 
     <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const searchForm = document.querySelector(".faq-search");
+    const searchInput = searchForm.querySelector("input");
+    const faqCards = document.querySelectorAll("#faqAccordion .accordion-card");
+
+    searchForm.addEventListener("submit", function (e) {
+        e.preventDefault(); // stop page reload
+
+        const keyword = searchInput.value.toLowerCase().trim();
+
+        faqCards.forEach(card => {
+            const question = card.querySelector(".accordion-button")?.innerText.toLowerCase() || "";
+            const answer = card.querySelector(".accordion-body")?.innerText.toLowerCase() || "";
+
+            if (question.includes(keyword) || answer.includes(keyword)) {
+                card.classList.remove("d-none");
+            } else {
+                card.classList.add("d-none");
+            }
+        });
+    });
+
+    // Optional: reset results when input is cleared
+    searchInput.addEventListener("input", function () {
+        if (this.value.trim() === "") {
+            faqCards.forEach(card => card.classList.remove("d-none"));
+        }
+    });
+});
+</script>
+
 </body>
 
 </html>

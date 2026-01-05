@@ -9247,22 +9247,39 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
 }
 
 /* Hero 1 ---------------------------------- */
-/* =========================
-   HERO BASE
-========================= */
+/* ===============================
+   HERO STRUCTURE (SAFE STACKING)
+================================ */
 
-.hero-1,
-.hero-slider,
-.hero-slide {
+.hero-1 {
   position: relative;
   min-height: 100vh;
-  overflow: hidden;
+  overflow: visible; /* IMPORTANT */
   z-index: 1;
 }
 
-/* =========================
-   HERO TEXT CONTAINER
-========================= */
+.hero-slider,
+.hero-slide {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===============================
+   HERO OVERLAY FIX (CRITICAL)
+================================ */
+
+.hero-1::before,
+.hero-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  z-index: 0;
+}
+
+/* ===============================
+   HERO TEXT (TOP LAYER)
+================================ */
 
 .hero-style1 {
   position: absolute;
@@ -9271,155 +9288,75 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
   transform: translateY(-50%);
   max-width: 620px;
   width: 100%;
-  z-index: 999; /* CRITICAL: keeps text visible on laptop */
+  z-index: 9999; /* ABOVE EVERYTHING */
+  color: #fff;
 }
 
-/* =========================
-   HERO TEXT
-========================= */
-
 .hero-subtitle {
-  font-family: var(--title-font);
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.2em;
-  color: var(--theme-color);
+  color: #ffffff;
   text-transform: uppercase;
-  margin-bottom: 20px;
 }
 
 .hero-title {
   font-size: 72px;
   font-weight: 700;
   line-height: 1.2;
-  color: var(--white-color);
+  color: #ffffff;
   max-width: 13ch;
-  margin-bottom: 22px;
-}
-
-.hero-title > span {
-  display: block;
-  width: fit-content;
 }
 
 .hero-text {
+  color: #ffffff;
   max-width: 360px;
-  color: var(--white-color);
 }
 
-/* =========================
-   HERO IMAGE
-========================= */
+/* ===============================
+   HERO IMAGE (BELOW TEXT)
+================================ */
 
-.hero-1 .hero-img {
+.hero-img {
   position: absolute;
   bottom: 0;
   right: 0;
-  max-width: 744px;
-  z-index: 3;
+  max-width: 720px;
+  z-index: 2;
 }
 
-.hero-1 .hero-img img {
+.hero-img img {
   width: 100%;
   height: auto;
 }
 
-/* Decorative circle */
-.hero-1 .hero-img::before {
-  content: "";
-  position: absolute;
-  bottom: 36px;
-  right: 1%;
-  width: 255px;
-  height: 255px;
-  background-color: rgba(255, 255, 255, 0.15);
-  border-radius: 50%;
-  z-index: -1;
-}
+/* ===============================
+   RESPONSIVE (MOBILE SAFE)
+================================ */
 
-/* =========================
-   SLIDER ARROWS
-========================= */
-
-.hero-1 .slider-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: transparent;
-  color: var(--white-color);
-  border: 1px solid var(--white-color);
-  z-index: 5;
-}
-
-.hero-1 .slider-arrow:hover {
-  background-color: var(--white-color);
-  color: var(--theme-color);
-}
-
-/* =========================
-   RESPONSIVE FIXES
-========================= */
-
-/* Laptop */
-@media (max-width: 1399px) {
-  .hero-1 .hero-img {
-    max-width: 600px;
-  }
-}
-
-/* Tablet */
-@media (max-width: 1199px) {
-  .hero-title {
-    font-size: 50px;
-  }
-
-  .hero-1 .hero-img {
-    max-width: 450px;
-  }
-}
-
-/* Mobile & Tablet Layout Switch */
 @media (max-width: 991px) {
   .hero-style1 {
     position: relative;
     top: auto;
     left: auto;
     transform: none;
-    margin: 200px auto 40px;
+    margin: 180px auto 40px;
     text-align: center;
+  }
+
+  .hero-img {
+    position: relative;
+    margin: 0 auto;
   }
 
   .hero-title {
     font-size: 44px;
   }
-
-  .hero-text,
-  .hero-title > span {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-1 .hero-img {
-    position: relative;
-    margin: 0 auto;
-  }
 }
 
-/* Small devices */
 @media (max-width: 575px) {
   .hero-title {
     font-size: 32px;
-  }
-
-  .hero-1 .hero-img img {
-    max-height: 400px;
-  }
-}
-
-/* Extra small */
-@media (max-width: 390px) {
-  .hero-title {
-    font-size: 28px;
   }
 }
 

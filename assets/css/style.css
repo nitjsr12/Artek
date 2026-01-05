@@ -9387,11 +9387,9 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
   position: relative;
   z-index: 6;
   margin: 316px 0 180px 0;
+  max-width: 680px;
+  width:100%
 }
-
-
-
-
 
 .hero-style1 .hero-subtitle {
   margin-bottom: 35px;
@@ -9400,6 +9398,7 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
 .hero-style1 .hero-title {
   color: var(--white-color);
   margin-top: -100px !important;
+  max-width: 12ch;
 }
 
 .hero-style1 .hero-text {
@@ -9443,19 +9442,7 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
     font-size: 44px;
     line-height: 1.2;
   }
-  .hero-style1 {
-    margin: 210px 0 40px 0;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .hero-style1 .hero-text,
-  .hero-style1 .hero-title > span {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
+  
 /* Small devices */
 @media (max-width: 767px) {
   .hero-title {

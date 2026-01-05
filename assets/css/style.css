@@ -9458,6 +9458,38 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
   }
 }
 
+.hero-1,
+.hero-slider,
+.hero-slide {
+  position: relative;
+  min-height: 100vh;
+}
+.hero-style1 {
+  position: absolute;
+  top: 50%;
+  left: 6%;
+  transform: translateY(-50%);
+  max-width: 620px;
+  width: 100%;
+  z-index: 10;
+}
+.hero-style1 {
+  margin: 0 !important;
+}
+
+.hero-style1 .hero-title {
+  margin-top: 0 !important;
+}
+.hero-title {
+  max-width: 13ch;
+}
+
+.hero-text {
+  max-width: 360px;
+}
+
+
+
 /* Small devices */
 @media (max-width: 767px) {
   .hero-title {

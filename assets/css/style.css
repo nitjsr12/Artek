@@ -9293,9 +9293,7 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
 
 .hero-1 {
   overflow: hidden;
-  max-width: 1400px;
-  margin-left: auto;
-  margin-right: auto;
+  
 }
 
 .hero-1 .hero-img {

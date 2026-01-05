@@ -9247,20 +9247,23 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
 }
 
 /* Hero 1 ---------------------------------- */
+/* ===============================
+   HERO TYPOGRAPHY
+================================ */
+
 .hero-title {
   font-size: 72px;
   font-weight: 700;
-  line-height: 1.222;
+  line-height: 1.22;
   margin-bottom: 22px;
-  margin-top: -0.17em;
   text-transform: capitalize;
+  max-width: 13ch;
+  color: var(--white-color);
 }
 
 .hero-title > span {
   display: block;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
+  width: fit-content;
   position: relative;
 }
 
@@ -9271,47 +9274,64 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
   letter-spacing: 0.2em;
   color: var(--theme-color);
   display: block;
-  margin-bottom: 20px;
-  margin-top: -0.35em;
+  margin-bottom: 35px;
   text-transform: uppercase;
-  /* Small devices */
-  /* Extra small devices */
 }
 
-@media (max-width: 767px) {
-  .hero-subtitle {
-    font-size: 16px;
-    letter-spacing: 0.1em;
-  }
+.hero-text {
+  max-width: 360px;
+  color: var(--white-color);
 }
 
-@media (max-width: 575px) {
-  .hero-subtitle {
-    letter-spacing: 0em;
-  }
-}
+
+/* ===============================
+   HERO LAYOUT
+================================ */
 
 .hero-1 {
+  position: relative;
+  min-height: 100vh;
   overflow: hidden;
-  
 }
+
+.hero-slider,
+.hero-slide {
+  position: relative;
+  min-height: 100vh;
+  z-index: 1;
+}
+
+
+/* ===============================
+   HERO CONTENT (TEXT)
+================================ */
+
+.hero-style1 {
+  position: absolute;
+  top: 50%;
+  left: 6%;
+  transform: translateY(-50%);
+  max-width: 620px;
+  width: 100%;
+  z-index: 10;
+}
+
+
+/* ===============================
+   HERO IMAGE
+================================ */
 
 .hero-1 .hero-img {
   position: absolute;
   bottom: 0;
-  right: 0%;
+  right: 0;
   z-index: 3;
-  width: auto;
   max-width: 744px;
   text-align: center;
-  /* Extra large devices */
-  /* Medium Large devices */
-  /* Medium Large devices */
-  /* Large devices */
 }
 
-.hero-1 .hero-img:before {
-  content: '';
+.hero-1 .hero-img::before {
+  content: "";
   position: absolute;
   bottom: 36px;
   right: 1%;
@@ -9329,41 +9349,16 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
   z-index: -2;
 }
 
-@media (max-width: 1500px) {
-  .hero-1 .hero-img {
-    right: 0;
-  }
-}
 
-@media (max-width: 1399px) {
-  .hero-1 .hero-img {
-    max-width: 600px;
-  }
-}
-
-@media (max-width: 1299px) {
-  .hero-1 .hero-img {
-    max-width: 500px;
-  }
-}
-
-@media (max-width: 1199px) {
-  .hero-1 .hero-img {
-    max-width: 450px;
-  }
-  .hero-1 .hero-img img {
-    max-height: 590px;
-  }
-}
+/* ===============================
+   SLIDER ARROWS
+================================ */
 
 .hero-1 .slider-arrow {
-  --pos-x: 60px;
   position: absolute;
   background-color: transparent;
   color: var(--white-color);
   border: 1px solid var(--white-color);
-  /* Extra large devices */
-  /* Medium Large devices */
 }
 
 .hero-1 .slider-arrow:hover {
@@ -9371,155 +9366,88 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
   color: var(--theme-color);
 }
 
+
+/* ===============================
+   RESPONSIVE BREAKPOINTS
+================================ */
+
+/* XL */
 @media (max-width: 1500px) {
-  .hero-1 .slider-arrow {
-    --pos-x: 5px;
+  .hero-1 .hero-img {
+    max-width: 600px;
   }
 }
 
-@media (max-width: 1399px) {
-  .hero-1 .slider-arrow {
-    display: none;
-  }
-}
-
-.hero-style1 {
-  position: relative;
-  z-index: 6;
-  margin: 316px 0 180px 0;
-  max-width: 680px;
-  width:100%
-}
-
-
-
-
-
-.hero-style1 .hero-subtitle {
-  margin-bottom: 35px;
-}
-
-.hero-style1 .hero-title {
-  color: var(--white-color);
-  margin-top: -100px !important;
-}
-
-.hero-style1 .hero-text {
-  max-width: 300px;
-  color: var(--white-color);
-  margin-bottom: auto;
-}
-
-.hero-style1 .hero-arrow {
-  position: absolute;
-  right: 38%;
-  top: -72px;
-}
-
-/* Medium Large devices */
-@media (max-width: 1299px) {
-  .hero-style1 {
-    margin: 240px 0 150px 0;
-  }
-}
-
-/* Large devices */
+/* LG */
 @media (max-width: 1199px) {
   .hero-title {
     font-size: 50px;
   }
+
+  .hero-1 .hero-img {
+    max-width: 450px;
+  }
 }
 
-/* Medium devices */
+/* MD */
 @media (max-width: 991px) {
-  .hero-1 .hero-img {
+  .hero-style1 {
     position: relative;
-    max-width: 600px;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 200px auto 40px;
     text-align: center;
-    margin: 0 auto 0 auto;
   }
-  .hero-1 .hero-arrow {
-    display: none;
-  }
+
   .hero-title {
     font-size: 44px;
-    line-height: 1.2;
   }
-  .hero-style1 {
-    margin: 210px 0 40px 0;
-    text-align: center;
+
+  .hero-text,
+  .hero-title > span {
     margin-left: auto;
     margin-right: auto;
   }
-  .hero-style1 .hero-text,
-  .hero-style1 .hero-title > span {
-    margin-left: auto;
-    margin-right: auto;
+
+  .hero-1 .hero-img {
+    position: relative;
+    margin: 0 auto;
+    max-width: 600px;
   }
 }
 
-.hero-1,
-.hero-slider,
-.hero-slide {
-  position: relative;
-  min-height: 100vh;
-}
-.hero-style1 {
-  position: absolute;
-  top: 50%;
-  left: 6%;
-  transform: translateY(-50%);
-  max-width: 620px;
-  width: 100%;
-  z-index: 1;
-}
-.hero-style1 {
-  margin: 0 !important;
-}
-
-.hero-style1 .hero-title {
-  margin-top: 0 !important;
-}
-.hero-title {
-  max-width: 13ch;
-}
-
-.hero-text {
-  max-width: 360px;
-}
-
-
-
-/* Small devices */
+/* SM */
 @media (max-width: 767px) {
   .hero-title {
     font-size: 40px;
   }
+
+  .hero-subtitle {
+    font-size: 16px;
+    letter-spacing: 0.1em;
+  }
 }
 
-/* Extra small devices */
+/* XS */
 @media (max-width: 575px) {
-  .hero-1 .hero-img img {
-    max-height: 400px;
-  }
   .hero-title {
     font-size: 32px;
     line-height: 1.24;
   }
+
+  .hero-1 .hero-img img {
+    max-height: 400px;
+  }
 }
 
+/* XXS */
 @media (max-width: 390px) {
   .hero-title {
     font-size: 28px;
-    line-height: 1.3;
   }
 }
 
-@media (max-width: 330px) {
-  .hero-title {
-    font-size: 28px;
-  }
-}
 
 
 

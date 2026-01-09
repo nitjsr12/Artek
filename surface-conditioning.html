@@ -433,10 +433,20 @@ body {
 }
 
 /* ===== MOBILE ===== */
-@media (max-width: 768px) {
-  .product-card {
-    height: auto;
+/* FIX card scrollbar issue on mobile */
+@media (max-width: 767px) {
+
+  .swiper-slide,
+  .swiper-slide * {
+    height: auto !important;
   }
+
+  .product-card,
+  .card {
+    overflow: visible !important;
+    max-height: none !important;
+  }
+
 }
 
 

@@ -306,9 +306,9 @@ test Area
 
 <section id="products-slider-section">
 
-<!doctype html>
+<!-- <!doctype html>
 <html lang="en">
-<head>
+<head> -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Products Slider</title>
@@ -442,9 +442,11 @@ body {
 
 
 </style>
-</head>
+<!-- </head>
 
-<body>
+<body> -->
+
+<!--====feature ======-->
 
  <section id="products-slider-section">
 
@@ -623,144 +625,6 @@ new Swiper('.product-slider', {
 </html>
 
 </section>
-<!--==============================
-Feature Area  
-==============================-->
-
-<section class="switchgear-section">
-  <div class="container">
-
-    <div class="section-head">
-      <h2></h2>
-      <p></p>
-    </div>
-
-    <div class="tab-accordion">
-
-      <!-- LEFT LIST -->
-      <div class="tab-list">
-        <button class="tab-btn active" data-tab="tab1">
-          Alkaline Soak Cleaners
-        </button>
-        <button class="tab-btn" data-tab="tab2">
-          Alkaline Electrolytic Cleaners
-        </button>
-        <button class="tab-btn" data-tab="tab3">
-          Electrolytic Alkaline Derusting
-        </button>
-        <button class="tab-btn" data-tab="tab4">
-        Spray Cleaner
-        </button>
-        <button class="tab-btn" data-tab="tab5">
-          Acid Pickling & Brightening
-        </button>
-        <!-- <button class="tab-btn" data-tab="tab6">
-          Gas Insulated Switchgear (GIS)
-        </button> -->
-      </div>
-
-      <!-- RIGHT CONTENT -->
-      <div class="tab-content">
-
-        <div class="content active" id="tab1">
-          <span class="series">SURFOLIN SERIES</span>
-          <ul>
-            <li>High efficiency cleaner suitable for ferrous and non-ferrous metals</li>
-            <li>The cleaner has long service life with excellent cleaning performance</li>
-            <li>Removes grease, soil, and weak scale layers</li>
-            <li>Leaves the surface active and bright</li>
-          </ul>
-        </div>
-
-        <div class="content" id="tab2">
-          <span class="series">SURFOLIN EL SERIES</span>
-          <ul>
-            <li>Heavy duty chelated alkaline  ANODIC cleaner for ferrous metals. Can be used as a cathodic cleaner for activating passive nickel.</li>
-          </ul>
-
-          <span class="series">SURFOLIN BC PROCESS</span>
-          <ul>
-              <li>Good cathodic cleaner for copper and brass. Can also be effectively used as an anodic cleaner for copper and brass</li>
-          </ul>
-        </div>
-
-        <div class="content" id="tab3">
-          <span class="series">SURFOLIN NC SERIES</span> 
-          <ul>
-            <li>An electrolytic scale and rust remover</li>
-            <li>Very good substitute for anodic etches</li>
-            <li>Very good cleaner prior to electroless nickel on steel</li>
-            <li>Non-cyanide cleaner</li>
-          </ul>
-        </div>
-
-        <div class="content" id="tab4">
-          <span class="series">SURFOLIN SP PROCESS</span>
-          <ul>
-            <li>Heavy duty chelated alkaline cleaner for ferrous metals</li>
-          </ul>
-        </div>
-
-        <div class="content" id="tab5">
-          <span class="series">ACITEK DRY ACID SALT</span>
-          <ul>
-            <li>A dry acid salt used for making acid dips for removal of silicate and oxide films ON ferrous and non ferrous metals to get better adhesion of subsequent electrodeposits.</li>
-            <li>Replaces hazardous Hydrofluoric acid.</li>
-            <li>Added to the acid dip forremoval of silicate film.</li>
-            <li>Also used as an additive to pickling baths for removal of smut from aluminium alloys, stainless Steel and titanium.</li>
-          </ul>
-
-          <span class="series">ACID INHIBITOR SERIES</span>
-          <ul>
-            <li>An excellent inhibitor specially developed for Hydrochloric acid, Sulphuric acid pickling bath  to reduce the base metal attack during pickling.</li>
-          </ul>
-
-          <span class="series">FUME REDUCER</span>
-          <ul>
-            <li>Suppresses fumes during pickling.</li>
-            <li>Aids in uniform pickling action.</li>
-            <li>Emulsifies the oil carryover from carryover from alkaline soak cleaner. </li>
-          </ul>
-
-          <span class="series">KEMBRITE BC 20</span>
-          <ul>
-            <li>Brightening dip for brass and copper components.</li>
-            <li>Brighten the component to produce a glossy finish.</li>
-            <li>A dip in 5% Sulphuric acid is used after BC 20 to get finish.</li>
-          </ul>
-        </div>
-
-        <!-- <div class="content" id="tab6">
-          <p>
-            Gas Insulated Switchgear offering compact footprint, minimal maintenance,
-            and superior reliability for space-constrained installations.
-          </p>
-        </div> -->
-
-      </div>
-    </div>
-
-    <script>
-    document.querySelectorAll(".tab-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-        document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
-        document.querySelectorAll(".content").forEach(c => c.classList.remove("active"));
-
-        btn.classList.add("active");
-        document.getElementById(btn.dataset.tab).classList.add("active");
-    });
-    });
-    </script>
-
-
-  </div>
-</section>
-
-
-
-
-
-
 <!--==============================
 Feature Area  
 ==============================-->

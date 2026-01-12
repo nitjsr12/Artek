@@ -9274,6 +9274,7 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
   background-color: #101841;
   overflow: hidden;
   padding-top: 50px;
+  align-items: center;
 }
 
 /* ===============================

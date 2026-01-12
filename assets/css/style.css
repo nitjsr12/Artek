@@ -9317,7 +9317,7 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
 
 .hero-img {
   position: absolute;
-  right: 0;
+  right: 100px;
   bottom: 0;
   max-width: 720px;
   z-index: 5;                      /* 🔥 BELOW TEXT */

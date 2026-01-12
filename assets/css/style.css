@@ -9251,30 +9251,38 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
    HERO STRUCTURE (SAFE STACKING)
 ================================ */
 
+/* ===============================
+   HERO BASE
+================================ */
+
 .hero-1 {
   position: relative;
   min-height: 100vh;
-  overflow: visible; /* IMPORTANT */
-  z-index: 1;
-}
-
-.hero-slider,
-.hero-slide {
-  position: relative;
-  z-index: 1;
+  background-color: #101841;
+  overflow: hidden;
 }
 
 /* ===============================
-   HERO OVERLAY FIX (CRITICAL)
+   SWIPER FIX (CRITICAL)
 ================================ */
 
-.hero-1::before,
-.hero-slide::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: transparent;
-  z-index: 0;
+.th-slider,
+.swiper,
+.swiper-wrapper,
+.swiper-slide {
+  position: relative;
+  height: 100%;
+}
+
+/* ===============================
+   HERO INNER
+================================ */
+
+.hero-inner {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 /* ===============================
@@ -9282,23 +9290,10 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
 ================================ */
 
 .hero-style1 {
-  position: absolute;
-  top: 50%;
-  left: 6%;
-  transform: translateY(-50%);
+  position: relative;              /* 🔥 NOT absolute */
   max-width: 620px;
-  width: 100%;
-  z-index: 0; /* ABOVE EVERYTHING */
+  z-index: 10;                     /* 🔥 ABOVE EVERYTHING */
   color: #fff;
-}
-
-.hero-subtitle {
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  color: #ffffff;
-  text-transform: uppercase;
-  z-index: 1;
 }
 
 .hero-title {
@@ -9307,49 +9302,56 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
   line-height: 1.2;
   color: #ffffff;
   max-width: 13ch;
-  z-index: 1;
 }
 
 .hero-text {
   color: #ffffff;
   max-width: 360px;
-  z-index: 1;
+  margin-top: 20px;
 }
 
 /* ===============================
-   HERO IMAGE (BELOW TEXT)
+   HERO IMAGE
 ================================ */
 
 .hero-img {
   position: absolute;
-  bottom: 0;
   right: 0;
+  bottom: 0;
   max-width: 720px;
-  z-index: 2;
+  z-index: 5;                      /* 🔥 BELOW TEXT */
 }
 
 .hero-img img {
   width: 100%;
   height: auto;
+  display: block;
 }
 
 /* ===============================
-   RESPONSIVE (MOBILE SAFE)
+   DECOR SHAPES
+================================ */
+
+.shape-mockup {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* ===============================
+   RESPONSIVE
 ================================ */
 
 @media (max-width: 991px) {
-  .hero-style1 {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    margin: 180px auto 40px;
+  .hero-inner {
+    flex-direction: column;
     text-align: center;
+    padding-top: 140px;
   }
 
   .hero-img {
     position: relative;
-    margin: 0 auto;
+    margin-top: 40px;
   }
 
   .hero-title {

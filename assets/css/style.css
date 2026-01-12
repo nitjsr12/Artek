@@ -9288,7 +9288,7 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
   transform: translateY(-50%);
   max-width: 620px;
   width: 100%;
-  z-index: 9999; /* ABOVE EVERYTHING */
+  z-index: 0; /* ABOVE EVERYTHING */
   color: #fff;
 }
 
@@ -9298,6 +9298,7 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
   letter-spacing: 0.2em;
   color: #ffffff;
   text-transform: uppercase;
+  z-index: 1;
 }
 
 .hero-title {
@@ -9306,11 +9307,13 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
   line-height: 1.2;
   color: #ffffff;
   max-width: 13ch;
+  z-index: 1;
 }
 
 .hero-text {
   color: #ffffff;
   max-width: 360px;
+  z-index: 1;
 }
 
 /* ===============================

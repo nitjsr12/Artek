@@ -9321,6 +9321,10 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
   margin-bottom: 8px;
 }
 
+.hero-title .title3 {
+  margin-bottom: 8px;
+}
+
 
 .hero-text {
   color: #ffffff;

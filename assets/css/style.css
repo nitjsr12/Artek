@@ -9278,12 +9278,13 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
 /* ===============================
    HERO INNER
 ================================ */
-
 .hero-inner {
-  position: relative;
-  min-height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 140px 6% 80px; /* accounts for header */
+  position: relative;
 }
 
 /* ===============================
@@ -9291,11 +9292,12 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
 ================================ */
 
 .hero-style1 {
-  position: relative;              /* 🔥 NOT absolute */
+  position: relative;
   max-width: 620px;
-  z-index: 10;                     /* 🔥 ABOVE EVERYTHING */
   color: #fff;
+  z-index: 2;
 }
+
 
 .hero-title {
   font-size: 72px;
@@ -9316,7 +9318,7 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
 ================================ */
 
 .hero-img {
-  position: absolute;
+  position: relative;
   right: 100px;
   bottom: 0;
   max-width: 720px;

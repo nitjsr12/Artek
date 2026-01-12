@@ -9300,20 +9300,15 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
 
 
 .hero-title {
-  font-size: 72px;
-  font-weight: 700;
-  line-height: 1.2;
-  color: #ffffff;
-  max-width: 13ch;
+  max-width: none;      /* remove artificial wrapping */
+  white-space: normal;
 }
 
-.hero-title .title1 {
-  margin-bottom: 8px;
+.hero-title span {
+  display: block;       /* each title on its own line */
+  line-height: 1.15;
 }
 
-.hero-title .title2 {
-  margin-bottom: 8px;
-}
 
 
 .hero-text {

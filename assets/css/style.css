@@ -9260,7 +9260,7 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
   min-height: 100vh;
   background-color: #101841;
   overflow: hidden;
-  padding: top 120px;
+  padding-top: 120px;
 }
 
 /* ===============================

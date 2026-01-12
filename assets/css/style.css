@@ -9312,6 +9312,11 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
   white-space: nowrap;   /* 🔑 force single line */
 }
 
+.hero-title .text-theme {
+  white-space: nowrap;
+  display: inline;
+}
+
 
 .hero-title .title1 {
   margin-bottom: 8px;
@@ -9386,10 +9391,6 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
     font-size: 32px;
   }
 }
-
-
-
-
 
 /* Hero 2 ---------------------------------- */
 .hero-2 {

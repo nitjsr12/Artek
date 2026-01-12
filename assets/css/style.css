@@ -9307,6 +9307,15 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
   max-width: 13ch;
 }
 
+.hero-title .title1 {
+  margin-bottom: 8px;
+}
+
+.hero-title .title2 {
+  margin-bottom: 8px;
+}
+
+
 .hero-text {
   color: #ffffff;
   max-width: 360px;

@@ -9330,6 +9330,10 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
   margin-bottom: 8px;
 }
 
+.hero-text {
+  white-space: nowrap;
+}
+
 
 .hero-text {
   color: #ffffff;

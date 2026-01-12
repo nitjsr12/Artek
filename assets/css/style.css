@@ -9255,6 +9255,19 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
    HERO BASE
 ================================ */
 
+.hero {
+  width: 100%;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;          /* ✅ keeps center on zoom */
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+}
+
+
 .hero-1 {
   position: relative;
   min-height: 100vh;

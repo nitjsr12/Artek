@@ -433,25 +433,31 @@ body {
 }
 
 /* ===== MOBILE ===== */
-/* FIX card scrollbar issue on mobile */
 @media (max-width: 767px) {
 
   .product-slider {
-    overflow: visible;   /* 🔥 critical */
+    overflow: visible;
   }
 
-  .product-card {
-    height: auto;        /* 🔥 critical */
-  }
-
-  .product-card__content {
-    overflow: visible;  /* 🔥 critical */
+  .swiper-wrapper {
+    align-items: stretch;
   }
 
   .swiper-slide {
-    height: auto;
+    height: auto !important;
+  }
+
+  .product-card {
+    height: auto !important;
+    min-height: unset;
+  }
+
+  .product-card__content {
+    overflow-y: visible !important;
+    max-height: none !important;
   }
 }
+
 
 
 </style>

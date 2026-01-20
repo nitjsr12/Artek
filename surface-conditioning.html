@@ -432,31 +432,19 @@ body {
   font-weight: bold;
 }
 
-/* ===== MOBILE ===== */
-@media (max-width: 767px) {
-
-  .product-slider {
-    overflow: visible;
-  }
-
-  .swiper-wrapper {
-    align-items: stretch;
-  }
-
-  .swiper-slide {
-    height: auto !important;
-  }
-
-  .product-card {
-    height: auto !important;
-    min-height: unset;
-  }
-
-  .product-card__content {
-    overflow-y: visible !important;
-    max-height: none !important;
-  }
+/* SAME behavior on desktop & mobile */
+.product-card {
+  height: 320px;                 /* fixed height */
+  display: flex;
+  flex-direction: column;
 }
+
+.product-card__content {
+  flex: 1;
+  overflow-y: auto;              /* scroll enabled */
+  -webkit-overflow-scrolling: touch;
+}
+
 
 
 

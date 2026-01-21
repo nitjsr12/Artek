@@ -198,7 +198,7 @@ Header Area
     <!--==============================
 Service Area  
 ==============================-->
-    <section class="overflow-hidden space" id="service-sec">
+    <!-- <section class="overflow-hidden space" id="service-sec">
         <div class="shape-mockup spin " data-bottom="7%" data-left="0"><img src="assets/img/shape/lines_1.png" alt="shape"></div>
         <div class="container">
             <div class="row justify-content-center">
@@ -280,7 +280,314 @@ Service Area
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
+
+
+<section id="products-slider-section">
+
+<!-- <!doctype html>
+<html lang="en">
+<head> -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Products Slider</title>
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+
+<style>
+/* ===== GLOBAL ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #eef0f0;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== SECTION ===== */
+#products-slider-section {
+  padding: 80px 0;
+  background: #eef0f0;
+}
+
+#products-slider-section {
+  margin-top: -10px;   /* adjust value if needed */
+  padding-top: 20px;
+}
+
+
+/* ===== SWIPER CONTAINER ===== */
+.product-slider {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;   /* ensures only 2 slides visible */
+  padding-bottom: 70px; /* space for arrows */
+}
+
+/* ===== SLIDES ===== */
+.swiper-wrapper {
+  align-items: stretch;
+}
+
+.swiper-slide {
+  height: auto;
+}
+
+/* ===== PRODUCT CARD ===== */
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 20px rgba(0,0,0,.08);
+}
+
+/* ===== HEADER ===== */
+.card-header h3 {
+  margin: 0 0 12px;
+  font-size: 22px;
+  color: #0b1b4d;
+}
+
+/* ===== SERIES LABEL ===== */
+.series {
+  font-size: 12px;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* ===== CARD CONTENT ===== */
+.product-card__content {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.product-card__content ul {
+  padding-left: 16px;
+  margin: 0 0 12px;
+}
+
+.product-card__content li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+/* ===== BOTTOM ARROWS ===== */
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  bottom: 0;
+  top: auto;
+  width: 42px;
+  height: 42px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  color: #0b1b4d;
+}
+
+/* Center arrows */
+.swiper-button-prev {
+  left: calc(50% - 60px);
+}
+
+.swiper-button-next {
+  right: calc(50% - 60px);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* SAME behavior on desktop & mobile */
+.product-card {
+  height: 320px;                 /* fixed height */
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card__content {
+  flex: 1;
+  overflow-y: auto;              /* scroll enabled */
+  -webkit-overflow-scrolling: touch;
+}
+
+
+
+
+</style>
+<!-- </head>
+
+<body> -->
+
+ <section id="products-slider-section">
+
+  <!-- ===== HEADING (ON TOP) ===== -->
+  <div class="row justify-content-center">
+    <div class="col-xl-8 col-md-10">
+      <div class="title-area text-center">
+        <span class="sub-title">
+          <img src="assets/img/theme-img/title_icon.svg" alt="Icon">
+          Our Products
+        </span>
+        <p class="sec-text">
+           Provides superior corrosion resistance with high-performance bright nickel, satin, and microporous finishes.
+        </p>
+        <div class="checklist" style="display: flex; gap: 2rem; justify-content: center;">
+                        <ul style="list-style: none; padding: 0;">
+                            <li>Bright Nickel</li>
+                            <li>Duplex, Triplex Nickel & Microporous</li>
+                            <li>Satin Nickel</li>
+                        </ul>
+                        </div>
+      </div>
+    </div>
+  </div>   
+
+<section class="product-slider swiper">
+  <div class="swiper-wrapper">
+
+
+                <!-- 01 -->
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="card-header">
+                    <h3>Bright Nickel</h3>
+                    
+                    </div>
+                    <div class="product-card__content">
+                    <span class="series">OMNI SERIES</span>
+                    <ul>
+                        <li>A high performance system formulated to give good degree of brightness, leveling, coverage and chrome receptivity</li>
+                        <li>Suitable for rack and barrel plating</li>
+                        <li>Quick brightening and leveling properties</li>
+                    </ul>
+                    <span class="series">HALLMARK SERIES</span>
+                        <li>Excellent deposits of nickel on different base metals</li>
+                        <li>Excellent brightening and leveling properties</li>
+                        <li>Ideal system for duplex and triplex nickel layer coatings</li>
+                        <li>Ductile deposits</li>
+                        <li>Low brightener consumption and hence an economical process</li>
+                    </ul>
+                    <span class="series">MAGNUM SERIES</span>
+                    <ul>
+                        <li>Good brightening and leveling</li>
+                        <li>Very ductile deposits</li>
+                        <li>Deposits are whiter and pleasing in appearance</li>
+                        <li>Extremely good for barrel plating</li>
+                    </ul>
+                    <span class="series">TRIPLE ACTION</span>
+                    <ul>
+                        <li>An extra ordinary product which gives high tolerance to metallic impurities like zinc and copper and improves throwing power</li>
+                    </ul>
+                    <span class="series">METAKURE</span>
+                    <ul>
+                        <li>A purifier for Bright Nickel solutions to improve tolerance to metallic impurities like dissolved copper and zinc</li>
+                    </ul>
+                    <span class="series">OMNI LEVELLER</span>
+                    <ul>
+                        <li>An additive  for bright Nickel baths to impart additional leveling on poorly polished surface</li>
+                    </ul>
+            
+                    </div>
+                </div>
+                </div>
+
+                <!-- 02 -->
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="card-header">
+                    <h3>Alkaline Electrolytic Cleaners</h3>
+                    
+                    </div>
+                    <div class="product-card__content">
+                    <span class="series">CLASSIC SEMI BRIGHT</span>
+                    <ul>
+                        <li>Advanced technology designed to produce high corrosion resistant semi bright nickel deposit</li>
+                        <li>Ideal for duplex nickel and triplex nickel plating system </li>
+                        <li>Provides more than 120 mv difference.</li>
+                    </ul>
+
+                    <span class="series">CLASSIC NIPURA</span>
+                    <ul>
+                        <li>It is an intermediate layer between semi bright and bright nickel deposit</li>
+                        <li>Provides high Sulphur Nickel deposit between the semi-bright and  the bright nickel layers to prevent pit type corrosion to the base metal</li>
+                    </ul>
+                    <span class="series">TEKNOPOROUS</span>
+                    <ul>
+                        <li>New advanced technology designed to produce a higher corrosion resistance compared to single/double nickel layer system</li>
+                        <li>Very good receptivity to chrome</li>
+                        <li>Need a special equipment</li>
+                    </ul>  
+                    </div>
+                </div>
+                </div>
+
+                <!-- 03 -->
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="card-header">
+                    <h3>Electrolytic Alkaline Derusting</h3>
+                    
+                    </div>
+                    <div class="product-card__content">
+                    <span class="series">SILKEN SERIES</span> 
+                    <ul>
+                        <li>Process developed to produce non-glaring rich silky, stain-free, attractive, Satin Nickel deposits</li>
+                        <li>Deposits have a good chrome reception to give an anti-tarnish topcoat to the products</li>
+                        
+                    </ul>
+                    </div>
+                </div>
+                </div>
+
+  </div>
+
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- Scrollbar -->
+  <!-- <div class="swiper-scrollbar"></div> -->
+</section>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  new Swiper('.product-slider', {
+    slidesPerView: 1,
+    spaceBetween: 16,
+    watchOverflow: true,
+    observer: true,
+    observeParents: true,
+    touchStartPreventDefault: false,
+    breakpoints: {
+      767: {
+        slidesPerView: 2,
+        spaceBetween: 24
+      }
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+  });
+});
+</script>
+</section>
 <!--==============================
 Feature Area  
 ==============================-->

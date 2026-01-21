@@ -115,80 +115,7 @@
 </div><!--==============================
 Header Area
 ==============================-->
-<header class="th-header header-layout1 ">
-    <div class="header-top">
-        <div class="container">
-            <div class="row justify-content-center justify-content-lg-between align-items-center gy-2">
-                <div class="col-auto d-none d-lg-block">
-                    <div class="header-links">
-                        <ul>
-                            <li><i class="fas fa-location-dot"></i> Surfin Center, 121, Marol Co-Op. Ind. Estate, M. V. Road, Andheri (E), Mumbai - 400 059</li>
-                            <li><i class="fas fa-clock"></i> Monday to Friday: 8.00 am - 7.00 pm</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-auto">
-                    <div class="header-links">
-                        <ul>
-                            <li class="d-none d-md-inline-block"><i class="fas fa-messages"></i> <a href="#">FAQ</a></li>
-                            <li><i class="fas fa-headset"></i> <a href="#">Support</a></li>
-                            <li><i class="fas fa-user"></i> <a href="#">Sign In / Register</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="sticky-wrapper">
-        <!-- Main Menu Area -->
-        <div class="container">
-            <div class="menu-area">
-                <div class="row align-items-center justify-content-between">
-                    <div class="col-auto">
-                        <div class="header-logo">
-                             <a href="https://www.artekpassionminds.com/index.html"><img src="assets/img/artek-website-logo3.png" alt="artek"></a>
-                        </div>
-                    </div>
-                    <div class="col-auto">
-                        <nav class="main-menu d-none d-lg-inline-block">
-                            <ul>
-                                <li>
-                                    <a href="index.html">Home</a>
-                                </li>
-                                <li><a href="about.html">About Us</a></li>
-                                <li>
-                                    <a href="products.html">Products </a>
-                                </li>
-                                <li>
-                                    <a href="quality-policy.html">quality-policy </a>
-                                </li>
-                                <li>
-                                    <a href="R&D.html">R&D </a>
-                                </li>
-                                <li>
-                                    <a href="Industries.html">Industries</a>
-                                </li>
-                                <li>
-                                    <a href="sustainability.html">sustainability</a>
-                                </li>
-                                <li>
-                                    <a href="blog.html">Blogs</a>
-                                </li>
-                                <li>
-                                    <a href="events.html">Events</a>
-                                </li>
-                                    <a href="contact.html">Contact Us</a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <button type="button" class="th-menu-toggle d-block d-lg-none"><i class="far fa-bars"></i></button>
-                    </div>
-                   
-                </div>
-            </div>
-        </div>
-    </div>
-</header>    <header class="th-header header-layout1 ">
+   <header class="th-header header-layout1 ">
         <div class="header-top">
             <div class="container">
                 <div class="row justify-content-center justify-content-lg-between align-items-center gy-2">
@@ -271,7 +198,7 @@ Header Area
     <!--==============================
 Service Area  
 ==============================-->
-    <section class="overflow-hidden space" id="service-sec">
+    <!-- <section class="overflow-hidden space" id="service-sec">
         <div class="shape-mockup spin " data-bottom="7%" data-left="0"><img src="assets/img/shape/lines_1.png" alt="shape"></div>
         <div class="container">
             <div class="row justify-content-center">
@@ -363,7 +290,338 @@ Service Area
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
+
+<section id="products-slider-section">
+
+<!-- <!doctype html>
+<html lang="en">
+<head> -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Products Slider</title>
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+
+<style>
+/* ===== GLOBAL ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #eef0f0;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== SECTION ===== */
+#products-slider-section {
+  padding: 80px 0;
+  background: #eef0f0;
+}
+
+#products-slider-section {
+  margin-top: -10px;   /* adjust value if needed */
+  padding-top: 20px;
+}
+
+
+/* ===== SWIPER CONTAINER ===== */
+.product-slider {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;   /* ensures only 2 slides visible */
+  padding-bottom: 70px; /* space for arrows */
+}
+
+/* ===== SLIDES ===== */
+.swiper-wrapper {
+  align-items: stretch;
+}
+
+.swiper-slide {
+  height: auto;
+}
+
+/* ===== PRODUCT CARD ===== */
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 20px rgba(0,0,0,.08);
+}
+
+/* ===== HEADER ===== */
+.card-header h3 {
+  margin: 0 0 12px;
+  font-size: 22px;
+  color: #0b1b4d;
+}
+
+/* ===== SERIES LABEL ===== */
+.series {
+  font-size: 12px;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* ===== CARD CONTENT ===== */
+.product-card__content {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.product-card__content ul {
+  padding-left: 16px;
+  margin: 0 0 12px;
+}
+
+.product-card__content li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+/* ===== BOTTOM ARROWS ===== */
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  bottom: 0;
+  top: auto;
+  width: 42px;
+  height: 42px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  color: #0b1b4d;
+}
+
+/* Center arrows */
+.swiper-button-prev {
+  left: calc(50% - 60px);
+}
+
+.swiper-button-next {
+  right: calc(50% - 60px);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* SAME behavior on desktop & mobile */
+.product-card {
+  height: 320px;                 /* fixed height */
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card__content {
+  flex: 1;
+  overflow-y: auto;              /* scroll enabled */
+  -webkit-overflow-scrolling: touch;
+}
+
+
+
+
+</style>
+<!-- </head>
+
+<body> -->
+
+ <section id="products-slider-section">
+
+  <!-- ===== HEADING (ON TOP) ===== -->
+  <div class="row justify-content-center">
+    <div class="col-xl-8 col-md-10">
+      <div class="title-area text-center">
+        <span class="sub-title">
+          <img src="assets/img/theme-img/title_icon.svg" alt="Icon">
+          Our Products
+        </span>
+        <p class="sec-text">
+          Advanced plastic plating solutions providing excellent adhesion and conductive coatings for ABS plastics and other polymer substrates.
+        </p>
+        <div class="checklist" style="display: flex; gap: 2rem; justify-content: center;">
+                        <ul style="list-style: none; padding: 0;">
+                            <li>Kemplate 1452</li>
+                            <li>Teknoplate EH 384</li>
+                            <li>Kemplate Activator 1442</li>
+                            <li>Kemplate PA 1492</li>
+                            <li>Kemplate Ni 504</li>
+                            <li>Microbond Activator 9446</li>
+                            <li>Microbond CU 995</li>
+                        </ul>
+                        </div>
+      </div>
+    </div>
+  </div>   
+
+<section class="product-slider swiper">
+  <div class="swiper-wrapper">
+
+
+                <!-- 01 -->
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="card-header">
+                    <h3>Kemplate 1452</h3>
+                    
+                    </div>
+                    <div class="product-card__content">
+                    <span class="series">Kemplate 1452</span>
+                    <ul>
+                        <li>An alkaline soak cleaner designed to remove light grease and finger prints from the ABS plastic surface</li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+
+                <!-- 02 -->
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="card-header">
+                    <h3>Teknoplate EH 384</h3>
+                    
+                    </div>
+                    <div class="product-card__content">
+                    <span class="series">Teknoplate EH 384</span>
+                    <ul>
+                        <li>Strong acid conditioner used to micro etch the plastic surface to obtain true adhesion of plate to plastic without prior mechanical roughening</li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+
+                <!-- 03 -->
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="card-header">
+                    <h3>Kemplate Activator 1442</h3>
+                    
+                    </div>
+                    <div class="product-card__content">
+                    <span class="series">Kemplate Activator 1442</span> 
+                    <ul>
+                        <li>An advanced Tin Palladium catalyst solution which catalyses ABS plastic surface to influence the metal deposition from subsequent electroless nickel or copper bath</li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+
+                <!-- 04 -->
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="card-header">
+                    <h3>Kemplate PA 1492</h3>
+                    
+                    </div>
+                    <div class="product-card__content">
+                    <span class="series">Kemplate PA 1492</span>
+                    <ul>
+                        <li>To improve initial deposition of subsequent electroless copper or nickel </li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+
+                <!-- 05 -->
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="card-header">
+                    <h3>Kemplate Ni 504</h3>
+                    
+                    </div>
+                    <div class="product-card__content">
+                    <span class="series">Kemplate Ni 504</span>
+                    <ul>
+                        <li>A highly stable room temperature electroless nickel bath to deposit uniform conductive nickel coating on ABS plastics</li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+
+                <!-- 06 -->
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="card-header">
+                    <h3>Microbond Activator 9446</h3>
+                    
+                    </div>
+                    <div class="product-card__content">
+                    <span class="series">Microbond Activator 9446</span>
+                    <ul>
+                        <li>Acidic tin-palladium activator for direct metalizing process</li>
+                        <li>Gives uniform strong bonding of the copper to ABS surface</li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+
+                <!-- 07 -->
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="card-header">
+                    <h3>Microbond CU 995</h3>
+                    
+                    </div>
+                    <div class="product-card__content">
+                    <span class="series">Microbond CU 995</span>
+                    <ul>
+                        <li>A highly stable alkaline bath making conductive link on plastic surface</li>
+                        <li>Used for DMS process</li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+
+  </div>
+
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- Scrollbar -->
+  <!-- <div class="swiper-scrollbar"></div> -->
+</section>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  new Swiper('.product-slider', {
+    slidesPerView: 1,
+    spaceBetween: 16,
+    watchOverflow: true,
+    observer: true,
+    observeParents: true,
+    touchStartPreventDefault: false,
+    breakpoints: {
+      767: {
+        slidesPerView: 2,
+        spaceBetween: 24
+      }
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+  });
+});
+</script>
+</section>
 <!--==============================
 Feature Area  
 ==============================-->

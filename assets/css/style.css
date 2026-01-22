@@ -21181,6 +21181,25 @@ textarea.form-control {
     text-align: center;
   }
 
+   /* Force center image column */
+  .industry-new .industry-image {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Force image itself to center */
+  .industry-new .industry-image img {
+    display: block;
+    margin: 0 auto;
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+  }
+}
+
   .industry-image {
     margin-bottom: 30px;
     justify-content: center;
@@ -21203,4 +21222,4 @@ textarea.form-control {
     padding-left: 0;
     list-style-position: inside;
   }
-}
+

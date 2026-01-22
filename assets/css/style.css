@@ -16957,35 +16957,51 @@ span.select2-selection.select2-selection--single:focus {
   /* Small devices */
 }
 
+/* ===== MOBILE HARD RESET FIX ===== */
 @media (max-width: 767px) {
 
-  /* Reset image overlap on mobile */
-  .img-box2 {
+  html, body {
+    overflow-x: hidden !important;
+  }
+
+  .industry-section,
+  .container,
+  .row {
+    overflow-x: hidden !important;
+  }
+
+  /* FORCE image container reset */
+  .industry-section .img-box2 {
     margin-left: 0 !important;
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: center;
+    margin-right: 0 !important;
+    margin-bottom: 24px;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
   }
 
-  .img-box2 .img1 img {
-    width: 100%;
-    max-width: 320px;
-    height: auto;
+  /* FORCE image size reset */
+  .industry-section .img-box2 .img1 img {
+    width: 100% !important;
+    max-width: 320px !important;
+    height: auto !important;
+    object-fit: contain !important;
   }
 
-  /* Feature cards alignment */
+  /* Choose feature alignment */
   .choose-feature-wrap {
+    grid-template-columns: 1fr !important;
     margin-bottom: 40px;
   }
 
   .choose-feature {
-    padding: 20px;
-    gap: 14px;
-    align-items: center;
+    flex-direction: column !important;
+    text-align: center !important;
+    align-items: center !important;
   }
 
   .choose-feature .box-title {
-    max-width: none;
+    max-width: none !important;
     text-align: center;
   }
 }

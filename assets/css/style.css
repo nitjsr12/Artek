@@ -21125,3 +21125,80 @@ textarea.form-control {
         height: 190px;
     }
 }
+
+/* ============================= */
+/* INDUSTRY SECTION – NEW CSS */
+/* ============================= */
+
+.industry-new {
+  padding: 60px 0;
+}
+
+/* Image column */
+.industry-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.industry-image img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Content spacing */
+.industry-content {
+  padding-left: 30px;
+}
+
+.industry-block {
+  margin-bottom: 28px;
+}
+
+.industry-block h4 {
+  margin-bottom: 12px;
+}
+
+/* List styling */
+.industry-block ol {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.industry-block li {
+  margin-bottom: 6px;
+}
+
+/* ============================= */
+/* MOBILE FIX */
+/* ============================= */
+@media (max-width: 767px) {
+
+  .industry-new {
+    padding: 40px 0;
+    text-align: center;
+  }
+
+  .industry-image {
+    margin-bottom: 30px;
+  }
+
+  .industry-image img {
+    max-width: 320px;
+  }
+
+  .industry-content {
+    padding-left: 0;
+  }
+
+  .industry-block {
+    text-align: center;
+  }
+
+  .industry-block ol {
+    padding-left: 0;
+    list-style-position: inside;
+  }
+}

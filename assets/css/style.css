@@ -21183,6 +21183,8 @@ textarea.form-control {
 
   .industry-image {
     margin-bottom: 30px;
+    justify-content: center;
+
   }
 
   .industry-image img {

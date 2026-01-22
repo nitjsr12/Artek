@@ -357,6 +357,421 @@ Service Area
             </div>
         </div>
     </section>
+
+<section id="products-slider-section">
+
+<!-- <!doctype html>
+<html lang="en">
+<head> -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Products Slider</title>
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+
+<style>
+/* ===== GLOBAL ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #eef0f0;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== SECTION ===== */
+#products-slider-section {
+  padding: 80px 0;
+  background: #eef0f0;
+}
+
+#products-slider-section {
+  margin-top: -10px;   /* adjust value if needed */
+  padding-top: 20px;
+}
+
+
+/* ===== SWIPER CONTAINER ===== */
+.product-slider {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;   /* ensures only 2 slides visible */
+  padding-bottom: 70px; /* space for arrows */
+}
+
+/* ===== SLIDES ===== */
+.swiper-wrapper {
+  align-items: stretch;
+}
+
+.swiper-slide {
+  height: auto;
+}
+
+/* ===== PRODUCT CARD ===== */
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 20px rgba(0,0,0,.08);
+}
+
+/* ===== HEADER ===== */
+.card-header h3 {
+  margin: 0 0 12px;
+  font-size: 22px;
+  color: #0b1b4d;
+}
+
+/* ===== SERIES LABEL ===== */
+.series {
+  font-size: 12px;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* ===== CARD CONTENT ===== */
+.product-card__content {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.product-card__content ul {
+  padding-left: 16px;
+  margin: 0 0 12px;
+}
+
+.product-card__content li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+/* ===== BOTTOM ARROWS ===== */
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  bottom: 0;
+  top: auto;
+  width: 42px;
+  height: 42px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  color: #0b1b4d;
+}
+
+/* Center arrows */
+.swiper-button-prev {
+  left: calc(50% - 60px);
+}
+
+.swiper-button-next {
+  right: calc(50% - 60px);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* SAME behavior on desktop & mobile */
+.product-card {
+  height: 320px;                 /* fixed height */
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card__content {
+  flex: 1;
+  overflow-y: auto;              /* scroll enabled */
+  -webkit-overflow-scrolling: touch;
+}
+
+
+
+
+</style>
+<!-- </head>
+
+<body> -->
+
+ <section id="products-slider-section">
+
+  <!-- ===== HEADING (ON TOP) ===== -->
+  <div class="row justify-content-center">
+    <div class="col-xl-8 col-md-10">
+      <div class="title-area text-center">
+        <span class="sub-title">
+          <img src="assets/img/theme-img/title_icon.svg" alt="Icon">
+          Our Products
+        </span>
+        <p class="sec-text">
+          High-quality anodising solutions providing uniform colouration, excellent sealing, and corrosion resistance for aluminium components.
+        </p>
+        <div class="checklist" style="display: flex; gap: 2rem; justify-content: center;">
+                        <ul style="list-style: none; padding: 0;">
+                            <li>DEGREASER</li>
+                            <li>MATT/SATIN</li>
+                            <li>ETCHING</li>
+                            <li>CHROMATING</li>
+                            <li>ANODIZING  Additives</li>
+                            <li>ELECTRO COLOURING</li>
+                            <li>DYES</li>
+                            <li>SEALING</li>
+                            <li>BRIGHTENING</li>
+                        </ul>
+                        </div>
+      </div>
+    </div>
+  </div>   
+
+<section class="product-slider swiper">
+  <div class="swiper-wrapper">
+
+
+                <!-- 01 -->
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="card-header">
+                    <h3> DEGREASER</h3>
+                    
+                    </div>
+                    <div class="product-card__content">
+                    <span class="series">ALUMAX CLEAN ALT 1</span>
+                    <ul>
+                        <li>Non silicate mild  alkaline soak cleaner used for either Non etch or mild etch cleaning</li>
+                        <li>Excellent cleaning power almost no loss of material and brightness from base metal </li>
+                    </ul>
+                    <span class="series">ALUMAX ACID CLEAN MAM</span>
+                    <ul>
+                        <li>An acid concertrate specially designed for immersion or Spray cleaning of aluminium or its alloy</li>
+                        <li>Avoids the smut as the results of the alkaline cleaning</li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+
+                <!-- 02 -->
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="card-header">
+                    <h3>MATT/SATIN</h3>
+                    
+                    </div>
+                    <div class="product-card__content">
+                    <span class="series">ALUMAX SATIN 06</span>
+                    <ul>
+                        <li>A unique alkaline product which produces an ultra fine etch on aluminium to a satin bright finish.</li>
+                        <li>Serves as a low cost substitiues for chemical polishing</li>
+                    </ul>
+
+                    <span class="series">ALUMAX ETCH 7 CM</span>
+                    <ul>
+                        <li>Used for milky white finish on aluminium </li>
+                        <li>Very fine grained etch</li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+
+                <!-- 03 -->
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="card-header">
+                    <h3>ETCHING</h3>
+                    
+                    </div>
+                    <div class="product-card__content">
+                    <span class="series">SURFOLIN NC SERIES</span> 
+                    <ul>
+                        <li>A liquid alkaline additives for Aluminium etchant</li>
+                        <li>Prevents formation of scales on tank surfaces and heating elements</li>
+                    </ul>
+                    <span class="series">SURFOLIN ETCH FUME SUPRESSANT </span>
+                    <ul>
+                        <li>Used to suppress fuming in alkaline pickling baths</li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+
+                <!-- 04 -->
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="card-header">
+                    <h3>CHROMATING</h3>
+                    
+                    </div>
+                    <div class="product-card__content">
+                    <span class="series">ALPHOS CRL</span>
+                    <ul>
+                        <li>It is chrome free clear coating</li>
+                        <li>It has good adhesieve properties and provide bonding for Subsequest powder coating and painting</li>
+                        <li>It improves corrosion resistance</li>
+                    </ul>
+                    <span class="series">ALCHROME LM 201 M</span>
+                    <ul>
+                        <li>It is an acidic liquid product used for the yellow chromating Process over aluminium and its alloys </li>
+                        <li>Produce wide range of iridescent finishes on the aluminum surface and The chromate conversion coating can be used as a undercoat for powder Coating or panting  </li>
+                        <li>A final finishing on aluminuium for corrosion resistance  and decorative Purposes</li>
+                    </ul>
+                    <span class="series">ALCHROME TRI 430E</span>
+                    <ul>
+                        <li>Trivalent chromium base passivation for alumiumn</li>
+                        <li>Excellent bare corrosion protection on pure aluminum as well on alloys and castings</li>
+                        <li>heat resistant up to 100 °c with minimum loss in corrosion resistance Suitable as pretreatment for powder coating </li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+
+                <!-- 05 -->
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="card-header">
+                    <h3>ANODIZING  Additives</h3>
+                    
+                    </div>
+                    <div class="product-card__content">
+                    <span class="series">ALUMAX FUMONIL</span>
+                    <ul>
+                        <li>Prevents spurting of the anodizing bath over contacts and cathodes, thereby eliminating their corrosion.</li>
+                    </ul>
+
+                    <span class="series">ALUMAX ANO ADDITIVE LP</span>
+                    <ul>
+                        <li> An energy-saving additive for conventional sulfuric acid anodizing baths. It allows operation at higher temperatures and lower current densities.</li>
+                        <li>Helps achieve nearly uniform film thickness</li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+
+                <!-- 06 -->
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="card-header">
+                    <h3>ELECTRO COLOURING</h3>
+                    
+                    </div>
+                    <div class="product-card__content">
+                    <span class="series">ALUMAX EC 400 </span>
+                    <ul>
+                        <li>Designed for the electrolytic colouring on anodized Aluminium articles</li>
+                        <li>Gives perfect and even dispersion in depth to colour the article</li>
+                    </ul>
+
+                    <span class="series">ALUMAX EC STABILISER</span>
+                    <ul>
+                        <li>An acidic concentrate to suppress oxidation of stannous to stannic in electrocuting baths</li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+
+                <!-- 07 -->
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="card-header">
+                    <h3>DYES</h3>
+                    
+                    </div>
+                    <div class="product-card__content">
+                    <span class="series">INORGANIC DYES</span>
+                    <ul>
+                        <li>UV and weathers resistant gold colour in various shades </li>
+                        <li>Can be applied over electro-colored surfaces to achieve different colors</li>
+                    </ul>
+
+                    <span class="series">ORGANIC DYES</span>
+                    <ul>
+                        <li>For light and weather resistant metallic dyes</li>
+                        <li>Dyes suitable for alumiumun building components</li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+
+                <!-- 08 -->
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="card-header">
+                    <h3>SEALING</h3>
+                    
+                    </div>
+                    <div class="product-card__content">
+                    <span class="series">ALUMAX COLD SEALING SALT AH </span>
+                    <ul>
+                        <li>Works at low temperature it converts oxide into boehmite</li>
+                        <li>Gives special positive aging effect</li>
+                        <li> It gives energy saving sealing for anodized surface</li>
+                    </ul>
+
+                    <span class="series">ALUMAX COLD C2535 SUPER(Liquid) </span>
+                    <ul>
+                        <li> works at low temp it converts oxide into boehmite</li>
+                        <li>it has a special positive aging effect</li>
+                        <li> it gives energy saving sealing for anodized surface</li>
+                    </ul>
+
+                    <span class="series">ALUMAX HOT SEALING SALT 391</span>
+                    <ul>
+                        <li>Accelerated sealing hydrolyzed process at mid temperature</li>
+                        <li>Reduces bleeding of dye colour </li>
+                        <li>Reduced the smut & work with low energy consumption</li>
+                        <li>No iridescence affect even on black</li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+
+  </div>
+
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- Scrollbar -->
+  <!-- <div class="swiper-scrollbar"></div> -->
+</section>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  new Swiper('.product-slider', {
+    slidesPerView: 1,
+    spaceBetween: 16,
+    watchOverflow: true,
+    observer: true,
+    observeParents: true,
+    touchStartPreventDefault: false,
+    breakpoints: {
+      767: {
+        slidesPerView: 2,
+        spaceBetween: 24
+      }
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+  });
+});
+</script>
+</section>
 <!--==============================
 Feature Area  
 ==============================-->

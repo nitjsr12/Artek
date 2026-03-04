@@ -2744,7 +2744,7 @@ textarea.is-invalid {
   display: inline-block;
   font-size: 18px;
   font-weight: 600;
-  color: space
+  color: var(--white-color);
   margin-bottom: 31px;
   text-transform: capitalize;
   line-height: 24px;
@@ -9295,7 +9295,7 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
 .hero-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   min-height: 100vh;
   padding: 140px 6% 80px; /* accounts for header */
   position: relative;
@@ -9360,7 +9360,7 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
 ================================ */
 
 .hero-img {
-  position: relative;
+  position: absolute;
   right: 100px;
   bottom: 0;
   max-width: 1000px;

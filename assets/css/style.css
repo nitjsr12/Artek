@@ -2899,7 +2899,7 @@ textarea.is-invalid {
 }
 
 .title-area .sec-title {
-  margin-bottom: 14px;
+  margin-top:20 px;
 }
 
 .title-area.mb-0 .sec-title {
@@ -2946,10 +2946,7 @@ hr.title-line {
   background-clip: text;
   text-fill-color: transparent;
   margin: -0.18em 0 -0.4em 0;
-  /* Medium Large devices */
-  /* Medium devices */
-  /* Small devices */
-  /* Extra small devices */
+  
 }
 
 @media (max-width: 1299px) {
@@ -17396,6 +17393,13 @@ span.select2-selection.select2-selection--single:focus {
 
 .service-card .box-icon {
   margin-bottom: 27px;
+}
+#service-sec .sub-title {
+    margin-bottom: 12px;   /* space below Our Offerings */
+}
+
+#service-sec .sec-title {
+    margin-top: 12px;      /* space above What We Offer */
 }
 
 .service-card .th-btn {

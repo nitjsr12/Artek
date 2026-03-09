@@ -176,10 +176,7 @@ input:focus {
 img:not([draggable]),
 embed,
 object,
-/* video {
-  max-width: auto;
-  height: auto;
-} */
+
 
 ul {
   list-style-type: disc;
@@ -5065,10 +5062,6 @@ a.text-theme:hover,
   display: block;
 }
 
-/* .widget_info .th-video {
-  margin-bottom: 20px;
-} */
-
 .info-list {
   margin-top: -16px;
 }
@@ -5294,32 +5287,6 @@ a.text-theme:hover,
 .widget_shopping_cart .th-btn:last-child {
   margin-right: 0;
 }
-
-/* .th-video-widget .video-thumb {
-  position: relative;
-}
-
-.th-video-widget .play-btn {
-  --icon-size: 60px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.th-video-widget .play-btn i {
-  font-size: 16px;
-}
-
-.th-video-widget .video-thumb-title {
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1.4;
-  margin-top: 10px;
-  margin-bottom: -0.3em;
-} */
 
 .widget_recent_entries ul {
   margin: -0.3em 0 0 0;
@@ -9292,7 +9259,7 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
   display: flex;
   align-items: center;
   justify-content: space-between; /* better than center */
-  gap: 100px;
+  gap: 40px;
   min-height: 100vh;
   padding: 140px 20px 80px; 
   max-width: 1200px;
@@ -9348,10 +9315,6 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
   margin-bottom: 8px;
 }
 
-/* .hero-text {
-  white-space: normal;
-} */
-
 
 .hero-text {
   color: #ffffff;
@@ -9365,10 +9328,9 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
 
 .hero-img {
   position: relative;
-  /* right: 100px; */
   bottom: 0;
-  max-width: 1000px;
-  z-index: 5;                      /* 🔥 BELOW TEXT */
+  max-width: 1200px;
+  z-index: 5;                   
 }
 
 .hero-img img {
@@ -9452,7 +9414,6 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
 /*------------------- 4.9. Error  -------------------*/
 .error-img {
   margin-right: -300px;
-  /* Extra large devices */
 }
 
 @media (max-width: 1500px) {
@@ -17067,24 +17028,6 @@ span.select2-selection.select2-selection--single:focus {
   }
 }
 
-/* .video-content1 {
-  padding: 220px 0;
-  width: 100%;
-  max-width: 550px;
-  text-align: center;
-  margin: 0 auto;
-  
-} */
-
-/* .video-content1 .sec-title {
-  margin: 40px 0 -0.22em 0;
-}
-
-.video-content1 .play-btn {
-  --icon-size: 80px;
-  font-size: 20px;
-} */
-
 @media (max-width: 1299px) {
   .video-content1 {
     padding: 160px 0;
@@ -17096,6 +17039,7 @@ span.select2-selection.select2-selection--single:focus {
     padding: 120px 0;
   }
 }
+
 
 .link-btn2 {
   font-family: var(--title-font);
@@ -17119,61 +17063,6 @@ span.select2-selection.select2-selection--single:focus {
 .link-btn2:hover {
   color: var(--theme-color);
 }
-
-/* .video-content2 {
-  padding: 160px 0 110px 0;
-  width: 100%;
-  max-width: 840px;
-  text-align: center;
-  margin: 0 auto;
- 
-}
-
-.video-content2 .sec-title {
-  margin: 60px 0 26px 0;
-}
-
-.video-content2 .sec-text {
-  margin-bottom: 40px;
-}
-
-.video-content2 .play-btn {
-  --icon-size: 80px;
-  font-size: 20px;
-} */
-
-/* @media (max-width: 991px) {
-  .video-content2 {
-    padding: 100px 0;
-  }
-} */
-
-/* .video-sec2 .counter-card-wrap {
-  border-radius: 40px 40px 0 0;
-  
-} */
-
-/* @media (max-width: 991px) {
-  .video-sec2 .counter-card-wrap {
-    border-radius: 20px 20px 0 0;
-  }
-} */
-
-/* .video-sec3 .play-btn {
-  --icon-size: 80px;
-  font-size: 20px;
-}
-
-.video-content3 .sec-title {
-  margin-bottom: 26px;
-  
-} */
-
-/* @media (max-width: 1199px) {
-  .video-content3 .sec-title {
-    margin-top: 50px;
-  }
-} */
 
 /*------------------- 4.00. Tab Menu -------------------*/
 /* Tab Menu 1 ------------------------------------*/
@@ -19728,6 +19617,15 @@ span.select2-selection.select2-selection--single:focus {
     border-radius: 0;
     box-shadow: none;
     object-fit: cover;
+}
+/* Desktop only - smaller video */
+@media (min-width: 992px) {
+    .video-wrapper {
+        width: 80%;        /* ← adjust this to your liking */
+        left: 0;
+        transform: none;
+        margin: 20px auto 30px auto;
+    }
 }
 
 

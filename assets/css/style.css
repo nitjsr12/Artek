@@ -20323,3 +20323,7 @@ textarea.form-control {
 .industry-section .industry-block{
     padding-left: 0;
 }
+#service-sec .sub-title {
+    font-size: 30px;
+    font-weight: 600;
+}

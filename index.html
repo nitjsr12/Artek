@@ -426,7 +426,7 @@ About Area
                                     <circle cx="150" cy="100" r="75" fill="none" />
                                     <g>
                                         <use xlink:href="#circlePath" fill="none" />
-                                        <text class="circle-text">
+                                        <text class="circle-text" id="spinningText">
                                             <textPath xlink:href="#circlePath">Trusted chemistry delivering proven solutions</textPath>
                                         </text>
                                     </g>
@@ -992,28 +992,34 @@ Contact Area
     <script src="assets/js/main.js"></script>
 
 <script>
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function() {
+    const textElement = document.getElementById("spinningText");
+    const imageBox = document.querySelector(".img1"); // The container for whychooseus.jpg
 
-const text = document.querySelector(".circle-text");
+    if (!textElement || !imageBox) return;
 
-let angle = 0;
+    function checkColor() {
+        const textRect = textElement.getBoundingClientRect();
+        const imgRect = imageBox.getBoundingClientRect();
 
-setInterval(function(){
+        // Check if any part of the text circle is overlapping the image box
+        const isOverlapping = !(
+            textRect.right < imgRect.left || 
+            textRect.left > imgRect.right || 
+            textRect.bottom < imgRect.top || 
+            textRect.top > imgRect.bottom
+        );
 
-  angle += 2;
+        if (isOverlapping) {
+            textElement.classList.add("is-on-image");
+        } else {
+            textElement.classList.remove("is-on-image");
+        }
 
-  if(angle > 90 && angle < 270){
-      text.style.fill = "#007bff";   // Blue
-  }else{
-      text.style.fill = "#e2b93b";   // Yellow
-  }
+        requestAnimationFrame(checkColor);
+    }
 
-  if(angle >= 360){
-      angle = 0;
-  }
-
-},40);
-
+    checkColor();
 });
 </script>
 

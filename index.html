@@ -426,7 +426,7 @@ About Area
                                     <circle cx="150" cy="100" r="75" fill="none" />
                                     <g>
                                         <use xlink:href="#circlePath" fill="none" />
-                                        <text fill="#e2b93b" >
+                                        <text class="circle-text">
                                             <textPath xlink:href="#circlePath">Trusted chemistry delivering proven solutions</textPath>
                                         </text>
                                     </g>
@@ -990,6 +990,33 @@ Contact Area
 
     <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+const text = document.querySelector(".circle-text");
+
+let angle = 0;
+
+setInterval(function(){
+
+  angle += 2;
+
+  if(angle > 90 && angle < 270){
+      text.style.fill = "#007bff";   // Blue
+  }else{
+      text.style.fill = "#e2b93b";   // Yellow
+  }
+
+  if(angle >= 360){
+      angle = 0;
+  }
+
+},40);
+
+});
+</script>
+
 </body>
 
 </html>

@@ -9256,7 +9256,7 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
   display: flex;
   align-items: center;
   justify-content: space-between; /* better than center */
-  gap: 40px;
+  gap: 120px;
   min-height: 100vh;
   padding: 140px 20px 80px; 
   max-width: 1200px;
@@ -9326,7 +9326,8 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
 .hero-img {
   position: relative;
   bottom: 0;
-  max-width: 1200px;
+  max-width: 1600px;   /* increase this */
+  width: 100%;         /* add this */
   z-index: 5;                   
 }
 

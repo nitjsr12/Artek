@@ -20315,45 +20315,12 @@ textarea.form-control {
     font-weight: 600;
 }
 
-
-/* 1. Force the badge to have no background so we see the dark section color */
-.box-badge {
-    background-color: transparent !important;
-    background: transparent !important;
-}
-
-/* 2. Set the Yellow as the base color */
 #spinningText textPath {
-    fill: #e2b93b !important; /* Your specific Yellow */
-    transition: fill 0.3s ease;
+    fill: #e2b93b;
+    transition: fill 0.15s ease;
     font-weight: 700;
 }
 
-/* 3. This class will be added by JavaScript when it touches the image */
 #spinningText.is-on-image textPath {
-    fill: #007bff !important; /* Your specific Blue */
-}
-
- 
-/* Wrapper must be positioned */
-.split-text-wrapper {
-  position: relative;
-  display: inline-block;
-}
- 
-/* Blue text — shows over the IMAGE half */
-.typed-text.layer-blue {
-  color: #003399; /* your blue colour */
-}
- 
-/* Yellow text — shows ONLY over the blue panel half */
-.typed-text.layer-yellow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: #FFD700; /* yellow */
-  /* KEY: Clip this layer to only show over the blue background area */
-  /* Adjust the percentage to match where your blue panel ends */
-  clip-path: inset(0 50% 0 0); /* shows only on left 50% = the blue side */
-  pointer-events: none;
+    fill: #007bff;
 }

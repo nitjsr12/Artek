@@ -992,34 +992,62 @@ Contact Area
     <script src="assets/js/main.js"></script>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    const textElement = document.getElementById("spinningText");
-    const imageBox = document.querySelector(".img1"); // The container for whychooseus.jpg
+document.addEventListener("DOMContentLoaded", function () {
+  const svgEl = document.querySelector(".box-badge .spin-text svg");
+  const textEl = document.getElementById("spinningText");
+  const textPathEl = textEl ? textEl.querySelector("textPath") : null;
+  const imgBox = document.querySelector(".img1");
 
-    if (!textElement || !imageBox) return;
+  if (!svgEl || !textPathEl || !imgBox) return;
 
-    function checkColor() {
-        const textRect = textElement.getBoundingClientRect();
-        const imgRect = imageBox.getBoundingClientRect();
+  const originalText = textPathEl.textContent.trim();
 
-        // Check if any part of the text circle is overlapping the image box
-        const isOverlapping = !(
-            textRect.right < imgRect.left || 
-            textRect.left > imgRect.right || 
-            textRect.bottom < imgRect.top || 
-            textRect.top > imgRect.bottom
-        );
+  // Split text into individual character spans
+  textPathEl.textContent = "";
+  [...originalText].forEach((char, i) => {
+    const tspan = document.createElementNS("http://www.w3.org/2000/svg", "tspan");
+    tspan.textContent = char === " " ? "\u00A0" : char;
+    tspan.setAttribute("data-index", i);
+    textPathEl.appendChild(tspan);
+  });
 
-        if (isOverlapping) {
-            textElement.classList.add("is-on-image");
-        } else {
-            textElement.classList.remove("is-on-image");
-        }
+  function colorizeChars() {
+    const imgRect = imgBox.getBoundingClientRect();
+    const tspans = textPathEl.querySelectorAll("tspan");
 
-        requestAnimationFrame(checkColor);
-    }
+    tspans.forEach((tspan) => {
+      try {
+        // Get the bounding box of each character in SVG coords
+        const bbox = tspan.getBBox();
+        const charCenterX = bbox.x + bbox.width / 2;
+        const charCenterY = bbox.y + bbox.height / 2;
 
-    checkColor();
+        // Convert SVG local coords → screen coords using SVG's CTM
+        const ctm = svgEl.getScreenCTM();
+        if (!ctm) return;
+
+        const pt = svgEl.createSVGPoint();
+        pt.x = charCenterX;
+        pt.y = charCenterY;
+        const screenPt = pt.matrixTransform(ctm);
+
+        // Check if character center is inside image bounds
+        const onImage =
+          screenPt.x >= imgRect.left &&
+          screenPt.x <= imgRect.right &&
+          screenPt.y >= imgRect.top &&
+          screenPt.y <= imgRect.bottom;
+
+        tspan.style.fill = onImage ? "#007bff" : "#e2b93b";
+      } catch (e) {
+        // getBBox can fail on hidden elements
+      }
+    });
+
+    requestAnimationFrame(colorizeChars);
+  }
+
+  colorizeChars();
 });
 </script>
 

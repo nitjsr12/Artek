@@ -20349,20 +20349,29 @@ textarea.form-control {
 
 /* Wide card is shorter/rectangular */
 .service-card-wide {
-  height: 220px !important;   /* shorter than top cards */
+  height: 220px !important;
   display: flex;
-  flex-direction: row;        /* horizontal layout */
+  flex-direction: row;        /* icon+labels on LEFT, text on RIGHT */
   align-items: center;
-  gap: 20px;
+  gap: 30px;
   padding: 30px 40px;
+  position: relative;
 }
 
-.service-card-wide .box-icon {
-  flex-shrink: 0;
+/* Left column: icon + subtitle + title stacked vertically */
+.service-card-wide .left-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  min-width: 160px;
 }
 
-.service-card-wide .box-number {
-  position: absolute;
-  top: 16px;
-  right: 20px;
+/* Right column: description text */
+.service-card-wide .right-col {
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #555;
+  padding-top: 50px;
 }

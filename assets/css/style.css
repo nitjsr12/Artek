@@ -20324,3 +20324,45 @@ textarea.form-control {
 #spinningText.is-on-image textPath {
     fill: #007bff;
 }
+
+/* Static layout */
+.static-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+/* Top row: 3 equal cards */
+.cards-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+}
+
+/* Bottom row: 2 wide rectangle cards */
+.cards-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+/* Wide card is shorter/rectangular */
+.service-card-wide {
+  height: 220px !important;   /* shorter than top cards */
+  display: flex;
+  flex-direction: row;        /* horizontal layout */
+  align-items: center;
+  gap: 20px;
+  padding: 30px 40px;
+}
+
+.service-card-wide .box-icon {
+  flex-shrink: 0;
+}
+
+.service-card-wide .box-number {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+}

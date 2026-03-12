@@ -12,15 +12,15 @@ body{
  
 /* MAIN CONTAINER */
 .infographic{
-  width:1000px;
-  height:1000px;
-  margin:50px auto;
+  width:500px;
+  height:500px;
+  margin:300px auto;
+  overflow:visible;
+   /* margin-left: 600px; */
   display:grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   position:relative;
- 
- 
 }
  
 /* COMMON PIECE STYLE */
@@ -42,7 +42,6 @@ body{
   height:100%;
 }
  
- 
 .text{
   position:absolute;
   width:180px;
@@ -53,8 +52,9 @@ body{
 .text.left{
   left:-190px;
   top:50%;
-  transform:translateY(-50%);
+  transform:translateY(-120%);
   text-align:right;
+  width: 190px;
 }
  
 /* RIGHT SIDE TEXT */
@@ -67,9 +67,10 @@ body{
  
 /* BOTTOM LEFT */
 .text.bottom-left{
-  left:-190px;
-  bottom:20px;
-  text-align:right;
+  left: -190px;
+  top: 50%;                    /* ← change from bottom:20px to top:50% */
+  transform: translateY(0%); /* ← add this */
+  text-align: right;
 }
  
 /* BOTTOM RIGHT */
@@ -78,7 +79,6 @@ body{
   bottom:20px;
   text-align:left;
 }
- 
  
 .desc{
   opacity:0;
@@ -114,13 +114,11 @@ body{
   width: 20px;
 }
 
-
 /* Optional: last item no extra gap */
 .desc ul li:last-child {
   margin-bottom: 0;
 }
 
- 
 /* HOVER EFFECT */
 .piece:hover .desc{
   opacity:1;
@@ -147,7 +145,7 @@ body{
   background-repeat: no-repeat;
   background-position: center;
   border-top-right-radius:100%;
-  transform: translateY(10px);
+  transform: translateY(15px);
 }
  
 .venus{
@@ -165,25 +163,42 @@ body{
   background-repeat: no-repeat;
   background-position: center;
   border-bottom-right-radius:100%;
-  transform: translate(-10px,10px);
+  transform: translate(-10px,15px);
  
 }
- 
  
 .piece{
   width:100%;
   height:100%;
 }  
- 
- 
-.title{
-  font-weight:bold;}
+  
+.title {
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 1.35;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.text.left .desc {
+  position: absolute;
+  right: 0px;        /* pushes desc left, away from puzzle */
+  width: 360px;        /* wide enough for each item */
+  
+}
  
 </style>
 </head>
  
 <body>
- 
+ <div class="wrapper">
 <div class="infographic">
  
   <div class="item">
@@ -233,7 +248,7 @@ body{
   </div>
  
 </div>
- 
+</div>
  
 </body>
 </html>

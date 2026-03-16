@@ -18037,10 +18037,11 @@ span.select2-selection.select2-selection--single:focus {
 
 .project-grid .box-content {
   padding: 32px;
-  /* Large devices */
-  /* Small devices */
-  /* Extra small devices */
 }
+.project-grid .box-title {
+    margin-bottom: 6px; /* reduce gap between title and button */
+}
+
 
 @media (max-width: 1199px) {
   .project-grid .box-content {
@@ -18066,7 +18067,7 @@ span.select2-selection.select2-selection--single:focus {
 
 .project-grid .th-btn2,
 .project-grid .th-btn {
-  margin-top: 31px;
+  margin-top: 10px;
 }
 
 .project-grid .th-btn.style2 {
@@ -20356,4 +20357,65 @@ textarea.form-control {
   gap: 30px;
   padding: 30px 40px;
   position: relative;
+}
+
+/* ── Industries Served ── */
+.industries-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+.industry-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #f0f4ff;
+    border-radius: 5px;
+    padding: 6px 14px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #101840;
+}
+
+.industry-pill i {
+    font-size: 19px;
+    color: #101840;
+}
+
+/* ── Sustainability ── */
+.sustainability-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sustainability-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.sustainability-list li i {
+    color: #101840;
+    margin-top: 4px;
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+.sustainability-list .point-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #101840;
+    margin-bottom: 4px;
+}
+
+.sustainability-list .point-desc {
+    font-size: 17x;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
 }

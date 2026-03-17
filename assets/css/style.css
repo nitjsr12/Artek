@@ -2717,10 +2717,31 @@ textarea.is-invalid {
 }
 
 /*------------------- 3.3. Titles -------------------*/
-.sec-title {
-  margin-bottom: calc(var(--section-title-space) - 10px);
-  margin-top: -0.18em;
-  text-transform: capitalize;
+/* FORCE CENTER ALIGNMENT */
+#service-sec .row {
+  justify-content: center !important;
+}
+
+#service-sec .col-md-7 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+#service-sec .title-area {
+  text-align: center;
+}
+
+#service-sec .sec-title {
+  text-align: center;
+  margin-left: 0 !important;
+}
+
+/* REMOVE LEFT ALIGN ON MEDIUM SCREENS */
+#service-sec .text-md-start {
+  text-align: center !important;
+}
+#service-sec .title-area {
+  margin-top: -60px;  /* adjust value as needed */
 }
 
 .sub-title {

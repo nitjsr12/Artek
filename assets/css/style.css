@@ -15538,7 +15538,7 @@ span.select2-selection.select2-selection--single:focus {
   position: relative;
   z-index: 2;
   margin: -70px 120px;
-  /* Medium Large devices */
+  
 }
 
 @media (max-width: 1299px) {
@@ -15553,6 +15553,11 @@ span.select2-selection.select2-selection--single:focus {
   inset: -53px;
   -webkit-animation: spin 10s linear infinite;
           animation: spin 10s linear infinite;
+}
+
+.brand-list-area .arrow-down .shape {
+  animation: none !important;
+  -webkit-animation: none !important;
 }
 
 .brand-list-area .arrow-down .link {
@@ -20439,4 +20444,13 @@ textarea.form-control {
     color: #666;
     line-height: 1.6;
     margin: 0;
+}
+
+/* STOP BRAND SHAPE SPIN - FINAL OVERRIDE */
+.brand-list-area .arrow-down .shape,
+.brand-list-area .arrow-down .shape * {
+  -webkit-animation: none !important;
+  animation: none !important;
+  -webkit-transform: none !important;
+  transform: none !important;
 }
